@@ -78,14 +78,14 @@ li.daohang a:hover {
 }
 
 #Minecraft {
-    background: url(images/icon_minecraft.png);
+    background: url(https://raw.githubusercontent.com/han-karry/personal_page/master/css/images/icon_minecraft.png);
     background-repeat: no-repeat;
     background-size: 7em;
     background-position: top;
 
 }
 #Unturned {
-    background: url(images/icon_unturned.png);
+    background: url(https://raw.githubusercontent.com/han-karry/personal_page/master/css/images/icon_unturned.png);
     background-repeat: no-repeat;
     background-size: 7em;
     background-position: top;
