@@ -43,14 +43,21 @@ li.daohang a:hover {
 } */
 
 #body {
+    float: left;
     margin: 0 auto;
     padding: 0;
+    width: 100%;
+}
 
+#body::after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
 .connect {
 
-    /* float: left; */
+    float: left;
 
     text-align: center;
     margin: auto;
@@ -114,12 +121,11 @@ li.daohang a:hover {
     /* color: green; */
 }
 
-
 .diary {
-    /* float: left; */
-    margin: 0 auto;
+    float: left;
+    margin: 0 auto 0 5%;
     display: block;
-    max-width: 30%;
+    width: 25%;
     border: 1px solid #4e4e4e;
     border-radius: 10px;
 }
@@ -129,20 +135,8 @@ li.daohang a:hover {
     font-size: 1.5em;
 }
 
-#foot::after {
-    clear: both;
-}
-
-.foot {
-    clear: both;
-    /* margin-top: 3em; */
-}
-
 footer {
-
-    clear: both;
     text-align: center;
     font-size: 0.5em;
     color: #888888;
-
 }
