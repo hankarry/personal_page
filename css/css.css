@@ -1,12 +1,27 @@
+@font-face {
+    font-family: MiSans;
+    src: url(/ttf/MiSans-Normal.ttf);
+}
+
+@font-face {
+    font-family: MiSans;
+    src: url(/ttf/MiSans-Bold.ttf);
+    font-weight: bold;
+}
+
 * {
-    font-family: Microsoft YaHei, Arial, Helvetica;    
+    font-family: MiSans, Microsoft YaHei, Arial, Helvetica;
+}
+
+.connect, .diary {
+    background-color: white;
 }
 
 body {
     /* background:url("D:/网页/images/background.jpg")  no-repeat center center;   加载背景图   背景图不平铺 */
     /* background-size:cover;  让背景图基于容器大小伸缩 */
     /* background-attachment:fixed;        当内容高度大于图片高度时，背景图像的位置相对于viewport固定    此条属性必须设置否则可能无效 */
-    background-color: white;   /* 设置背景颜色，背景图加载过程中会显示背景色 */
+    background-color: rgba(115, 201, 241, 0.1);/* 设置背景颜色，背景图加载过程中会显示背景色 */
 }
 
 .header {
@@ -43,19 +58,23 @@ li.daohang a:hover {
 } */
 
 #body {
-    float: left;
-    padding: 0;
-    width: 100%;
+    display: grid;
+    grid-gap: 0 0;
+    grid-template-columns: 70% 30%;
+    /* box-sizing: border-box; */
+    /* float: left; */
+    /* padding: 0; */
+    /* width: 100%; */
 }
 
 .connect {
 
-    float: left;
+    /* float: left; */
 
     text-align: center;
     margin: auto;
-    /* width: 70%; */
-    width: 30em;
+    width: 100%;
+    /* width: 30em; */
     /* height: 30em; */
 
     border-style: solid;
@@ -115,10 +134,11 @@ li.daohang a:hover {
 }
 
 .diary {
-    float: left;
+    /* float: left; */
     margin: 0 auto 0 5%;
-    display: block;
-    width: 20em;
+    /* display: block; */
+    /* width: 20em; */
+    /* width: 30%; */
     border: 1px solid #4e4e4e;
     border-radius: 10px;
 }
@@ -128,11 +148,16 @@ li.daohang a:hover {
     font-size: 1.5em;
 }
 
+.diary ul {
+    /* margin: auto; */
+    padding: 0 0 0 1.5em;
+}
+/* 
 #body::after {
     content: "";
     display: block;
     clear: both;
-}
+} */
 
 footer {
     text-align: center;
