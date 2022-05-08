@@ -1,0 +1,26 @@
+/* .diary {
+    background-color: white;
+} */
+
+.diary {
+    /* float: left; */
+    /* margin: 1em 1em 1em 1em; */
+    /* padding: 1em 0 1em 0; */
+    /* display: block; */
+    /* width: 20em; */
+    /* width: 80%; */
+    border: 0px solid #4e4e4e;
+    border-radius: 15px;
+}
+
+.diary section {
+    padding: 0 0 0 0.5em;
+    /* text-align: center; */
+    /* color: aqua; */
+    font-size: 1.5em;
+}
+
+.diary ul {
+    /* margin: auto; */
+    padding: 0 0 0 1.5em;
+}

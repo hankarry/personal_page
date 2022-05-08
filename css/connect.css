@@ -1,0 +1,81 @@
+#body section {
+
+    /* border: 1px solid #4e4e4e; */
+    font-size: 1.5em;
+    padding: 0 0 0 0.5em;
+    text-align: left;
+}
+
+.connect {
+    text-align: center;
+    margin: auto;
+    width: 100%;
+}
+
+.server {
+    margin: 1.5em 0 1.5em 0;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* #server {
+    border-style: solid;
+    border-color: rgba(78, 78, 78, 0.3);
+    border-width: 0 1px 1px 0;
+} */
+
+/* .server td,.server th {
+    border: 1px solid rgba(78, 78, 78, 0.3);
+} */
+
+.server td, .server th {
+    border-top: 0;
+    border-right: 1px solid rgba(78, 78, 78, 0.3);
+    border-bottom: 1px solid rgba(78, 78, 78, 0.3);
+    border-left: 0;
+}
+
+.lastrow td {
+    border-bottom: 0;
+}
+
+th.lastcol, td.lastcol {
+    border-right: 0;
+}
+
+#Minecraft {
+    overflow: auto;
+    background: url(images/icon_minecraft.png);
+    background-repeat: no-repeat;
+    background-size: 7em;
+    background-position: top;
+
+    /* border-style: solid;
+    border-color: rgba(78, 78, 78, 0.3);
+    border-width: 1px 1px 1px 0; */
+}
+#Unturned {
+    overflow: auto;
+    background: url(images/icon_unturned.png);
+    background-repeat: no-repeat;
+    background-size: 7em;
+    background-position: top;
+
+    /* border-style: solid;
+    border-color: rgba(78, 78, 78, 0.3);
+    border-width: 1px 1px 0 0; */
+}
+
+.server_left {width: 30%; height: 3em;}
+.state {width: 10%;}
+.address {width: 50%;}
+.server_detail {width: 20%;}
+
+#Minecraft_state {
+    color: red;
+    /* color: green; */
+}
+#Unturned_state {
+    color: red;
+    /* color: green; */
+}

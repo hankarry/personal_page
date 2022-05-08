@@ -1,0 +1,130 @@
+@font-face {
+    font-family: MiSans;
+    src: url(ttf/MiSans-Normal.ttf);
+}
+
+@font-face {
+    font-family: MiSans;
+    src: url(ttf/MiSans-Bold.ttf);
+    font-weight: bold;
+}
+
+* {
+    font-family: MiSans, Microsoft YaHei, Arial, Helvetica;
+}
+
+p {
+    margin: 0em;
+}
+
+body {
+    height: 50em;
+    margin: 0;
+    /* background:url("D:/网页/images/background.jpg")  no-repeat center center;   加载背景图   背景图不平铺 */
+    /* background-size:cover;  让背景图基于容器大小伸缩 */
+    /* background-attachment:fixed;        当内容高度大于图片高度时，背景图像的位置相对于viewport固定    此条属性必须设置否则可能无效 */
+    background-color: rgba(115, 201, 241, 0.1);/* 设置背景颜色，背景图加载过程中会显示背景色 */
+}
+
+#body {
+    height: 100%;
+    background-color: white;
+    margin: 1em 1em 1em 1em;
+    padding: 0.5em 0 0.5em 0;
+
+    border: 0px solid #4e4e4e;
+    border-radius: 15px;
+}
+
+.header {
+    background-color: white;
+}
+
+#head {
+    border-style: none none solid none;
+    border-width: 1px;
+    border-color: rgba(136, 136, 136, 0.3);
+}
+
+.header {
+    width: 100%;
+    /* margin: 0 20% 0 20%; */
+    /* padding: 0 20% 0 20%; */
+    display: grid;
+    grid-template-columns: 35% 10% 10% 10% 10% 25%;
+    /* text-align: center; */
+    /* color: rgb(115, 201, 241); */
+}
+
+.header_content {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    /* text-align: center; */
+    font-size: 1.25em;
+}
+
+.header_title {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    /* text-align: center; */
+    font-size: 2em;
+}
+
+.header_content a {
+    display: inline;
+    padding: 5px 10px 5px 0px;
+}
+
+.header_content a:link, .header_content a:visited, .header_content a:hover, .header_content a:active {
+    color: black;
+    text-decoration: none;
+}
+
+/*
+.daohang {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(55, 44, 44, 0.642);
+}
+
+ul.daohang {
+    list-style-type: none;
+    
+}
+
+li.daohang {
+    float: left;
+    display: inline-block;
+    height: 3em;
+    width: 7em;
+}
+
+li.daohang a {
+    width: 3em;
+    color: white;
+    text-align: center;
+    padding: 14px 18px;
+    text-decoration: none;
+}
+
+li.daohang a:hover {
+    background-color: #111;
+}
+ */
+
+/* 
+#body::after {
+    content: "";
+    display: block;
+    clear: both;
+} */
+
+footer {
+    text-align: center;
+    font-size: 0.5em;
+    color: #888888;
+}
