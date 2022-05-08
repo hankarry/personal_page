@@ -18,7 +18,7 @@ p {
 }
 
 body {
-    height: 50em;
+    height: 30em;
     margin: 0;
     /* background:url("D:/网页/images/background.jpg")  no-repeat center center;   加载背景图   背景图不平铺 */
     /* background-size:cover;  让背景图基于容器大小伸缩 */
@@ -29,7 +29,8 @@ body {
 #body {
     height: 100%;
     background-color: white;
-    margin: 1em 1em 1em 1em;
+    margin: 1em auto 1em auto;
+    width: 85%;
     padding: 0.5em 0 0.5em 0;
 
     border: 0px solid #4e4e4e;
@@ -61,7 +62,7 @@ body {
     display: flex;
     align-items: center;
     /* text-align: center; */
-    font-size: 1.25em;
+    font-size: 1.5em;
 }
 
 .header_title {
