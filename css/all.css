@@ -17,6 +17,8 @@ p {
 }
 :root {
     --maincolor: #94E9FF;
+    --gray: #4e4e4e;
+    --backgroundcolor: rgba(115, 201, 241, 0.1);
 }
 
 body {
@@ -25,7 +27,7 @@ body {
     /* background:url("D:/网页/images/background.jpg")  no-repeat center center;   加载背景图   背景图不平铺 */
     /* background-size:cover;  让背景图基于容器大小伸缩 */
     /* background-attachment:fixed;        当内容高度大于图片高度时，背景图像的位置相对于viewport固定    此条属性必须设置否则可能无效 */
-    background-color: rgba(115, 201, 241, 0.1);/* 设置背景颜色，背景图加载过程中会显示背景色 */
+    background-color: var(--backgroundcolor);/* 设置背景颜色，背景图加载过程中会显示背景色 */
 }
 
 
@@ -45,7 +47,7 @@ body {
     width: 85%;
     padding: 0.5em 0 0.5em 0;
 
-    border: 0px solid #4e4e4e;
+    border: 0px solid var(--gray);
     border-radius: 15px;
 
 }
@@ -119,8 +121,8 @@ body {
     background-color: var(--maincolor);
     position: absolute; /* 重合div元素 */
     border: 1px solid black;
-    animation-name: load_block1;
     border-radius: 5px;
+    animation-name: load_block1;
     animation-duration: 4s;
     animation-iteration-count: infinite;
 }
