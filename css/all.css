@@ -1,8 +1,7 @@
-@font-face {
+@font-face { /* 字体MiSans引用 */
     font-family: MiSans;
     src: url(ttf/MiSans-Normal.ttf);
 }
-
 @font-face {
     font-family: MiSans;
     src: url(ttf/MiSans-Bold.ttf);
@@ -16,6 +15,9 @@
 p {
     margin: 0em;
 }
+:root {
+    --maincolor: #94E9FF;
+}
 
 body {
     height: 30em;
@@ -26,7 +28,17 @@ body {
     background-color: rgba(115, 201, 241, 0.1);/* 设置背景颜色，背景图加载过程中会显示背景色 */
 }
 
+
+@keyframes gointo {
+    0% {opacity: 0; left: -100px;}
+    100% {opacity: 1; left: 0px;}
+}
+
 #body {
+    position: relative;
+    animation-name: gointo;
+    animation-duration: 1.5s;
+
     height: 100%;
     background-color: white;
     margin: 1em auto 1em auto;
@@ -35,10 +47,7 @@ body {
 
     border: 0px solid #4e4e4e;
     border-radius: 15px;
-}
 
-.header {
-    background-color: white;
 }
 
 #head {
@@ -48,6 +57,7 @@ body {
 }
 
 .header {
+    background-color: white;
     width: 100%;
     /* margin: 0 20% 0 20%; */
     /* padding: 0 20% 0 20%; */
@@ -62,7 +72,7 @@ body {
     display: flex;
     align-items: center;
     /* text-align: center; */
-    font-size: 1.5em;
+    font-size: 1.25em;
 }
 
 .header_title {
@@ -81,11 +91,6 @@ body {
 .header_content a:link, .header_content a:visited, .header_content a:hover, .header_content a:active {
     color: black;
     text-decoration: none;
-}
-
-@keyframes gointo {
-    from {opacity: 0;}
-    to {opacity: 1;}
 }
 
 @keyframes load_block1 { /* 加载块动画 */
@@ -111,7 +116,7 @@ body {
 #loading1 {
     width: 1em;
     height: 1em;
-    background-color: #36d5e0;
+    background-color: var(--maincolor);
     position: absolute; /* 重合div元素 */
     border: 1px solid black;
     animation-name: load_block1;
@@ -123,7 +128,7 @@ body {
 #loading2 {
     width: 1em;
     height: 1em;
-    background-color: #36d5e0;
+    background-color: var(--maincolor);
     position: absolute;
     border: 1px solid black;
     border-radius: 5px;
