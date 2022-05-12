@@ -17,6 +17,7 @@ p {
 }
 :root {
     --maincolor: #94E9FF;
+    --maincolor_thin: rgb(148, 233, 255, 0.5);
     --gray: #4e4e4e;
     --backgroundcolor: rgba(115, 201, 241, 0.1);
 }
@@ -29,7 +30,6 @@ body {
     /* background-attachment:fixed;        当内容高度大于图片高度时，背景图像的位置相对于viewport固定    此条属性必须设置否则可能无效 */
     background-color: var(--backgroundcolor);/* 设置背景颜色，背景图加载过程中会显示背景色 */
 }
-
 
 @keyframes gointo {
     0% {opacity: 0; left: -100px;}
@@ -70,6 +70,8 @@ body {
 }
 
 .header a {
+    border-right: 1px solid #888888;
+
     width: 100%;
     height: 100%;
     font-size: 1.25em;
@@ -81,9 +83,12 @@ body {
     align-items: center;
     margin: auto;
 }
+.header a:last-child {
+    border-right: none;
+}
 
 .header_img:hover {
-    background-color: rgb(148, 233, 255, 0.5);
+    background-color: var(--maincolor_thin);
 }
 
 /* 
