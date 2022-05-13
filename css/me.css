@@ -8,9 +8,13 @@
     100% {opacity: 1; right: 0px;}
 }
 
+#head_me {
+    background-color: var(--backgroundcolor);
+}
+
 #body_me {
     margin: 1em auto 1em auto;
-    width: 90%;
+    width: 95%;
     display: grid;
     grid-template-columns: 50% 50%;
 }

@@ -7,6 +7,10 @@
     src: url(ttf/MiSans-Bold.ttf);
     font-weight: bold;
 }
+@font-face {
+    font-family: MiSans_thin;
+    src: url(ttf/MiSans-Thin.ttf);
+}
 
 * {
     font-family: MiSans, Microsoft YaHei, Arial, Helvetica;
@@ -18,8 +22,9 @@ p {
 :root {
     --maincolor: #94E9FF;
     --maincolor_thin: rgb(148, 233, 255, 0.5);
-    --gray: #4e4e4e;
+    --gray: rgba(78, 78, 78, 0.3);
     --backgroundcolor: rgba(115, 201, 241, 0.1);
+    --font_color_title: #0097bc;
 }
 
 body {
@@ -30,13 +35,16 @@ body {
     /* background-attachment:fixed;        当内容高度大于图片高度时，背景图像的位置相对于viewport固定    此条属性必须设置否则可能无效 */
     background-color: var(--backgroundcolor);/* 设置背景颜色，背景图加载过程中会显示背景色 */
 }
+hr {
+    background-color: var(--maincolor);
+}
 
 @keyframes gointo {
     0% {opacity: 0; left: -100px;}
     100% {opacity: 1; left: 0px;}
 }
 
-#body {
+.body {
     position: relative;
     animation-name: gointo;
     animation-duration: 1.5s;
@@ -70,7 +78,7 @@ body {
 }
 
 .header a {
-    border-right: 1px solid #888888;
+    border-right: 1px solid var(--gray);
 
     width: 100%;
     height: 100%;
@@ -78,43 +86,33 @@ body {
     
     display: flex;
 }
+#head_me {
+    border-left: 1px solid var(--gray);
+}
+
 .header_img div {
     display: flex;
     align-items: center;
     margin: auto;
 }
-.header a:last-child {
+/* .header a:last-child {
     border-right: none;
-}
+} */
 
 .header_img:hover {
     background-color: var(--maincolor_thin);
 }
 
-/* 
-.header_img div {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-} */
-
-/* 
-.header_title {
-    margin: auto;
-    display: flex;
-    align-items: center;
-    font-size: 1.5em;
-} */
-
-/* .header_content a {
-    display: inline;
-    padding: 5px 5px 5px 0px;
-} */
-
 .header a:link, .header a:visited, .header a:hover, .header a:active {
     color: black;
     text-decoration: none;
+}
+
+.p_title {
+    padding: 0 0 0 0.5em;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--font_color_title);
 }
 
 @keyframes load_block1 { /* 加载块动画 */
@@ -134,6 +132,8 @@ body {
 }
 
 #loadings {
+    width: 2em;
+    height: 2em;
     position: relative;
 }
 
@@ -142,8 +142,8 @@ body {
     height: 1em;
     background-color: var(--maincolor);
     position: absolute; /* 重合div元素 */
-    border: 1px solid black;
-    border-radius: 5px;
+    /* border: 1px solid black;
+    border-radius: 5px; */
     animation-name: load_block1;
     animation-duration: 4s;
     animation-iteration-count: infinite;
@@ -154,8 +154,8 @@ body {
     height: 1em;
     background-color: var(--maincolor);
     position: absolute;
-    border: 1px solid black;
-    border-radius: 5px;
+    /* border: 1px solid black;
+    border-radius: 5px; */
     animation-name: load_block2;
     animation-duration: 4s;
     animation-iteration-count: infinite;

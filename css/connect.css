@@ -1,9 +1,5 @@
-#body section {
-
-    /* border: 1px solid #4e4e4e; */
-    font-size: 1.5em;
-    padding: 0 0 0 0.5em;
-    text-align: left;
+#head_connect {
+    background-color: var(--backgroundcolor);
 }
 
 .connect {
@@ -30,9 +26,9 @@
 
 .server td, .server th {
     border-top: 0;
-    border-right: 1px solid rgba(78, 78, 78, 0.3);
-    border-bottom: 1px solid rgba(78, 78, 78, 0.3);
-    border-left: 0;
+    border-right: 1px solid var(--gray);
+    border-bottom: 1px solid var(--gray);
+    /* border-left: 0; */
 }
 
 .lastrow td {
