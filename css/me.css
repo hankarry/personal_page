@@ -10,6 +10,7 @@
 
 #head_me {
     background-color: var(--backgroundcolor);
+    border-bottom: none;
 }
 
 #body_me {

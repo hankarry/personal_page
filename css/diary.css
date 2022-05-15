@@ -1,8 +1,9 @@
+#head_diary {
+    background-color: var(--backgroundcolor);
+    border-bottom: none;
+}
+
 #diary ul {
     /* margin: auto; */
     padding: 0 0 0 1.5em;
-}
-
-#head_diary {
-    background-color: var(--backgroundcolor);
 }
