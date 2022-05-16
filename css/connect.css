@@ -76,3 +76,9 @@ th.lastcol, td.lastcol {
     color: red;
     /* color: green; */
 }
+
+#Mumble section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
