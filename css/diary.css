@@ -7,3 +7,7 @@
     /* margin: auto; */
     padding: 0 0 0 1.5em;
 }
+
+#server_detail_Minecraft {
+    display: none;
+}

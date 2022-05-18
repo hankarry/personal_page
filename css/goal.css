@@ -3,7 +3,7 @@
     background-color: var(--backgroundcolor);
 }
 
-.body section {
+.card section {
     font-size: 5em;
     text-align: center;
     background-image: linear-gradient(to bottom right, rgb(73,188,246), rgb(6,194,174));
@@ -11,7 +11,7 @@
     color: transparent;
 }
 
-.body div {
+.card div {
     width: 300px;
     height: 300px;
     margin: auto;

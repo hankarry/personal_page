@@ -45,7 +45,7 @@ hr {
     100% {opacity: 1; left: 0px;}
 }
 
-.body { /* 主体设置 */
+.card { /* 主体设置 */
     position: relative;
     animation-name: gointo;
     animation-duration: 1.5s;

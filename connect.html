@@ -10,7 +10,29 @@
 		<link rel="stylesheet" type="text/css" href="css/all.css">
 		<link rel="stylesheet" type="text/css" href="css/connect.css">
 
-		
+
+		<style>
+
+		</style>
+
+		<script>
+			
+			
+
+			// function show_detail(id, button) {
+			// 	document.getElementById(button).onclick="hide_detail('server_detail_mumble', 'server_detail_button_mumble')";
+			// 	document.getElementById(id).style.animationName = "showfrom_top";
+			// 	document.getElementById(id).style.display = "block";
+			// }
+
+			// function hide_detail(id, button) {
+				
+			// 	document.getElementById(button).onclick="show_detail('server_detail_mumble', 'server_detail_button_mumble')";
+			// 	document.getElementById(id).style.animationName = "hidefrom";
+			// 	document.getElementById(id).style.display = "none";
+			// }
+
+		</script>
 	</head>
 
 	<body>
@@ -48,40 +70,61 @@
 			</div>
 		</div>
 	
-		<div class="body">
+		<div class="card">
 			<div id="title_div"><img src="css/hud/fuwuqi.svg" width="25" height="25"><section class="p_title">联机服务端信息</section></div>
 			<hr>
 			<div class="connect">
 				<table class="server" border="0" >
 					<tr>
-						<th class="server_left" id="server">服务端</th><th class="state">状态</th><th class="address">地址</th><th class="server_detail lastcol">详情</th>
+						<th class="server_left" id="server">服务端</th><th class="state">状态</th><th class="address">地址</th><th class="server_detail">详情</th>
 					</tr>
 					<tr>
-						<td class="server_left" id="Minecraft">Minecraft</td><td id="Minecraft_state">关闭</td><td>无</td><td class="lastcol">无</td>
+						<td class="server_left" id="Minecraft">Minecraft</td><td id="Minecraft_state">关闭</td><td>无</td><td>无</td>
 					</tr>
-					<tr class="lastrow">
-						<td class="server_left" id="Unturned">未转变者</td><td id="Unturned_state">关闭</td><td>无</td><td class="lastcol">无</td>
+					<!-- <tr>
+						<td colspan="4" id="server_detail_Minecraft">
+							233333
+						</td>
+					</tr> -->
+					<tr>
+						<td class="server_left" id="Unturned">未转变者</td><td id="Unturned_state">关闭</td><td>无</td><td>无</td>
 					</tr>
 				</table>
 			</div>
 		</div>
 
-		<div class="body">
+		<!-- <div class="card">
 			<div id="title_div"><img src="css/hud/maikefeng.svg" width="25" height="25"><section class="p_title">语音服务端信息</section></div>
 			<hr>
 			<div class="connect">
 				<table class="server" border="0">
 					<tr>
-						<th class="server_left" id="server">服务端</th><th class="state">状态</th><th class="address">地址</th><th class="server_detail lastcol">详情</th>
+						<th class="server_left" id="server">服务端</th><th class="state">状态</th><th class="address">地址</th><th>详情</th>
 					</tr>
-					<tr class="lastrow">
-						<td class="server_left" id="Mumble"><section><img src="css/images/icon_mumble.svg" width="25" height="25">Mumble</section></td><td id="Minecraft_state">关闭</td><td>无</td><td class="lastcol">无</td>
+					<tr>
+						<td class="server_left" id="Mumble" style="z-index: 1;"><section><img src="css/images/icon_mumble.svg" width="25" height="25">Mumble</section></td><td id="Minecraft_state">关闭</td><td>无</td><td><button type="button" id="server_detail_button_mumble" onclick="show_detail('server_detail_mumble')"><img src="css/hud/jiantou-xia.svg" width="25" height="25"></button></td>
+					</tr>
+					<tr>
+						<td id="server_detail_mumble" colspan="4" onclick=""><div>下载链接:382733838</div></td>
 					</tr>
 				</table>
 			</div>
-		</div>
+		</div> -->
 
-		
+		<div class="card">
+			<div id="title_div"><img src="css/hud/maikefeng.svg" width="25" height="25"><section class="p_title">语音服务端信息</section></div>
+			<hr>
+			<div class="connect">
+				<div id="server_voice" border="0">
+					<div class="grip_title grip_left"><section>服务端</section></div><div class="grip_title"><section>状态</section></div><div class="grip_title"><section>地址</section></div><div class="grip_title"><section>详情</section></div>
+				
+					<div class="grip_left" id="mumble"><section><img src="css/images/icon_mumble.svg" width="25" height="25">Mumble</section></div><div><section>关闭</section></div><div><section>无</section></div><div><section><button type="button" id="server_detail_button_mumble"><img src="css/hud/jiantou-xia.svg" width="25" height="25"></button></section></div>
+						
+					<div class="grip_left" id="server_detail_mumble"><div id="server_detail_text">777777777777777777777777777777777777777777777777777</div></div>
+					
+				</div>
+			</div>
+		</div>
 	<!-- 				
 			<div>
 				<hr>
@@ -97,3 +140,6 @@
 		<footer>Made by hankarry</footer>
 	</body>
 </html>
+
+
+		<script src="js/connect.js"></script>
