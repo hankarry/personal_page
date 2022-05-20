@@ -40,28 +40,6 @@
     border-right: 0;
 }
 
-#Minecraft {
-    overflow: auto;
-    background: url(images/icon_minecraft.png);
-    background-repeat: no-repeat;
-    background-size: 7em;
-    background-position: top;
-
-    /* border-style: solid;
-    border-color: rgba(78, 78, 78, 0.3);
-    border-width: 1px 1px 1px 0; */
-}
-#Unturned {
-    overflow: auto;
-    background: url(images/icon_unturned.png);
-    background-repeat: no-repeat;
-    background-size: 7em;
-    background-position: top;
-
-    /* border-style: solid;
-    border-color: rgba(78, 78, 78, 0.3);
-    border-width: 1px 1px 0 0; */
-}
 
 .server_left {width: 30%; height: 3em;}
 .state {width: 10%;}
@@ -77,70 +55,73 @@
     /* color: green; */
 }
 
+.grip_title {
+    border-top: unset !important;
+}
+.grip_left {
+    border-left: unset !important;
+}
+
+.button_detail {
+    
+    /* height: 5em; */
+    background-color: var(--white_gray);
+    grid-column: 1 / 5;
+
+}
+.button_detail_text {
+    border-top: unset !important;
+}
+
+#server_game {
+    display: grid;
+
+    grid-template-columns: 30% 10% 50% 10%;
+    grid-template-rows: 3em 3em 3em 3em 3em;
+}
+
+#server_game div {
+    
+    height: 100%;
+    width: 100%;
+    border-left: 1px solid var(--gray);
+    border-top: 1px solid var(--gray);
+}
+
+#Minecraft {
+    /* overflow: auto; */
+    background: url(images/icon_minecraft.png);
+    background-repeat: no-repeat;
+    background-size: 7em;
+    background-position: top;
+
+    /* border-style: solid;
+    border-color: rgba(78, 78, 78, 0.3);
+    border-width: 1px 1px 1px 0; */
+}
+#Unturned {
+    /* overflow: auto; */
+    background: url(images/icon_unturned.png);
+    background-repeat: no-repeat;
+    background-size: 7em;
+    background-position: top;
+
+    /* border-style: solid;
+    border-color: rgba(78, 78, 78, 0.3);
+    border-width: 1px 1px 0 0; */
+}
+
 #Mumble section {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-@keyframes showfrom_top {
-    0% {height: 0em;}
-    100% {height: 5em;}
-}
-@keyframes hidefrom {
-    0% {height: 5em;}
-    100% {height: 0em;}
-}
-@keyframes showfrom_top_text {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
-@keyframes hidefrom_text {    
-    0% {opacity: 1;}
-    100% {opacity: 0;}
-}
-@keyframes button_180 {
-    0% {
-        transform: rotate(0deg);
-        transform-origin: center;
-        -ms-transform:rotate(0deg); 	/* IE 9 */
-        -moz-transform:rotate(0deg); 	/* Firefox */
-        -webkit-transform:rotate(0deg); /* Safari 和 Chrome */
-        -o-transform:rotate(0deg); 	/* Opera */
-    }
-    100% {
-        transform: rotate(180deg);
-        transform-origin: center;
-        -ms-transform:rotate(180deg); 	/* IE 9 */
-        -moz-transform:rotate(180deg); 	/* Firefox */
-        -webkit-transform:rotate(180deg); /* Safari 和 Chrome */
-        -o-transform:rotate(180deg); 	/* Opera */
-    }
-}
-@keyframes button_360 {
-    0% {
-        transform: rotate(180deg);
-        transform-origin: center;
-        -ms-transform:rotate(180deg); 	/* IE 9 */
-        -moz-transform:rotate(180deg); 	/* Firefox */
-        -webkit-transform:rotate(180deg); /* Safari 和 Chrome */
-        -o-transform:rotate(180deg); 	/* Opera */
-    }
-    100% {
-        transform: rotate(360deg);
-        transform-origin: center;
-        -ms-transform:rotate(360deg); 	/* IE 9 */
-        -moz-transform:rotate(360deg); 	/* Firefox */
-        -webkit-transform:rotate(360deg); /* Safari 和 Chrome */
-        -o-transform:rotate(360deg); 	/* Opera */
-    }
-}
-
 #server_voice {
     display: grid;
     
     grid-template-columns: 30% 10% 50% 10%;
-    grid-template-rows: 3em 3em;
+    grid-template-rows: 3em 3em 3em;
     
 }
 
@@ -156,40 +137,9 @@
     border-top: 1px solid var(--gray);
 }
 
-.grip_title {
-    border-top: unset !important;
-}
-.grip_left {
-    border-left: unset !important;
-}
-
-#server_voice section {
+#server_voice section, #server_game section {
     width: fit-content;
     margin: 1em auto 1em auto;
-}
-
-#server_detail_mumble {
-    
-    height: 5em;
-    background-color: rgb(231 231 231);
-    grid-column: 1 / 5;
-
-    position: relative;
-    animation-name: showfrom_top;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-
-}
-
-#server_detail_mumble_text {
-    height: 100%;
-    text-align: left;
-    opacity: 0;
-    animation-name: showfrom_top_text;
-    animation-duration: 1s;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
-    border-top: unset !important;
 }
 
 #mumble section {
