@@ -15,6 +15,7 @@
 
 		</style>
 
+		<script src="js/connect.js"></script>
 		<script>
 			
 			
@@ -118,9 +119,15 @@
 				<div id="server_voice" border="0">
 					<div class="grip_title grip_left"><section>服务端</section></div><div class="grip_title"><section>状态</section></div><div class="grip_title"><section>地址</section></div><div class="grip_title"><section>详情</section></div>
 				
-					<div class="grip_left" id="mumble"><section><img src="css/images/icon_mumble.svg" width="25" height="25">Mumble</section></div><div><section>关闭</section></div><div><section>无</section></div><div><section><button type="button" id="server_detail_button_mumble"><img src="css/hud/jiantou-xia.svg" width="25" height="25"></button></section></div>
+					<div class="grip_left" id="mumble"><section><img src="css/images/icon_mumble.svg" width="25" height="25">Mumble</section></div><div><section>关闭</section></div><div><section>无</section></div><div><section><button type="button" class="button_arrow" id="server_detail_button_mumble" onclick="showhide('server_detail_button_mumble', 'server_detail_mumble', 'server_detail_mumble_text')"><img src="css/hud/jiantou-xia.svg" width="25" height="25"></button></section></div>
 						
-					<div class="grip_left" id="server_detail_mumble"><div id="server_detail_text">777777777777777777777777777777777777777777777777777</div></div>
+					<div class="grip_left" id="server_detail_mumble" style="display: none;">
+						<div id="server_detail_mumble_text">
+							下载连接:<br/>
+								(官网,可能需要魔法)<a href="https://www.mumble.info/downloads/">https://www.mumble.info/downloads/</a><br/>
+							端口:
+						</div>
+					</div>
 					
 				</div>
 			</div>
@@ -142,4 +149,3 @@
 </html>
 
 
-		<script src="js/connect.js"></script>
