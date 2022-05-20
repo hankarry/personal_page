@@ -1,4 +1,3 @@
-
 function showhide(button, detail, text) {
     if (document.getElementById(detail).style.display == "block") {
 
@@ -22,3 +21,5 @@ function showhide(button, detail, text) {
     document.getElementById(button).style.animationName = "button_180";
     }
 }
+
+    // document.getElementsByClassName()
