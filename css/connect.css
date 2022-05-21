@@ -1,3 +1,15 @@
+#head_connect {
+    background-color: var(--backgroundcolor);
+    border-bottom: none;
+}
+
+#header2 {
+    grid-column: 1 / 6;
+    display: grid;
+    grid-template-columns: 20% 20% 60%;
+    justify-items: center;
+}
+
 .connect {
     text-align: center;
     margin: auto;
