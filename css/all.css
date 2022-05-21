@@ -76,7 +76,7 @@ hr {
 
 #header button {
     border-top: unset;
-
+    border-left: unset;
     background-color: unset;
     border-right: 1px solid var(--gray);
     border-width: 1px;
@@ -88,7 +88,11 @@ hr {
     
 }
 
-.header_img, .header_div{
+#head_me {
+    border-left: 1px solid var(--gray) !important;
+}
+
+.header_img, .header_div {
     border-bottom: 1px solid var(--gray);
 }
 #head_me {
