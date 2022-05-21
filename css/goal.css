@@ -1,6 +1,6 @@
 #head_goal {
     border-bottom: none;
-    background-color: var(--backgroundcolor);
+    background-color: var(--backgroundcolor) !important;
 }
 
 .card section {

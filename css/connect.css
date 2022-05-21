@@ -1,5 +1,5 @@
 #head_connect {
-    background-color: var(--backgroundcolor);
+    background-color: var(--backgroundcolor) !important;
     border-bottom: none;
 }
 

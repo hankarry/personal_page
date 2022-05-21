@@ -77,7 +77,7 @@ hr {
 #header button {
     border-top: unset;
     border-left: unset;
-    background-color: unset;
+    background-color: white;
     border-right: 1px solid var(--gray);
     border-width: 1px;
     width: 100%;
