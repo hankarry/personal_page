@@ -259,3 +259,28 @@ footer { /* 页脚 */
     font-size: 0.5em;
     color: #888888;
 }
+
+@keyframes message_into {
+    0% {right: -20em;}
+    100% {right: 1em;}
+}
+@keyframes message_out {
+    0% {right: 1em;}
+    100% {right: -20em;}
+}
+#message_warn {
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    background-color: white;
+    border: 1px solid var(--maincolor);
+    border-radius: 10px;
+    animation-name: message_into;
+    animation-duration: 1s;
+}
+#message_warn section {
+    margin: 5px;
+    padding: 3px;
+    border: 1px solid red;
+    border-radius: 5px;
+}
