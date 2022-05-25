@@ -3,137 +3,61 @@
     border-bottom: none;
 }
 
-#header2 {
-    grid-column: 1 / 6;
-    display: grid;
-    grid-template-columns: 20% 20% 60%;
-    /* grid-template-rows: auto 2em; */
-    justify-items: center;
-    padding: 0.5em;
-}
 #header {
     grid-template-rows: auto 2em;
+    /* z-index: +1 !important; */
+    /* height: auto; */
 }
 
-#header2 div {
+@keyframes show {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+#div_header2 {
+    background-color: var(--backgroundcolor);
+    grid-column: 1 / 7;
+    /* width: 80%; */
+    /* height: 4em; */
+}
+
+#header2 {
+    width: 50%;
     height: 100%;
-}
-
-.connect {
-    text-align: center;
-    margin: auto;
-    width: 100%;
-}
-
-#Minecraft_state {
-    color: red;
-    /* color: green; */
-}
-#Unturned_state {
-    color: red;
-    /* color: green; */
-}
-
-.grip_title {
-    border-top: unset !important;
-}
-.grip_left {
-    border-left: unset !important;
-}
-
-.button_detail {
-    /* display: block; */
-    width: 100%;
-    /* height: 5em; */
-    background-color: var(--white_gray);
-    grid-column: 1 / 5;
-
-}
-.button_detail_text {
-    border-top: unset !important;
-}
-
-#server_game {
-    display: grid;
-
-    grid-template-columns: 30% 10% 50% 10%;
-    /* grid-template-rows: auto auto auto auto auto; */
-}
-
-#server_game div {
-    height: 3em;
-    /* height: 100%; */
-    width: 100%;
-    border-left: 1px solid var(--gray);
-    border-top: 1px solid var(--gray);
-}
-
-#Minecraft {
-    /* overflow: auto; */
-    background: url(images/icon_minecraft.png);
-    background-repeat: no-repeat;
-    background-size: 7em;
-    background-position: top;
-
-    /* border-style: solid;
-    border-color: rgba(78, 78, 78, 0.3);
-    border-width: 1px 1px 1px 0; */
-}
-#Unturned {
-    /* overflow: auto; */
-    background: url(images/icon_unturned.png);
-    background-repeat: no-repeat;
-    background-size: 7em;
-    background-position: top;
-
-    /* border-style: solid;
-    border-color: rgba(78, 78, 78, 0.3);
-    border-width: 1px 1px 0 0; */
-}
-
-#Mumble section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#server_voice {
-    display: grid;
+    margin: 0 auto 0 auto;
     
-    grid-template-columns: 30% 10% 50% 10%;
-    /* grid-template-rows: auto auto auto;    */
+    background-color: white;
+
+    display: grid;
+    grid-template-columns: auto auto;
+    /* grid-template-rows: auto 2em; */
+    justify-items: center;
+    /* padding: 0.5em; */
+
+    border: 1px solid var(--gray);
+    border-top: unset;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    position: relative;
+    animation-name: show;
+    /* animation-fill-mode: backwards; */
+    animation-duration: 1s;
+
+    /* z-index: 0 !important; */
 }
 
-.grip_title section {
-    font-size: 1em;
-    font-weight: bold;
-}
-
-#server_voice div{
-    /* height: 100%; */
-    height: 3em;
+#header2 button {
     width: 100%;
-    border-left: 1px solid var(--gray);
-    border-top: 1px solid var(--gray);
+    height: 100%;
+    background-color: unset;
+    border: unset;
+    border-right: 1px solid var(--gray);
+
+    position: relative;
+    z-index: auto;
 }
 
-#server_voice section, #server_game section {
-    width: fit-content;
-    margin: 1em auto 1em auto;
+#header2 button:last-child {
+    border-right: unset;
 }
-
-#mumble section {
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-}
-
-/* #server_detail_button_mumble img:hover {
-    background-color: var(--gray);
-} */
-/* 
-#server_detail_button_mumble:active #server_detail_mumble {
-    display: block;
-    animation-name: showfrom_top;
-} */
