@@ -1,3 +1,7 @@
 #head2_game {
     background-color: var(--backgroundcolor) !important;
 }
+
+iframe {
+    margin: 0 5% 0 5%;
+}
