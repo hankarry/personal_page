@@ -20,10 +20,6 @@ p {
     margin: 0 0 0.5em 1em;
 }
 
-[class*="col-"] {
-    
-}
-
 :root {
     --maincolor: #94E9FF;
     --maincolor_thin: rgb(148, 233, 255, 0.5); /* 菜单覆盖色 */
@@ -270,7 +266,7 @@ footer { /* 页脚 */
 }
 @keyframes message_out {
     0% {right: 1em;}
-    100% {right: -20em;}
+    100% {right: -20em; display: none;}
 }
 #message_warn {
     position: fixed;
@@ -279,8 +275,10 @@ footer { /* 页脚 */
     background-color: white;
     border: 1px solid var(--maincolor);
     border-radius: 10px;
-    animation-name: message_into;
-    animation-duration: 1s;
+    animation-name: message_into, message_out;
+    animation-delay: 0s, 10s;
+    animation-duration: 1s, 1s;
+    animation-fill-mode: forwards;
 }
 #message_warn section {
     margin: 5px;
