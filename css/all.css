@@ -20,6 +20,10 @@ p {
     margin: 0 0 0.5em 1em;
 }
 
+[class*="col-"] {
+    
+}
+
 :root {
     --maincolor: #94E9FF;
     --maincolor_thin: rgb(148, 233, 255, 0.5); /* 菜单覆盖色 */
