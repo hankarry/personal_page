@@ -21,7 +21,8 @@
 }
 
 #header2 {
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto;
+    width: 75%;
 }
 
 #reality {

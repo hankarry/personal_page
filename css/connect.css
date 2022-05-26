@@ -6,4 +6,5 @@
 
 #header2 {
     grid-template-columns: auto auto;
+    width: 50%;
 }
