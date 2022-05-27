@@ -16,6 +16,10 @@
     font-family: MiSans, Microsoft YaHei, Arial, Helvetica;
 }
 
+.hr_short {
+    padding: 0 2em 0 2em;
+}
+
 p {
     margin: 0 0 0.5em 1em;
 }
@@ -110,11 +114,16 @@ hr {
     border-right: none;
 } */
 
-.header_img:hover {
+#header>button:hover, #header2>button:hover {
     background-color: var(--maincolor_thin);
 }
-.header_img:active {
+#header>button:active, #header2>button:active {
     background-color: var(--maincolor);
+}
+
+#iframe_head {
+    /* width: 100%; */
+    
 }
 
 /* #header a:link, #header a:visited, #header a:hover, #header a:active {

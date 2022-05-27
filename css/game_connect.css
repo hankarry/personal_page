@@ -96,13 +96,6 @@
     margin: 1em auto 1em auto;
 }
 
-#mumble section {
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-}
-
 /* #server_detail_button_mumble img:hover {
     background-color: var(--gray);
 } */
