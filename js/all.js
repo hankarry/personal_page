@@ -4,8 +4,7 @@
 //         document.getElementById('message_warn').style.display = 'none';
 //     }, 1000)
 // }, 10000)
-window.onbeforeunload = function() {
-}
+
 // window.onload = 
 function jumpto(herf) {
     
@@ -16,5 +15,5 @@ function jumpto(herf) {
 
     setTimeout (function() {
         window.location.href = herf;
-    }, 800)
+    }, 500)
 }
