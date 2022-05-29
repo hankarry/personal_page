@@ -15,23 +15,6 @@
     border-left: unset !important;
 }
 
-@keyframes showfrom_top {
-    0% {height: 0;}
-    100% {height: 10em;}
-}
-@keyframes hidefrom {
-    0% {height: 10em;}
-    100% {height: 0;}
-}
-@keyframes showfrom_top_text {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
-@keyframes hidefrom_text {    
-    0% {opacity: 1;}
-    100% {opacity: 0;}
-}
-
 .button_detail {
     /* min-height: 1em; */
     /* display: block; */
