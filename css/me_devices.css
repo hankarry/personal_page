@@ -1,0 +1,8 @@
+#head2_devices {
+    background-color: var(--backgroundcolor) !important;
+}
+
+ul {
+    list-style-position: inside;
+    list-style-type: none;
+}

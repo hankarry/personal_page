@@ -1,0 +1,18 @@
+#head2_littlepoet {
+    border-bottom: none;
+    background-color: var(--backgroundcolor) !important;
+}
+
+.card section {
+    font-size: 5em;
+    text-align: center;
+    background-image: linear-gradient(to bottom right, rgb(73,188,246), rgb(6,194,174));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.card div {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}

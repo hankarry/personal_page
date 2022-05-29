@@ -9,7 +9,7 @@
 }
 
 #head_me {
-    background-color: var(--backgroundcolor);
+    background-color: var(--backgroundcolor) !important;
     border-bottom: none;
 }
 
@@ -20,38 +20,7 @@
     grid-template-columns: 50% 50%;
 }
 
-#reality {
-    position: relative;
-    margin: 0 5% 0 0;
-    width: 95%;
-    /* height: 30em; */
-    background-color: white;
-    border: 0px solid white;
-    border-radius: 15px;
-
-    animation-name: gointo_left;
-    animation-duration: 1s;
-}
-
-#furry {
-    position: relative;
-    margin: 0 5% 0 0;
-    width: 95%;
-    /* height: 30em; */
-    background-color: white;
-    border: 0px solid white;
-    border-radius: 15px;
-    
-    animation-name: gointo_right;
-    animation-duration: 1s;
-}
-
-#reality {
-    font-size: 2em;
-    text-align: right;
-}
-
-#furry_text {
-    font-size: 2em;
-    text-align: left;
+#header2 {
+    grid-template-columns: auto auto auto auto auto auto;
+    width: 75%;
 }

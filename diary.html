@@ -8,43 +8,45 @@
 		
 		<link rel="stylesheet" type="text/css" href="css/all.css">
         <link rel="stylesheet" type="text/css" href="css/diary.css">
+		<link rel="shortcut icon" href="logo4.jpg">
+
 	</head>
 
     <body>
-		<div class="header">
+		<div id="header">
 			<!-- <span class="header_title">寒Karry的小窝</span> -->
 			<div class="header_div" style="width: 100%; height: 50px;">
 				<img src="logo4.jpg" alt="logo" width="50" height="50">
 			</div>
-			<a href="index.html" class="header_img" id="head_me">
+			<button class="header_img" id="head_me" onclick="jumpto('index.html')">
 				<div>
 					<img src="css/hud/gerenzhongxin.svg" alt="HUD" width="25" height="25"><span class="header_content">我</span>
 				</div>
-			</a>
-			<a href="connect.html" class="header_img" id="head_connect">
+			</button>
+			<button class="header_img" id="head_connect" onclick="jumpto('game_connect.html')">
 				<div>
-					<img src ="css/hud/fuwuqi.svg" alt="HUD" width="25" height="25"><span class="header_content">联机</span>
+					<img src ="css/hud/game.svg" alt="HUD" width="27" height="27"><span class="header_content">游戏</span>
 				</div>
-			</a>
-			<a href="goal.html" class="header_img" id="head_goal">
+			</button>
+			<button class="header_img" id="head_goal" onclick="jumpto('commission.html')">
 				<div>
-					<img src="css/hud/dingdan.svg" alt="HUD" width="25" height="25"><span class="header_content">目标</span>
+					<img src="css/hud/dingdan.svg" alt="HUD" width="25" height="25"><span class="header_content">委托</span>
 				</div>
-			</a>
-			<a href="" class="header_img" id="head_diary">
+			</button>
+			<button class="header_img" id="head_diary" onclick="">
 				<div>
 					<img src="css/hud/xiugaidingdan.svg" alt="HUD" width="25" height="25"><span class="header_content">日志</span>
 				</div>
-			</a>
+			</button>
 			<div class="header_div">
 				
 			</div>
 		</div>
 	
 		<div>
-			<div class="body">
+			<div class="card">
 				<div>
-					<div id="title_div"><img src="css/hud/xiugaidingdan.svg" width="25" height="25"><section class="p_title">开发日志</section></div>
+					<div class="title_div"><img src="css/hud/xiugaidingdan.svg" width="25" height="25"><section class="p_title">开发日志</section></div>
 					<hr>
 					<ul>
 						<li>2022.4.30 开始学习html</li>
@@ -60,12 +62,24 @@
 						<li>2022.5.12 导航栏改进</li>
 						<li>2022.5.13 导航栏改进</li>
 						<li>2022.5.14 界面改进</li>
+						<li>2022.5.15 网页部署在gitee pages,加快访问速度</li>
+						<li>2022.5.16 新增语音服务器,界面改进</li>
+						<li>2022.5.18 琢磨js,重写表格,跟按钮杠上了xwx</li>
+						<li>2022.5.19 跟按钮耗</li>
+						<li>2022.5.20 终于解决按钮的问题了</li>
+						<li>2022.5.21 联机界面改进</li>
+						<li>2022.5.24 新建游戏主选项,联机界面改放其下成为子项</li>
+						<li>2022.5.25 导航栏改进,新页面制作</li>
+						<li>2022.5.26 目标界面制作,新页面规划</li>
+						<li>2022.5.27 新页面制作,疯狂挖坑</li>
+						<li>2022.5.28 新增页面离开效果</li>
+						<li>2022.5.29 多个页面的制作,效果改善</li>
 						<div id="loadings"><div id="loading1"></div><div id="loading2"></div></div>
 					</ul>
 				</div>
 			</div>
 	
-			<div class="body">
+			<div class="card">
 				<div>
 					<section class="p_title">关于此网页的开发</section>
 					<hr>
@@ -83,4 +97,5 @@
 		<hr id="foothr">
 		<footer>Made by hankarry</footer>
     </body>
+	<script src="js/all.js"></script>
 </html>

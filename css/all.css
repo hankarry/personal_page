@@ -16,6 +16,10 @@
     font-family: MiSans, Microsoft YaHei, Arial, Helvetica;
 }
 
+.hr_short {
+    padding: 0 2em 0 2em;
+}
+
 p {
     margin: 0 0 0.5em 1em;
 }
@@ -26,10 +30,11 @@ p {
     --gray: rgba(78, 78, 78, 0.3); /* 灰色 */
     --backgroundcolor: rgba(115, 201, 241, 0.1);
     --font_color_title: #0097bc;
+    --white_gray : rgb(231 231 231); /* 下拉界面背景色 */
 }
 
 body {
-    height: 30em;
+    /* height: 30em; */
     margin: 0;
     /* background:url("D:/网页/images/background.jpg")  no-repeat center center;   加载背景图   背景图不平铺 */
     /* background-size:cover;  让背景图基于容器大小伸缩 */
@@ -44,11 +49,16 @@ hr {
     0% {opacity: 0; left: -100px;}
     100% {opacity: 1; left: 0px;}
 }
+@keyframes goout {
+    0% {opacity: 1; right: 0;}
+    100% {opacity: 0; right: -100px;}
+}
 
-.body { /* 主体设置 */
+.card { /* 主体设置 */
     position: relative;
     animation-name: gointo;
-    animation-duration: 1.5s;
+    animation-duration: 1.3s;
+    animation-fill-mode: both;
 
     height: 100%;
     background-color: white;
@@ -62,10 +72,10 @@ hr {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.header {
+#header {
     background-color: white;
     width: 100%;
-    height: 50px;
+    /* height: 50px; */
     display: grid;
     grid-template-columns: 35% 10% 10% 10% 10% 25%;
 
@@ -73,18 +83,25 @@ hr {
     /* color: rgb(115, 201, 241); */
 }
 
-.header a {
+.header_img {
+    border-top: unset;
+    border-left: unset;
+    background-color: white;
     border-right: 1px solid var(--gray);
-
+    border-width: 1px;
     width: 100%;
-    height: 50px;
+    height: 51px;
     font-size: 1.25em;
     
     display: flex;
     
 }
 
-.header_img, .header_div{
+#head_me {
+    border-left: 1px solid var(--gray) !important;
+}
+
+.header_img, .header_div {
     border-bottom: 1px solid var(--gray);
 }
 #head_me {
@@ -98,23 +115,28 @@ hr {
     
     /* justify-content: center; */
 }
-/* .header a:last-child {
+/* #header a:last-child {
     border-right: none;
 } */
 
-.header_img:hover {
+#header>button:hover, #header2>button:hover {
     background-color: var(--maincolor_thin);
 }
-.header_img:active {
+#header>button:active, #header2>button:active {
     background-color: var(--maincolor);
 }
 
-.header a:link, .header a:visited, .header a:hover, .header a:active {
-    color: black;
-    text-decoration: none;
+#iframe_head {
+    /* width: 100%; */
+    
 }
 
-#title_div {
+/* #header a:link, #header a:visited, #header a:hover, #header a:active {
+    color: black;
+    text-decoration: none;
+} */
+
+.title_div {
     display: flex;
     align-items: center;
     margin-left: 1em;
@@ -135,7 +157,6 @@ hr {
     75% {left: 0em; top: 1.1em;}
     100% {left: 0em; top: 0em;}
 }
-
 @keyframes load_block2 {
     0% {left: 1.1em; top: 1.1em;}
     25% {left: 0em; top: 1.1em;}
@@ -143,13 +164,11 @@ hr {
     75% {left: 1.1em; top: 0em;}
     100% {left: 1.1em; top: 1.1em;}
 }
-
 #loadings {
     width: 2em;
     height: 2em;
     position: relative;
 }
-
 #loading1 {
     width: 1em;
     height: 1em;
@@ -161,21 +180,108 @@ hr {
     animation-duration: 4s;
     animation-iteration-count: infinite;
 }
-
 #loading2 {
     width: 1em;
     height: 1em;
     background-color: var(--maincolor);
     position: absolute;
-    /* border: 1px solid black;
-    border-radius: 5px; */
     animation-name: load_block2;
     animation-duration: 4s;
     animation-iteration-count: infinite;
+}
+
+
+@keyframes button_180 {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: center;
+        -ms-transform:rotate(0deg); 	/* IE 9 */
+        -moz-transform:rotate(0deg); 	/* Firefox */
+        -webkit-transform:rotate(0deg); /* Safari 和 Chrome */
+        -o-transform:rotate(0deg); 	/* Opera */
+    }
+    100% {
+        transform: rotate(180deg);
+        transform-origin: center;
+        -ms-transform:rotate(180deg); 	/* IE 9 */
+        -moz-transform:rotate(180deg); 	/* Firefox */
+        -webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+        -o-transform:rotate(180deg); 	/* Opera */
+    }
+}
+@keyframes button_360 {
+    0% {
+        transform: rotate(180deg);
+        transform-origin: center;
+        -ms-transform:rotate(180deg); 	/* IE 9 */
+        -moz-transform:rotate(180deg); 	/* Firefox */
+        -webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+        -o-transform:rotate(180deg); 	/* Opera */
+    }
+    100% {
+        transform: rotate(360deg);
+        transform-origin: center;
+        -ms-transform:rotate(360deg); 	/* IE 9 */
+        -moz-transform:rotate(360deg); 	/* Firefox */
+        -webkit-transform:rotate(360deg); /* Safari 和 Chrome */
+        -o-transform:rotate(360deg); 	/* Opera */
+    }
+}
+
+.button_arrow { /* 按钮-箭头 */
+    height: 100%;
+    width: 100%;
+    background-color: unset;
+    border: 0px;
+
+    /* animation-name: button_180; */
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+.button_detail {
+    position: relative;
+    animation-name: showfrom_top;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+.button_detail_text {
+    text-align: left;
+    opacity: 0;
+    animation-name: showfrom_top_text;
+    animation-duration: 0.2s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
 }
 
 footer { /* 页脚 */
     text-align: center;
     font-size: 0.5em;
     color: #888888;
+}
+
+@keyframes message_into {
+    0% {right: -20em;}
+    100% {right: 1em;}
+}
+@keyframes message_out {
+    0% {right: 1em;}
+    100% {right: -20em; display: none;}
+}
+#message_warn {
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    background-color: white;
+    border: 1px solid var(--maincolor);
+    border-radius: 10px;
+    animation-name: message_into, message_out;
+    animation-delay: 0s, 10s;
+    animation-duration: 1s, 1s;
+    animation-fill-mode: forwards;
+}
+#message_warn section {
+    margin: 5px;
+    padding: 3px;
+    border: 1px solid red;
+    border-radius: 5px;
 }
