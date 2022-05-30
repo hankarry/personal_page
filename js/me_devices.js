@@ -1,0 +1,1 @@
+document.getElementById('head2_devices').onclick = ''
