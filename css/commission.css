@@ -1,3 +1,13 @@
+#head_commission {
+    background-color: var(--backgroundcolor) !important;
+    border-bottom: none;
+}
+
+#header2 {
+    grid-template-columns: auto;
+    width: 50%;
+}
+
 .card section {
     font-size: 5em;
     text-align: center;

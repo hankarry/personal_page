@@ -27,6 +27,10 @@
     0% {right: -10em; opacity: 0;}
     100% {right: 0em; opacity: 1;}
 }
+@keyframes hide_from_right {
+    0% {right: 0em; opacity: 1;}
+    100% {right: -10em; opacity: 0;}
+}
 .card_small {
     position: relative;
     width: 95%;

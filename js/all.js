@@ -8,10 +8,15 @@
 // window.onload = 
 function jumpto(herf) {
     
-    var animation = document.getElementsByClassName('card');
-    for (var i = 0; i < animation.length; i++)
-    animation[i].style.animationName = 'goout';
-    // animation[i].style.animationDuration = '0.7s';
+    var animation_card = document.getElementsByClassName('card');
+    var animation_card_small = document.getElementsByClassName('card_small');
+    for (var i = 0; i < animation_card.length; i++) {
+        animation_card[i].style.animationName = 'goout';
+    }
+    for (var i = 0; i < animation_card_small.length; i++) {
+        animation_card_small[i].style.animationName = 'hide_from_right';
+        animation_card_small[i].style.animationDelay = '0s';
+    }
 
     setTimeout (function() {
         window.location.href = herf;
