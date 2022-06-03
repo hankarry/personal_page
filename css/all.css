@@ -92,6 +92,7 @@ hr {
 }
 
 #header {
+    font-size: 1.25em;
     position: sticky;
     position: -webkit-sticky;
     z-index: 10;
@@ -101,7 +102,6 @@ hr {
     /* height: 50px; */
     display: grid;
     grid-template-columns: var(--header1_grid);
-
     /* text-align: center; */
     /* color: rgb(115, 201, 241); */
 }

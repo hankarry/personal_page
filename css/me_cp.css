@@ -3,6 +3,24 @@
     background-color: var(--backgroundcolor) !important;
 }
 
+body {
+    background-image: url(../images/back_woer.jpg);
+    background-repeat: no-repeat;
+    /* background-position: top center; */
+    background-size: 100vw;
+}
+
+@keyframes transparent_change {
+    0% {background-color: rgba(255, 255, 255, 1);}
+    100% {background-color: rgba(255, 255, 255, 0.2)}
+}
+
+#header, #header button, #div_header2, #header2{
+    animation-name: transparent_change;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
 .card section {
     font-size: 5em;
     text-align: center;
