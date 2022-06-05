@@ -35,9 +35,9 @@ document.onreadystatechange = function() {
     //     document.getElementById('process').style.animationName = 'process75';
     // }
     if (document.readyState == 'complete') {
-        setTimeout (function() {
+        // setTimeout (function() {
             document.getElementById('process').style.animationName = 'process100';
             document.getElementById('div_process').style.animationName = 'process_leave';
-        }, 1000)
+        // }, 1000)
     }
 }
