@@ -23,21 +23,8 @@ function jumpto(herf) {
     }, 500)
 }
 
-document.write("<div id='div_process'><div id='process'></div></div>")
-// document.getElementById('process').style.animationName = 'process50';
-document.onreadystatechange = function() {
-    // if (document.readyState == 'interactive' ) {
-    //     document.getElementById('process').style.animationName = 'process50';
-    // }
-    // if (document.readyState == 'loading') {
-    // }
-    // if (document.readyState == 3 ) {
-    //     document.getElementById('process').style.animationName = 'process75';
-    // }
-    if (document.readyState == 'complete') {
-        // setTimeout (function() {
-            document.getElementById('process').style.animationName = 'process100';
-            document.getElementById('div_process').style.animationName = 'process_leave';
-        // }, 1000)
-    }
-}
+var footer = "<hr id='foothr'><footer>Made by hankarry</footer>";
+var foot = document.createElement('div');
+foot.id = 'foot';
+document.getElementsByTagName('body')[0].appendChild(foot);
+document.getElementById('foot').innerHTML = footer

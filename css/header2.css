@@ -51,6 +51,11 @@
     z-index: auto;
 }
 
-#header2 button:last-child {
+#header2 > button:last-child {
     border-right: unset;
+    border-bottom-right-radius: 10px;
+}
+
+#header2 > button:first-child {
+    border-bottom-left-radius: 10px;
 }
