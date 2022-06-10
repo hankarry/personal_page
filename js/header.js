@@ -21,5 +21,5 @@ xhttp.onreadystatechange = function () {
         // document.write = this.responseText
     }
 };
-xhttp.open("GET", "header.html", true)
+xhttp.open("GET", "header.html", false)
 xhttp.send()

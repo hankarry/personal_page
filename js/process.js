@@ -1,4 +1,11 @@
 document.write("<div id='div_process'><div id='process'></div></div>")
+
+// var process = document.createElement('div');
+// process.id = 'div_process';
+// var body = document.getElementsByTagName('body')[0]
+// document.getElementsByTagName('body')[0].insertBefore(process, body.childNodes[0])
+// document.getElementById('div_process').innerHTML = "<div id='process'>"
+
 document.onreadystatechange = function() {
     // if (document.readyState == 'interactive' ) {
     //     document.getElementById('process').style.animationName = 'process50';
