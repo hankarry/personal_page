@@ -1,5 +1,4 @@
 // document.createElement('div').id = 'header'
-// AddSheetFile("css/all.css");
 
 function AddSheetFile(path) {
     var fileref = document.createElement("link")
@@ -10,6 +9,8 @@ function AddSheetFile(path) {
     head.insertBefore(fileref, head.childNodes[4]);
     // appendChild()方法在最后插入
 }
+AddSheetFile("css/all.css");
+AddSheetFile("css/header.css")
 
 document.write("<div id='header'></div>")
 var xhttp

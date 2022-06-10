@@ -1,0 +1,64 @@
+
+@media screen and (max-width: 600px) {
+    #header {
+        --header1_grid : 25% 15% 15% 15% 15% 15%;
+    }
+}
+
+#header {
+    font-size: 1.25em;
+    position: sticky;
+    top: 0;
+    position: -webkit-sticky;
+    z-index: 10;
+    background-color: white;
+    width: 100%;
+    /* height: 50px; */
+    display: grid;
+    grid-template-columns: var(--header1_grid);
+    /* text-align: center; */
+    /* color: rgb(115, 201, 241); */
+}
+
+.header_img {
+    border-top: unset;
+    border-left: unset;
+    background-color: white;
+    border-right: 1px solid var(--gray);
+    border-width: 1px;
+    width: 100%;
+    height: 51px;
+    font-size: 1.25em;
+    
+    display: flex;
+    
+}
+
+#head_me {
+    border-left: 1px solid var(--gray) !important;
+}
+
+.header_img, .header_div {
+    border-bottom: 1px solid var(--gray);
+}
+#head_me {
+    border-left: 1px solid var(--gray);
+}
+
+.header_img div { /* 导航栏图片加文字的div */
+    margin: auto;
+    display: flex;
+    align-items: center;
+    
+    /* justify-content: center; */
+}
+/* #header a:last-child {
+    border-right: none;
+} */
+
+#header>button:hover, #header2>button:hover {
+    background-color: var(--maincolor_thin);
+}
+#header>button:active, #header2>button:active {
+    background-color: var(--maincolor);
+}
