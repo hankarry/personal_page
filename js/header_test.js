@@ -46,9 +46,6 @@ function Headers(number, now_page1, now_page2, header2_gui) {
             //     page_request("header2_me.html")
             // }
         
-        
-        
-        
         // function page_request(page) {
         
             var xhttp
