@@ -32,7 +32,6 @@ p {
     --font_color_title: #0097bc;
     --white_gray : rgb(231 231 231); /* 下拉界面背景色 */
 
-    --header1_grid : 35% 10% 10% 10% 10% 25%;
 }
 
 body {

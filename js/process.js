@@ -1,10 +1,11 @@
-document.write("<div id='div_process'><div id='process'></div></div>")
+// document.write("<div id='div_process'><div id='process'></div></div>")
 
-// var process = document.createElement('div');
-// process.id = 'div_process';
-// var body = document.getElementsByTagName('body')[0]
-// document.getElementsByTagName('body')[0].insertBefore(process, body.childNodes[0])
-// document.getElementById('div_process').innerHTML = "<div id='process'>"
+var process = document.createElement('div');
+process.id = 'div_process';
+var body = document.getElementsByTagName('body')[0];
+document.body.appendChild(process);
+// document.body.insertBefore(process, document.body.firstElementChild)
+document.getElementById('div_process').innerHTML = "<div id='process'>";
 
 document.onreadystatechange = function() {
     // if (document.readyState == 'interactive' ) {

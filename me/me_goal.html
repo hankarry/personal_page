@@ -11,20 +11,22 @@
 		<link rel="stylesheet" type="text/css" href="css/header.css">
 		<link rel="stylesheet" type="text/css" href="css/header2.css">
 		<link rel="stylesheet" type="text/css" href="css/me.css">
-		<link rel="stylesheet" type="text/css" href="css/me_cp.css">
+		<link rel="stylesheet" type="text/css" href="css/me_goal.css">
+
+		
 		<link rel="shortcut icon" href="logo4.jpg">
+
 		<script src="js/process.js"></script>
 	</head>
 
 	<body>
 		<noscript>You need to enable JavaScript to run this app.</noscript>
-        <!-- <iframe id="iframe_head" src="../header.html" MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no height=“auto” width="100%"></iframe> -->
 		<div id="header">
 			<!-- <section class="header_title">寒Karry的小窝</section> -->
-			<div class="header_div" style="width: 100%; height: 50px;">
-				<!-- <img src="logo4.jpg" alt="logo" width="50" height="50"> -->
+			<div class="header_div" style="width: 100%; height: 40px;">
+				<img src="logo4.jpg" alt="logo" width="40" height="40">
 			</div>
-			<button class="header_img" id="head_me" onclick="">
+			<button class="header_img" id="head_me" onclick="jumpto('index.html')">
 				<div>
 					<img src="css/hud/gerenzhongxin.svg" alt="HUD" width="25" height="25"><section class="header_content">我</section>
 				</div>
@@ -34,7 +36,7 @@
 					<img src ="css/hud/game.svg" alt="HUD" width="27" height="27"><section class="header_content">游戏</section>
 				</div>
 			</button>
-			<button class="header_img" id="head_commission" onclick="jumpto('commission.html')">
+			<button class="header_img" id="head_commission" onclick="">
 				<div>
 					<img src="css/hud/dingdan.svg" alt="HUD" width="25" height="25"><section class="header_content">委托</section>
 				</div>
@@ -58,27 +60,46 @@
 				</div>
 			</div>
 		</div>
-
-		<!-- <div id="body_me">
+        
+		<div class="div_card_small" id="div_card">
 			
-			<div id="reality">
-				<section id="reality_text" style="font-family: MiSans_thin, Microsoft YaHei, Arial, Helvetica;">reality</section>
+			<div class="card_small" id="card1">
+				<section class="p_title">考大学</section>
+				<hr>
+				
 			</div>
-			<div id="furry">
-				<section id="furry_text" style="font-family: MiSans_thin, Microsoft YaHei, Arial, Helvetica;">furry</section>
+	
+			<div class="card_small" id="card2">
+				<section class="p_title">做网页</section>
+				<hr>
+	
 			</div>
-		</div> -->
 
-		
-		<div class="card">
+			<div class="card_small" id="card3">
+				<section class="p_title">整设子</section>
+				<hr>
+	
+			</div>
+
+			<div class="card_small" id="card4">
+				<section class="p_title">qwp</section>
+				<hr>
+	
+			</div>
+
+			
+		</div>
+
+
+		<!-- <div class="card">
 			<section>施工中</section>
 			<div>
 				<img src="images/index_background2.jpg" alt="me" width="300" height="300">
 			</div>
-		</div>
+		</div> -->
 
 
     </body>
 	<script src="js/all.js"></script>
-	<script src="js/me_cp.js"></script>
+	<script src="js/me_goal.js"></script>
 </html>

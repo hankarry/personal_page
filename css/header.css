@@ -1,3 +1,7 @@
+:root {
+    --header1_grid : 35% 10% 10% 10% 10% 25%;
+
+}
 
 @media screen and (max-width: 600px) {
     #header {
@@ -6,7 +10,7 @@
 }
 
 #header {
-    font-size: 1.25em;
+    font-size: 1em;
     position: sticky;
     top: 0;
     position: -webkit-sticky;
@@ -27,7 +31,7 @@
     border-right: 1px solid var(--gray);
     border-width: 1px;
     width: 100%;
-    height: 51px;
+    height: 41px;
     font-size: 1.25em;
     
     display: flex;
@@ -61,4 +65,9 @@
 }
 #header>button:active, #header2>button:active {
     background-color: var(--maincolor);
+}
+
+.header_img div section {
+    white-space: nowrap;
+    overflow: hidden;
 }
