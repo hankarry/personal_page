@@ -24,7 +24,7 @@ p {
     margin: 0 0 0.5em 1em;
 }
 
-:root {
+:root {    
     --maincolor: #94E9FF;
     --maincolor_thin: rgb(148, 233, 255, 0.5); /* 菜单覆盖色 */
     --gray: rgba(78, 78, 78, 0.3); /* 灰色 */
@@ -69,6 +69,7 @@ hr {
 
 #div_process {
     position: fixed;
+    top: 1px;
     margin: 1px;
     width: 100%;
     z-index: 11;
@@ -319,8 +320,8 @@ footer { /* 页脚 */
     bottom: 1em;
     right: 1em;
     background-color: white;
-    border: 1px solid var(--maincolor);
-    border-radius: 10px;
+    /* border: 0px solid var(--maincolor); */
+    border-radius: 5px;
 
     animation-name: message_into, message_out;
     -o-animation-name: message_into, message_out;
@@ -346,7 +347,12 @@ footer { /* 页脚 */
 
 }
 #message_warn section {
-    margin: 5px;
+    /* margin: 5px; */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     padding: 3px;
     background-color: rgba(255, 0, 0, 0.1);
     border: 1px solid red;

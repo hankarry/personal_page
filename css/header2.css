@@ -10,8 +10,9 @@
 }
 
 #div_header2 {
-    background-color: var(--backgroundcolor);
+    /* background-color: var(--backgroundcolor); */
     grid-column: 1 / 7;
+    background-color: transparent !important;
     /* width: 80%; */
     /* height: 4em; */
 }
@@ -20,7 +21,7 @@
     height: 100%;
     margin: 0 auto 0 auto;
     
-    background-color: white;
+    background-color: transparent;
 
     display: grid;
     /* grid-template-rows: auto 2em; */

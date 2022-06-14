@@ -9,8 +9,8 @@
 }
 
 #head_me {
-    background-color: var(--backgroundcolor) !important;
-    border-bottom: none;
+    /* background-color: var(--backgroundcolor) !important;
+    border-bottom: none; */
 }
 
 #body_me {

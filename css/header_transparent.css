@@ -8,8 +8,11 @@
 }
 
 #header, #header button, #div_header2, #header2 {
+    opacity: 1;
     animation-name: transparent_change1;
+    /* animation-name: unset; */
     animation-duration: 1s;
+    animation-delay: 0s !important;
     animation-fill-mode: both;
 }
 #header:hover, #header button:hover, #div_header2:hover, #header2:hover {

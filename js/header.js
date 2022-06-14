@@ -9,36 +9,24 @@ function AddSheetFile(path) {
     head.insertBefore(fileref, head.childNodes[4]);
     // appendChild()方法在最后插入
 }
-AddSheetFile("css/all.css");
-AddSheetFile("css/header.css")
+AddSheetFile("/css/all.css");
+AddSheetFile("/css/header.css")
 
-document.write("<div id='header'></div>")
-var xhttp
-xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("header").innerHTML = this.responseText;
-        // document.getElementsByTagName('body')[0].write = this.responseText
-        // document.write = this.responseText
-    }
-};
-xhttp.open("GET", "/header/header.html", false)
-xhttp.send()
+// document.write("<div id='header'></div>")
+// var xhttp
+// xhttp = new XMLHttpRequest();
+// xhttp.onreadystatechange = function () {
+//     if (this.readyState == 4 && this.status == 200) {
+//         document.getElementById("header").innerHTML = this.responseText;
+//         // document.getElementsByTagName('body')[0].write = this.responseText
+//         // document.write = this.responseText
+//     }
+// };
+// xhttp.open("GET", "/header/header.html", false)
+// xhttp.send()
 
 // document.createElement('div').id = 'header'
 // AddSheetFile("css/all.css");
-
-function AddSheetFile(path) {
-    var fileref = document.createElement("link")
-    fileref.rel = "stylesheet";
-    fileref.type = "text/css";
-    fileref.href = path;
-    var head = document.getElementsByTagName('head')[0];
-    head.insertBefore(fileref, head.childNodes[4]);
-    // appendChild()方法在最后插入
-}
-AddSheetFile("/css/header.css")
-
 
 // 导航栏数量,当前导航栏1的id,当前导航栏2的id,导航栏2的html
 function Headers(number, now_page1, now_page2, header2_gui) {
@@ -59,7 +47,10 @@ function Headers(number, now_page1, now_page2, header2_gui) {
     xhttp.open("GET", "/header/header.html", false)
     xhttp.send()
 
+    document.getElementById(now_page1).onclick = "unset"
+
     document.getElementById(now_page1).style.backgroundColor = "var(--backgroundcolor)"
+    document.getElementById(now_page1).style.borderBottom = "unset"
     if (number == 2) {
         // document.getElementsByTagName('body')[0].write = "<script src = 'js/header2.js'></script>";
         // var script = document.createElement('script');
@@ -72,22 +63,21 @@ function Headers(number, now_page1, now_page2, header2_gui) {
         
             //     page_request("header2_me.html")
             // }
+        AddSheetFile("/css/header2.css")
         
-        // function page_request(page) {
+        var xhttp
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("header2").innerHTML = this.responseText;
+                // document.getElementsByTagName('body')[0].write = this.responseText
+                // document.write = this.responseText
+            }
+        };
+        xhttp.open("GET", header2_gui, false)
+        xhttp.send()
+        document.getElementById(now_page2).style.backgroundColor = "var(--backgroundcolor)"
         
-            var xhttp
-            xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function () {
-                if (this.readyState == 4 && this.status == 200) {
-                    document.getElementById("header2").innerHTML = this.responseText;
-                    // document.getElementsByTagName('body')[0].write = this.responseText
-                    // document.write = this.responseText
-                }
-            };
-            xhttp.open("GET", header2_gui, false)
-            xhttp.send()
-            document.getElementById(now_page2).style.backgroundColor = "var(--backgroundcolor)"
-        
-        // }
+        document.getElementById(now_page2).onclick = "unset"
     }
-}S
+}
