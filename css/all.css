@@ -125,7 +125,7 @@ hr {
 
     height: 100%;
     background-color: white;
-    margin: 1em auto 1em auto;
+    margin: 1em auto 0 auto;
     width: 85%;
     padding: 0.5em 0 0.5em 0;
 
@@ -307,6 +307,13 @@ footer { /* 页脚 */
     color: #888888;
 }
 
+#top_message {
+    display: flex;
+    background-color: var(--maincolor);
+    align-items: center;
+    justify-content: center;
+}
+
 @keyframes message_into {
     0% {right: -20em;}
     100% {right: 1em;}
@@ -315,7 +322,7 @@ footer { /* 页脚 */
     0% {right: 1em;}
     100% {right: -20em; display: none;}
 }
-#message_warn {
+.message_warn {
     position: fixed;
     bottom: 1em;
     right: 1em;
@@ -346,15 +353,35 @@ footer { /* 页脚 */
     -webkit-animation-fill-mode: forwards;
 
 }
-#message_warn section {
-    /* margin: 5px; */
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
+.message_warn_div {
+    display: flex;
+    background-color: rgba(249, 230, 0, 0.1);
+    border: 2px solid rgb(249, 230, 0);
     padding: 3px;
-    background-color: rgba(255, 0, 0, 0.1);
-    border: 1px solid red;
     border-radius: 5px;
+}
+
+@keyframes showwarn {
+    0% {max-height: 0;}
+    100% {max-height: 10em;}
+}
+
+.error {
+    overflow: hidden;
+    margin: 1em auto 0 auto;
+    width: 90%;
+    /* max-height: 0; */
+    background-color: white;
+    /* border-radius: 10px; */
+    animation: showwarn 3s ease 0s 1 normal both;
+}
+
+.error_div {
+    display: flex;
+    background-color: rgba(255, 0, 0, 0.1);
+    border: 2px solid rgb(255, 0, 0);
+    padding: 3px;
+    /* animation: showwarn 5s ease 0s 1 normal both; */
+    /* border-radius: 10px; */
 }

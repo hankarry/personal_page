@@ -3,6 +3,16 @@
     /* background-color: var(--backgroundcolor) !important; */
 }
 
+#school_img {
+    position: relative;
+    width: 1vw;
+    height: 1vh;
+}
+
+#school {
+    
+}
+
 #reality {
     position: relative;
     margin: 0 5% 0 0;

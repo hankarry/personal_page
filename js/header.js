@@ -31,10 +31,10 @@ AddSheetFile("/css/header.css")
 // 导航栏数量,当前导航栏1的id,当前导航栏2的id,导航栏2的html
 function Headers(number, now_page1, now_page2, header2_gui) {
     
-    // document.write("<div id='header'></div>")
-    var header = document.createElement('div');
-    header.id = "header";
-    document.getElementsByTagName('body')[0].insertBefore(header, document.body.firstChild);
+    document.write("<div id='header'></div>")
+    // var header = document.createElement('div');
+    // header.id = "header";
+    // document.getElementsByTagName('body')[0].insertBefore(header, document.body.firstChild);
     var xhttp
     xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
@@ -80,4 +80,21 @@ function Headers(number, now_page1, now_page2, header2_gui) {
         
         document.getElementById(now_page2).onclick = "unset"
     }
+}
+
+function jumpto(herf) {
+    
+    var animation_card = document.getElementsByClassName('card');
+    var animation_card_small = document.getElementsByClassName('card_small');
+    for (var i = 0; i < animation_card.length; i++) {
+        animation_card[i].style.animationName = 'goout';
+    }
+    for (var i = 0; i < animation_card_small.length; i++) {
+        animation_card_small[i].style.animationName = 'hide_from_right';
+        animation_card_small[i].style.animationDelay = '0s';
+    }
+
+    setTimeout (function() {
+        window.location.href = herf;
+    }, 500)
 }
