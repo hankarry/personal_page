@@ -307,11 +307,19 @@ footer { /* 页脚 */
     color: #888888;
 }
 
+@keyframes max_hight {
+    0% {max-height: 0;}
+    100% {max-height: var(--max_hight);}
+}
+
 #top_message {
     display: flex;
     background-color: var(--maincolor);
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    --max_hight: 3em;
+    animation: max_hight 2s ease 1s 1 normal both;
 }
 
 @keyframes message_into {
@@ -362,11 +370,6 @@ footer { /* 页脚 */
     border-radius: 5px;
 }
 
-@keyframes showwarn {
-    0% {max-height: 0;}
-    100% {max-height: 10em;}
-}
-
 .error {
     overflow: hidden;
     margin: 1em auto 0 auto;
@@ -374,7 +377,8 @@ footer { /* 页脚 */
     /* max-height: 0; */
     background-color: white;
     /* border-radius: 10px; */
-    animation: showwarn 3s ease 0s 1 normal both;
+    --max_hight: 10em;
+    animation: max_hight 2s ease 0s 1 normal both;
 }
 
 .error_div {
