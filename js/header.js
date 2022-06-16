@@ -31,10 +31,10 @@ AddSheetFile("/css/header.css")
 // 导航栏数量,当前导航栏1的id,当前导航栏2的id,导航栏2的html
 function Headers(number, now_page1, now_page2, header2_gui) {
     
-    document.write("<div id='header'></div>")
-    // var header = document.createElement('div');
-    // header.id = "header";
-    // document.getElementsByTagName('body')[0].insertBefore(header, document.body.firstChild);
+    // document.write("<div id='header'></div>")
+    var header = document.createElement('div');
+    header.id = "header";
+    document.getElementsByTagName('body')[0].insertBefore(header, document.body.childNodes[2]);
     var xhttp
     xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {

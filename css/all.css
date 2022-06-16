@@ -67,7 +67,7 @@ hr {
     100% {top: -0.5em;}
 }
 
-#div_process {
+#div_head_process {
     position: fixed;
     top: 1px;
     margin: 1px;
@@ -80,7 +80,7 @@ hr {
     /* height: 1em; */
 }
 
-#process {
+#head_process {
     height: 0.5em;
     width: 0%;
     border-radius: 10px;
@@ -133,6 +133,10 @@ hr {
     border-radius: 15px;
 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card > div > section {
+    margin: 0 1em 0 1em;
 }
 
 #iframe_head {
@@ -364,8 +368,9 @@ footer { /* 页脚 */
 
 .message_warn_div {
     display: flex;
-    background-color: rgba(249, 230, 0, 0.1);
-    border: 2px solid rgb(249, 230, 0);
+    background-color: rgba(249, 170, 0, 0.1);
+    border: 1.5px solid rgb(249, 170, 0);
+    color: rgb(249, 170, 0);
     padding: 3px;
     border-radius: 5px;
 }
@@ -384,8 +389,28 @@ footer { /* 页脚 */
 .error_div {
     display: flex;
     background-color: rgba(255, 0, 0, 0.1);
-    border: 2px solid rgb(255, 0, 0);
+    border: 1.5px solid rgb(255, 0, 0);
+    color: rgb(255, 0, 0);
     padding: 3px;
     /* animation: showwarn 5s ease 0s 1 normal both; */
     /* border-radius: 10px; */
+}
+
+.div_process {
+    border: 1px solid var(--gray);
+    border-radius: 10px;
+}
+@keyframes process {
+    0% {width: 0;}
+    100% {width: var(--process);}
+}
+.process {
+    height: 0.5em;
+    width: 0%;
+    border-radius: 10px;
+    margin: auto 0 auto 0;
+    background-color: rgb(0, 157, 255);
+    box-shadow: 0px 0px 10px 0px rgb(0 157 255);
+    /* transform-origin: width 1s; */
+    animation: process 1s ease-out 0s normal both;
 }

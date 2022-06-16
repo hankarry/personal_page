@@ -26,10 +26,10 @@
 // AddSheetFile("css/all.css");
 
 var d = new Date;
-var day = d.getDate();
+var birthday_count = 19 - d.getDate();
 // var birthday = 19 - day;
-var birthday_count = 19 - day;
-console.log (day)
+// var birthday_count = 19 - day;
+// console.log (day)
 if (birthday_count == 0) {
     birthday_text = "今天是咱的生日!"
 }
