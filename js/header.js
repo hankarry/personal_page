@@ -10,7 +10,6 @@ function AddSheetFile(path) {
     // appendChild()方法在最后插入
 }
 AddSheetFile("/css/all.css");
-AddSheetFile("/css/header.css")
 
 // document.write("<div id='header'></div>")
 // var xhttp
@@ -29,7 +28,7 @@ AddSheetFile("/css/header.css")
 // AddSheetFile("css/all.css");
 
 // 导航栏数量,当前导航栏1的id,当前导航栏2的id,导航栏2的html
-function Headers(number, now_page1, now_page2, header2_gui) {
+function Headers(number, now_page1, now_page2, header2_gui, transparent) {
     
     // document.write("<div id='header'></div>")
     var header = document.createElement('div');
@@ -51,6 +50,13 @@ function Headers(number, now_page1, now_page2, header2_gui) {
 
     document.getElementById(now_page1).style.backgroundColor = "var(--backgroundcolor)"
     document.getElementById(now_page1).style.borderBottom = "unset"
+
+    if (transparent == 'true') {
+        AddSheetFile("/css/header_transparent.css")
+    } else {
+        AddSheetFile("/css/header.css")
+    }
+
     if (number == 2) {
         // document.getElementsByTagName('body')[0].write = "<script src = 'js/header2.js'></script>";
         // var script = document.createElement('script');

@@ -1,4 +1,5 @@
-@font-face { /* 字体MiSans引用 */
+/* 字体MiSans引用 */
+@font-face {
     font-family: MiSans;
     src: url(ttf/MiSans-Normal.ttf);
 }
@@ -383,7 +384,6 @@ footer { /* 页脚 */
     background-color: white;
     /* border-radius: 10px; */
     --max_hight: 10em;
-    animation: max_hight 2s ease 0s 1 normal both;
 }
 
 .error_div {
@@ -392,6 +392,7 @@ footer { /* 页脚 */
     border: 1.5px solid rgb(255, 0, 0);
     color: rgb(255, 0, 0);
     padding: 3px;
+    animation: max_hight 2s ease 0s 1 normal both;
     /* animation: showwarn 5s ease 0s 1 normal both; */
     /* border-radius: 10px; */
 }
@@ -405,7 +406,7 @@ footer { /* 页脚 */
     100% {width: var(--process);}
 }
 .process {
-    height: 0.5em;
+    height: 9px;
     width: 0%;
     border-radius: 10px;
     margin: auto 0 auto 0;

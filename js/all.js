@@ -43,4 +43,4 @@ if (birthday_count < 0) {
 var newelement = document.createElement("div");
 newelement.id = "top_message";
 document.body.insertBefore(newelement, document.body.firstChild)
-document.getElementById("top_message").innerHTML = "<img src='/css/hud/cake.svg' width='25' height='25'><section>" + birthday_text + "</section>"
+document.getElementById("top_message").innerHTML = "<img src='/css/hud/cake.svg' width='25' height='25'><section>" + birthday_text + "🎉</section>"

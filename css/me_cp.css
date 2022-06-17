@@ -1,6 +1,7 @@
 #head2_cp {
     border-bottom: none;
     background-color: var(--backgroundcolor) !important;
+    object-fit: cover;
 }
 
 body {

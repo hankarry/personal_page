@@ -51,12 +51,12 @@
 
 #skill {
     display: grid;
+    /* width: 50%; */
     grid-template-columns: auto auto;
 }
 
 .div_process {
-    margin-left: auto;
-    margin-right: 1em;
+    margin: auto 1em auto auto;
     height: 0.5em;
     width: 90%;
 }
@@ -67,4 +67,11 @@
 .skill_section {
     /* display: inline-block; */
     margin-left: 1em;
+}
+
+#skill_chart {
+    width: 5em;
+    height: 5em;
+    border: 1px solid var(--gray);
+    border-radius: 100%;
 }
