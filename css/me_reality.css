@@ -74,4 +74,14 @@
     height: 5em;
     border: 1px solid var(--gray);
     border-radius: 100%;
+    overflow: hidden;
+    
+}
+
+#skill_chart_part1 {
+    /* border-radius: 100%; */
+    /* position: relative; */
+    /* top: auto; */
+    /* left: auto; */
+    background-color: aqua;
 }

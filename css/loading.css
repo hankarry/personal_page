@@ -1,0 +1,63 @@
+/* loading的模板文件 */
+@keyframes loading_show {
+    0% {opacity: 0;}
+    100% {background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%); opacity: 1;}
+}
+@keyframes loading_hide {
+    0% {background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%); opacity: 1;}
+    100% {opacity: 0;}
+}
+@keyframes loading_font_show {
+    0% {font-size: 8vw;}
+    25% {font-size: 12vw;}
+    50% {font-size: 9.75vw;}
+    70% {font-size: 10.25vw;}
+    100% {font-size: 10vw;}
+}
+@keyframes loading_font_hide {
+    0% {font-size: 10vw;}
+    25% {font-size: 10.25vw;}
+    50% {font-size: 9.75vw;}
+    70% {font-size: 12vw;}
+    100% {font-size: 8vw;}
+}
+/* @keyframes loading_font_disappear {
+    0% {font-size: 10vw;}
+    25% {font-size: 12vw;}
+    50% {font-size: 9.75vw;}
+    70% {font-size: 10.25vw;}
+    100% {font-size: 10vw;}
+} */
+
+#loading {
+    position: fixed;
+    z-index: 14;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    /* background-color: aqua; */
+    /* animation: loading_show 1s ease 0s 1 normal both; */
+    animation-name: loading_show;
+    animation-fill-mode: both;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-timing-function: ease;
+    /* animation-iteration-count: 1; */
+    /* animation-direction: alternate; */
+}
+
+#loading > section {
+    position: absolute;
+    width: 90vw;
+    color: rgb(80, 153, 198);
+    /* height: 100vh; */
+    margin: 40vh auto 40vh auto;
+    /* color: white; */
+    /* padding: auto; */
+    font-size: 8vw;
+    text-align: center;
+    /* vertical-align: middle; */
+    /* line-height: 2em; */
+    /* border: 1px solid black; */
+    animation: loading_font_show 1s ease 0s 1 normal both;
+}

@@ -42,5 +42,5 @@ if (birthday_count < 0) {
 // document.write = "<div id='top_message'><img src='/css/hud/cake.svg' width='25' height='25'><section>咱的生日快到啦</section></div>"
 var newelement = document.createElement("div");
 newelement.id = "top_message";
-document.body.insertBefore(newelement, document.body.firstChild)
+document.getElementById("body").insertBefore(newelement, document.getElementById("body").firstChild)
 document.getElementById("top_message").innerHTML = "<img src='/css/hud/cake.svg' width='25' height='25'><section>" + birthday_text + "🎉</section>"

@@ -24,5 +24,8 @@ document.onreadystatechange = function() {
         // document.getElementById('process').style.width = '100%'
         document.getElementById('div_head_process').style.animationName = 'process_leave'
         document.getElementById('head_process').style.animationDuration = '1.5s';
+
+        // document.getElementById("loading").style.animation = "loading_show 1s ease 0s 1 reverse both"
+        // document.getElementById("loading").lastChild.style.animation = "loading_font_show 1s ease 0s 1 reverse both"
     }
 }

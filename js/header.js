@@ -31,9 +31,10 @@ AddSheetFile("/css/all.css");
 function Headers(number, now_page1, now_page2, header2_gui, transparent) {
     
     // document.write("<div id='header'></div>")
-    var header = document.createElement('div');
+    var header = document.createElement("div");
     header.id = "header";
-    document.getElementsByTagName('body')[0].insertBefore(header, document.body.childNodes[2]);
+    // document.getElementsByTagName('body')[0].insertBefore(header, document.body.childNodes[2]);
+    document.getElementById("body").insertBefore(header, document.getElementById("body").childNodes[2]);
     var xhttp
     xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
