@@ -85,3 +85,22 @@
     /* left: auto; */
     background-color: aqua;
 }
+
+@keyframes show {
+    0% {opacity: 0;font-size: 3em;}
+    50% {opacity: 0.5;font-size: 6em;}
+    100% {opacity: 1; font-size: 5em;}
+}
+#birthday {
+    display: flex;
+    overflow: hidden;
+    /* word-break: break-all; */
+    width: 50%;
+    margin: 2em auto 0 30vw;
+    animation: show 2s ease 0s 1 normal both;
+    align-items: center;
+}
+#birthday section {
+    /* font-size: 5em; */
+    color: rgb(78, 154, 221);
+}
