@@ -5,16 +5,16 @@ error#fa0804
 warn#f9e600
 
 右下角警告
-'''
-<div class="message_warn">
-    <div class="message_warn_div">
-        <img src="/css/hud/warn.svg" height="25" width="25"><section></section>
+
+    <div class="message_warn">
+        <div class="message_warn_div">
+            <img src="/css/hud/warn.svg" height="25" width="25"><section></section>
+        </div>
     </div>
-</div>
-'''
+
 
 CSS动画适配
-'''
+
     animation-name: message_into, message_out;
     -o-animation-name: message_into, message_out;
     -moz-animation-name: message_into, message_out;
@@ -36,13 +36,12 @@ CSS动画适配
     animation-fill-mode: ;
     -o-animation-fill-mode: ;
     -webkit-animation-fill-mode: ;
-'''
+
 
 error
-'''
-<div class="error">
-    <div class="error_div">
-        <img src="/css/hud/error.svg" width="25" height="25"><section></section>
+
+    <div class="error">
+        <div class="error_div">
+            <img src="/css/hud/error.svg" width="25" height="25"><section></section>
+        </div>
     </div>
-</div>
-'''
