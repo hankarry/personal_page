@@ -47,10 +47,10 @@ setTimeout (function(){
 
     // document.getElementById("loading").lastChild.style.animation = "loading_font_show 1s ease 0s 1 reverse both";
     // document.getElementById("loading").lastChild.style.animationDirection = "reverse"
-}, 3000)
+}, 2000)
 setTimeout (function(){
     document.getElementById("body").style.display = "block";
-}, 4000)
+}, 2000)
 setTimeout (function(){
     document.getElementById("loading").style.display = "none";
-}, 5000)
+}, 3000)
