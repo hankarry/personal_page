@@ -1,5 +1,5 @@
 /* 字体MiSans引用 */
-@font-face {
+/* @font-face {
     font-family: MiSans;
     src: url(ttf/MiSans-Normal.ttf);
 }
@@ -11,10 +11,10 @@
 @font-face {
     font-family: MiSans_thin;
     src: url(ttf/MiSans-Thin.ttf);
-}
+} */
 
 * {
-    font-family: MiSans, Microsoft YaHei, Arial, Helvetica;
+    font-family: MiSans, "Motiva Sans", Sans-serif, Microsoft YaHei, Arial, Helvetica;
 }
 
 .hr_short {
@@ -29,7 +29,7 @@ p {
     --maincolor: #94E9FF;
     --maincolor_thin: rgb(148, 233, 255, 0.5); /* 菜单覆盖色 */
     --gray: rgba(78, 78, 78, 0.3); /* 灰色 */
-    --backgroundcolor: rgba(115, 201, 241, 0.1);
+    --backgroundcolor: rgb(240, 249, 253);
     --font_color_title: #0097bc;
     --white_gray : rgb(231 231 231); /* 下拉界面背景色 */
 
