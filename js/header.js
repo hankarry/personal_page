@@ -32,14 +32,15 @@ function Headers(number, now_page1, now_page2, header2_gui, transparent) {
     
     // document.write("<div id='header'></div>")
     var header = document.createElement("div");
-    header.id = "header";
+    header.id = "div_header";
+    // header.innerHTML = "<div id='header'></div>";
     // document.getElementsByTagName('body')[0].insertBefore(header, document.body.childNodes[2]);
     document.getElementById("body").insertBefore(header, document.getElementById("body").childNodes[2]);
     var xhttp
     xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("header").innerHTML = this.responseText;
+            document.getElementById("div_header").innerHTML = this.responseText;
             // document.getElementsByTagName('body')[0].write = this.responseText
             // document.write = this.responseText
         }
@@ -101,7 +102,19 @@ function jumpto(herf) {
         animation_card_small[i].style.animationDelay = '0s';
     }
 
-    setTimeout (function() {
+    setTimeout(function() {
         window.location.href = herf;
     }, 500)
+}
+
+function header_changemode() {
+    
+    var header = document.getElementById("header");
+    var header2 = document.getElementById("div_header2")
+    header.style.animation = "header1_mode1_hide 3s ease 1s 1 normal both";
+    header2.style.animation = "header2_mode1_hide 1.5s ease 0s 1 normal both";
+    setTimeout(function() {
+        header.style.display = "none"
+        header2.style.display = "none"
+    }, 4500)
 }

@@ -1,1 +1,1 @@
-document.getElementById('logo').innerHTML = ""
+// document.getElementById('logo').innerHTML = ""
