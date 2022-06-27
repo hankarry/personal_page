@@ -91,7 +91,7 @@
 
 @keyframes header1_mode1_hide {
     0% {left: 0; max-height: 100px;}
-    30% {left: -150vw; max-height: 100px;}
+    50% {left: -150vw; max-height: 100px;}
     100% {left: -150vw; max-height: 0px;}
 }
 @keyframes header2_mode1_hide {

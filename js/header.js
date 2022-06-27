@@ -29,7 +29,7 @@ AddSheetFile("/css/all.css");
 
 // 导航栏数量,当前导航栏1的id,当前导航栏2的id,导航栏2的html
 function Headers(number, now_page1, now_page2, header2_gui, transparent) {
-    
+    header_number = number
     // document.write("<div id='header'></div>")
     var header = document.createElement("div");
     header.id = "div_header";
@@ -110,11 +110,21 @@ function jumpto(herf) {
 function header_changemode() {
     
     var header = document.getElementById("header");
-    var header2 = document.getElementById("div_header2")
-    header.style.animation = "header1_mode1_hide 3s ease 1s 1 normal both";
-    header2.style.animation = "header2_mode1_hide 1.5s ease 0s 1 normal both";
+    // var header2 = document.getElementById("div_header2")
+    header.style.animation = "header1_mode1_hide 1.5s ease 1s 1 normal both";
+    // header2.style.animation = "header2_mode1_hide 1.5s ease 0s 1 normal both";
     setTimeout(function() {
         header.style.display = "none"
-        header2.style.display = "none"
-    }, 4500)
+        // header2.style.display = "none"
+    }, 3000)
+
+    if (header_number == 2) {
+        var header2 = document.getElementById("div_header2")
+        // header.style.animation = "header1_mode1_hide 1s ease 1s 1 normal both";
+        header2.style.animation = "header2_mode1_hide 1s ease 0s 1 normal both";
+        setTimeout(function() {
+            // header.style.display = "none"
+            header2.style.display = "none"
+        }, 2000)
+    }
 }
