@@ -62,9 +62,9 @@
 .header_img, .header_div {
     border-bottom: 1px solid var(--gray);
 }
-#head_me {
+/* #head_me {
     border-left: 1px solid var(--gray);
-}
+} */
 
 .header_img div { /* 导航栏图片加文字的div */
     margin: auto;
@@ -91,12 +91,12 @@
 
 @keyframes header1_mode1_hide {
     0% {left: 0; max-height: 100px;}
-    50% {left: -150vw; max-height: 100px;}
-    100% {left: -150vw; max-height: 0px;}
+    50% {left: -100vw; max-height: 100px;}
+    100% {left: -100vw; max-height: 0px;}
 }
 @keyframes header2_mode1_hide {
     0% {top: 0;}
-    100% {top: -20vh;}
+    100% {top: -50px;}
 }
 
 #div_header {
@@ -105,6 +105,7 @@
     z-index: 10;
     /* display: inline-block; */
     width: 100%;
+    /* flex: 30%; */
 }
 #logo {
     position: absolute;

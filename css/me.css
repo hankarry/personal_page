@@ -8,11 +8,6 @@
     100% {opacity: 1; right: 0px;}
 }
 
-#head_me {
-    /* background-color: var(--backgroundcolor) !important;
-    border-bottom: none; */
-}
-
 #body_me {
     margin: 1em auto 1em auto;
     width: 95%;

@@ -33,10 +33,12 @@ p {
     --font_color_title: #0097bc;
     --white_gray : rgb(231 231 231); /* 下拉界面背景色 */
 
+    --header_mode2_width: 130px;
 }
 
 body {
     /* height: 30em; */
+    /* overflow-y: hidden; */
     margin: 0;
     /* background:url("D:/网页/images/background.jpg")  no-repeat center center;   加载背景图   背景图不平铺 */
     /* background-size:cover;  让背景图基于容器大小伸缩 */
@@ -49,6 +51,7 @@ hr {
 
 #body {
     display: none;
+    /* overflow: hidden; */
 }
 
 @keyframes process25 {
@@ -113,30 +116,28 @@ hr {
 
 .card { /* 主体设置 */
     position: relative;
-
+    /* display: inline-block; */
+    /* display: flexbox; */
+    /* display: inline-flex; */
     animation-name: gointo;
     -o-animation-name: gointo;
     -moz-animation-name: gointo;
     -webkit-animation-name: gointo;
-
     animation-duration: 1.3s;
     -o-animation-duration: 1.3s;
     -moz-animation-duration: 1.3s;
     -webkit-animation-duration: 1.3s;
-
     animation-fill-mode: both;
     -o-animation-fill-mode: both;
     -webkit-animation-fill-mode: both;
-
+    flex: 0 0 30%;
     height: 100%;
     background-color: white;
     margin: 1em auto 0 auto;
     width: 85%;
     padding: 0.5em 0 0.5em 0;
-
     border: 0px solid var(--gray);
     border-radius: 15px;
-
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
