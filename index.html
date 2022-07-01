@@ -8,10 +8,12 @@
 		
 		<!-- <link rel="stylesheet" type="text/css" href="css/all.css"> -->
 		<!-- <link rel="stylesheet" type="text/css" href="css/header2.css"> -->
+		<script src="/js/all.js" defer="true"></script>
 		<link rel="stylesheet" type="text/css" href="/css/me.css">
 		<link rel="stylesheet" type="text/css" href="/css/me_reality.css">
 		<link rel="shortcut icon" href="logo4.jpg">
 		<!-- <script src="js/write_to_end.js"></script> -->
+		<!-- <script src="/js/function_basic.js"></script> -->
 
 	</head>
 
@@ -26,80 +28,87 @@
 		<script src="/js/loading.js"></script>
 		<script src="/js/basic.js"></script>
 
-		<div id="body">
-			<script src="/js/header.js" onload="Headers(2, 'head_me', 'head2_reality', '/header/header2_me.html')"></script>
-			<script src="/js/me_reality.js"></script>
-
-
-			<!-- <div id="birthday">
-				<img src="/logo3.png" width="100" height="100">
-				<section>生日快乐</section>
-			</div> -->
-
-			<div class="card">
-				<div>
-					<div class="title_div"><img src="/css/hud/skill.svg" width="30" height="40"><section class="p_title">技能</section></div>
-					<hr>
-					<div id="skill">
-						<section class="skill_section">
-							<section>HTML</section>
-						</section>
-						<div class="div_process"><div class="process" style="--process: 65%;"></div></div>
+		<div id="root">
+			<div id="body">
+				<script src="/js/header.js" onload="Headers(2, 'head_me', 'head2_reality', '/header/header2_me.html')"></script>
+				<script src="/js/me_reality.js"></script>
 	
-						<section class="skill_section">
-							<section>CSS</section>
-						</section>
-						<div class="div_process"><div class="process" style="--process: 65%;"></div></div>
 	
-						<section class="skill_section">
-							<section>JavaScript</section>
-						</section>
-						<div class="div_process"><div class="process" style="--process: 40%;"></div></div>
+				<!-- <div id="birthday">
+					<img src="/logo3.png" width="100" height="100">
+					<section>生日快乐</section>
+				</div> -->
 	
-						<section class="skill_section">
-							<section>PHP</section>
-						</section>
-						<div class="div_process"><div class="process" style="--process: 5%;"></div></div>
-	
-						<section class="skill_section">
-							<section>SQL</section>
-						</section>
-						<div class="div_process"><div class="process" style="--process: 0%;"></div></div>
-	
-						<section class="skill_section">
-							<section>Lua</section>
-						</section>
-						<div class="div_process"><div class="process" style="--process: 20%;"></div></div>
-						
-						<section class="skill_section">
-							<section>C</section>
-						</section>
-						<div class="div_process"><div class="process" style="--process: 0%;"></div></div>
-	
-						<section class="skill_section">
-							<section>C#</section>
-						</section>
-						<div class="div_process"><div class="process" style="--process: 5%;"></div></div>
-	
-						<section class="skill_section">
-							<section>Python</section>
-						</section>
-						<div class="div_process"><div class="process" style="--process: 0%;"></div></div>
-	
-					</div>
-				</div>
-			</div>
+				<div id="body_right">
+		
+					<div class="card">
+						<div>
+							<div class="title_div"><img src="/css/hud/skill.svg" width="30" height="40"><section class="p_title">技能</section></div>
+							<hr>
+							<div id="skill">
+								<section class="skill_section">
+									<section>HTML</section>
+								</section>
+								<div class="div_process"><div class="process" style="--process: 65%;"></div></div>
 			
-			<div class="card">
-				<div>
-					<div class="title_div"><img src="/css/hud/qukuai.svg" width="30" height="40"><section class="p_title">我的项目</section></div>
-					<hr>
+								<section class="skill_section">
+									<section>CSS</section>
+								</section>
+								<div class="div_process"><div class="process" style="--process: 65%;"></div></div>
+			
+								<section class="skill_section">
+									<section>JavaScript</section>
+								</section>
+								<div class="div_process"><div class="process" style="--process: 40%;"></div></div>
+			
+								<section class="skill_section">
+									<section>PHP</section>
+								</section>
+								<div class="div_process"><div class="process" style="--process: 5%;"></div></div>
+			
+								<section class="skill_section">
+									<section>SQL</section>
+								</section>
+								<div class="div_process"><div class="process" style="--process: 0%;"></div></div>
+			
+								<section class="skill_section">
+									<section>Lua</section>
+								</section>
+								<div class="div_process"><div class="process" style="--process: 20%;"></div></div>
+								
+								<section class="skill_section">
+									<section>C</section>
+								</section>
+								<div class="div_process"><div class="process" style="--process: 0%;"></div></div>
+			
+								<section class="skill_section">
+									<section>C#</section>
+								</section>
+								<div class="div_process"><div class="process" style="--process: 5%;"></div></div>
+			
+								<section class="skill_section">
+									<section>Python</section>
+								</section>
+								<div class="div_process"><div class="process" style="--process: 0%;"></div></div>
+			
+							</div>
+						</div>
+					</div>
+					
+					<div class="card">
+						<div>
+							<div class="title_div"><img src="/css/hud/qukuai.svg" width="30" height="40"><section class="p_title">我的项目</section></div>
+							<hr>
+						</div>
+					</div>
+			
 				</div>
+		
+		
+		
+		
 			</div>
-	
-	
-	
-	
+
 		</div>
 		<!-- <div id="body_me">
 			
@@ -113,7 +122,6 @@
 	
 		<!-- <link rel="stylesheet" type="text/css" href="/css/loading.css">
 		<div id="loading"><section>loading...</section></div> -->
-		<script src="/js/all.js"></script>
     </body>
 
 </html>

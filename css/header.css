@@ -18,10 +18,10 @@
     /* display: none; */
     /* opacity: 0; */
     font-size: 1em;
-    position: sticky;
-    top: 0;
-    position: -webkit-sticky;
-    z-index: 10;
+    /* position: sticky; */
+    /* top: 0; */
+    /* position: -webkit-sticky; */
+    /* z-index: 10; */
     /* background-color: white; */
     /* display: inline-block; */
     width: 100%;
@@ -62,9 +62,9 @@
 .header_img, .header_div {
     border-bottom: 1px solid var(--gray);
 }
-#head_me {
+/* #head_me {
     border-left: 1px solid var(--gray);
-}
+} */
 
 .header_img div { /* 导航栏图片加文字的div */
     margin: auto;
@@ -90,28 +90,36 @@
 }
 
 @keyframes header1_mode1_hide {
-    0% {left: 0;}
-    100% {left: -500px; display: none;}
+    0% {left: 0; max-height: 100px;}
+    50% {left: -100vw; max-height: 100px;}
+    100% {left: -100vw; max-height: 0px;}
 }
 @keyframes header2_mode1_hide {
     0% {top: 0;}
-    100% {top: -40px; display: none;}
+    100% {top: -50px;}
 }
 
 #div_header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
     /* display: inline-block; */
     width: 100%;
+    /* flex: 30%; */
 }
 #logo {
-    /* position: sticky; */
-    /* left: 0; */
+    position: absolute;
+    z-index: 11;
+    left: 0;
+    top: 0;
     /* display: inline-block; */
     /* width: 10%; */
 }
 
-/* #header {
-    animation: header1_mode1_hide 1s ease 5s 1 normal both;
+#header {
+    position: relative;
+    /* animation: header1_mode1_hide 1s ease-in 3s 1 normal both; */
 }
 #div_header2 {
-    animation: header2_mode1_hide 1s ease 5s 1 normal both;
-} */
+    /* animation: header2_mode1_hide 1s ease-in 2s 1 normal both; */
+}

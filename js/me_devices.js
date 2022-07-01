@@ -1,1 +1,1 @@
-document.getElementById('head2_devices').onclick = ''
+// document.getElementById('head2_devices').onclick = ''

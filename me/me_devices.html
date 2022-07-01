@@ -5,6 +5,8 @@
 		<meta charset="UTF-8">
 		<title>寒Karry的小窝</title>
 		<!-- <meta http-equiv="refresh" content="2"> -->
+		<script src="/js/all.js" defer="true"></script>
+		<script src="/js/me_devices.js" defer="true"></script>
 		
 
 		<!-- <link rel="stylesheet" type="text/css" href="/css/all.css">
@@ -22,42 +24,48 @@
 		<script src="/js/process.js"></script>
 		<script src="/js/loading.js"></script>
 		
-		<div id="body">
-			<script src="/js/header.js" onload="Headers(2, 'head_me', 'head2_devices', '/header/header2_me.html')"></script>
+		<div id="root">
+			
+			<div id="body">
+				<script src="/js/header.js" onload="Headers(2, 'head_me', 'head2_devices', '/header/header2_me.html')"></script>
 
-			<div class="error">
-				<div class="error_div">
-					<img src="/css/hud/error.svg" width="25" height="25"><section>学业原因,笔记本和台式都被收走了XWX</section>
+				<div id="body_right">
+						
+					<div class="error">
+						<div class="error_div">
+							<img src="/css/hud/error.svg" width="25" height="25"><section>学业原因,笔记本和台式都被收走了XWX</section>
+						</div>
+					</div>
+			
+					<div class="card">
+						<div class="title_div"><img src="/css/hud/computer/taishidiannao.svg" width="30" height="30"><section class="p_title">台式电脑</section></div>
+						<hr>
+						<ul>
+							<li><div class="title_div"><img src="/css/hud/computer/CPU.svg" width="25" height="25">CPU: Intel(R) Core(TM) i3-6100 CPU @ 3.70GHz</div></li>
+							<li><div class="title_div"><img src="/css/hud/computer/neicuntiao.svg" width="25" height="25">内存: 6GB</div></li>
+							<li><div class="title_div"><img src="/css/hud/computer/xianka.svg" width="25" height="25">显卡: Intel(R) HD Graphics 530</div></li>
+							<li><div class="title_div"><img src="/css/hud/computer/gutaiyingpan.svg" width="25" height="25">固态硬盘: TOSHIBA A100 224GB</div></li>
+							<li><div class="title_div">操作系统: <img src="/images/windows10.png" width="250" height="50"></div></li>
+							<!-- <li><div class="title_div"><img src="css/hud/computer/" width="25" height="25"></div></li> -->
+							<!-- <li><div class="title_div"><img src="css/hud/computer/" width="25" height="25"></div></li> -->
+						</ul>
+					
+					</div>
+			
+					<div class="card">
+						<div class="title_div"><img src="/css/hud/computer/bijiben.svg" width="30" height="30"><section class="p_title">笔记本电脑</section></div>
+						<hr>
+						<ul>
+							<li></li>
+						</ul>
+					
+					</div>
+			
 				</div>
+				
 			</div>
-	
-			<div class="card">
-				<div class="title_div"><img src="/css/hud/computer/taishidiannao.svg" width="30" height="30"><section class="p_title">台式电脑</section></div>
-				<hr>
-				<ul>
-					<li><div class="title_div"><img src="/css/hud/computer/CPU.svg" width="25" height="25">CPU: Intel(R) Core(TM) i3-6100 CPU @ 3.70GHz</div></li>
-					<li><div class="title_div"><img src="/css/hud/computer/neicuntiao.svg" width="25" height="25">内存: 6GB</div></li>
-					<li><div class="title_div"><img src="/css/hud/computer/xianka.svg" width="25" height="25">显卡: Intel(R) HD Graphics 530</div></li>
-					<li><div class="title_div"><img src="/css/hud/computer/gutaiyingpan.svg" width="25" height="25">固态硬盘: TOSHIBA A100 224GB</div></li>
-					<li><div class="title_div">操作系统: <img src="/images/windows10.png" width="250" height="50"></div></li>
-					<!-- <li><div class="title_div"><img src="css/hud/computer/" width="25" height="25"></div></li> -->
-					<!-- <li><div class="title_div"><img src="css/hud/computer/" width="25" height="25"></div></li> -->
-				</ul>
-			
-			</div>
-	
-			<div class="card">
-				<div class="title_div"><img src="/css/hud/computer/bijiben.svg" width="30" height="30"><section class="p_title">笔记本电脑</section></div>
-				<hr>
-				<ul>
-					<li></li>
-				</ul>
-			
-			</div>
-	
 		</div>
+		
 
     </body>
-	<script src="/js/all.js"></script>
-	<script src="/js/me_devices.js"></script>
 </html>
