@@ -50,10 +50,10 @@ function Headers(number, now_page1, now_page2, header2_gui, transparent) {
     xhttp.open("GET", "/header/header.html", false)
     xhttp.send()
 
-    document.getElementById(now_page1).onclick = "unset"
-
-    document.getElementById(now_page1).style.backgroundColor = "var(--backgroundcolor)"
-    // document.getElementById(now_page1).style.borderBottom = "unset"
+    var document_now_page1 = document.getElementById(now_page1);
+    document_now_page1.onclick = "unset";
+    document_now_page1.style.backgroundColor = "var(--backgroundcolor)";
+    // document_now_page1.style.borderBottom = "unset"
 
     if (transparent == 'true') {
         AddSheetFile("/css/header_transparent.css")
@@ -86,9 +86,10 @@ function Headers(number, now_page1, now_page2, header2_gui, transparent) {
         };
         xhttp.open("GET", header2_gui, false)
         xhttp.send()
-        document.getElementById(now_page2).style.backgroundColor = "var(--backgroundcolor)"
-        
-        document.getElementById(now_page2).onclick = "unset"
+
+        var document_now_page2 = document.getElementById(now_page2);
+        document_now_page2.style.backgroundColor = "var(--backgroundcolor)";
+        document_now_page2.onclick = "unset";
     }
 }
 

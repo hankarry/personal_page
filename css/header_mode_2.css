@@ -87,3 +87,10 @@
     padding: 0;
     margin: 0;
 }
+
+#header_mode2 button:hover {
+    background-color: var(--maincolor_thin);
+}
+#header_mode2 button:active {
+    background-color: var(--maincolor);
+}
