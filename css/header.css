@@ -108,10 +108,11 @@
     /* flex: 30%; */
 }
 #logo {
-    position: absolute;
+    /* position: absolute; */
+    margin: 0 auto 0 auto;
     z-index: 11;
-    left: 0;
-    top: 0;
+    /* left: 0; */
+    /* top: 0; */
     /* display: inline-block; */
     /* width: 10%; */
 }

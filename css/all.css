@@ -26,14 +26,17 @@ p {
 }
 
 :root {    
-    --maincolor: #94E9FF;
-    --maincolor_thin: rgb(148, 233, 255, 0.5); /* 菜单覆盖色 */
-    --gray: rgba(78, 78, 78, 0.3); /* 灰色 */
-    --backgroundcolor: rgb(240, 249, 253);
-    --font_color_title: #0097bc;
-    --white_gray : rgb(231 231 231); /* 下拉界面背景色 */
+    --maincolor:#94E9FF;
+    --maincolor_thin:rgba(148, 233, 255, 0.5); /* 菜单覆盖色 */
+    --maincolor_thin3:rgba(148, 233, 255, 0.3);
+    --maincolor_thin4:rgba(148, 233, 255, 0.4);
+    --gray:rgba(78, 78, 78, 0.3); /* 灰色 */
+    --backgroundcolor:rgb(240, 249, 253);
+    --font_color_title:#0097bc;
+    --white_gray :rgb(231 231 231); /* 下拉界面背景色 */
 
-    --header_mode2_width: 130px;
+    --header_mode2_width:110px;
+    --white:rgba(255, 255, 255, 1);
 }
 
 body {
@@ -134,7 +137,7 @@ hr {
     height: 100%;
     background-color: white;
     margin: 1em auto 0 auto;
-    width: 85%;
+    width: 90%;
     padding: 0.5em 0 0.5em 0;
     border: 0px solid var(--gray);
     border-radius: 15px;
