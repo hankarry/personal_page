@@ -7,11 +7,11 @@
 
 // window.onload = 
 
-// var footer = "<hr id='foothr'><footer>Made by hankarry</footer>";
-// var foot = document.createElement('div');
-// foot.id = 'foot';
-// document.getElementsByTagName('body')[0].appendChild(foot);
-// document.getElementById('foot').innerHTML = footer
+var footer = "<hr id='foothr'><footer>Made by hankarry Version2.0</footer>";
+var foot = document.createElement('div');
+foot.id = 'foot';
+document.getElementById("body_right").appendChild(foot);
+document.getElementById('foot').innerHTML = footer
 
 // function AddSheetFile(path) {
 //     var fileref = document.createElement("link")

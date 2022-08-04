@@ -35,16 +35,19 @@
 </div> -->
 
 <div id="header_mode2" style="width: 110px">
-    <div id="logo" onclick="header_changemode()">
-        <img src="/logo4.jpg" alt="logo" width="40" height="40">
+    <div id="div_logo">
+        <div id="logo" onclick="header_changemode()">
+            <img src="/logo4.jpg" alt="logo" width="40" height="40">
+        </div>
     </div>
     <div id="header_content">
+        <div id="header_background"></div>
         <button class="header_mode2_img" id="head_me" onclick="jumpto('/index.html')">
             <div>
-                <img src="/css/hud/gerenzhongxin.svg" alt="HUD" width="25" height="25"><section class="header_content">我</section>
+                <img src="/css/hud/gerenzhongxin.svg" alt="HUD" width="25" height="25"><section class="header_main_content">我</section>
             </div>
         </button>
-        <div id="header2_mode2_me" class="header2_mode2" style="max-height: 300px;">
+        <div id="header2_mode2_me" class="header2_mode2" style="max-height: 150px;">
             <button class="header2_mode2_button" id="head2_reality" onclick="jumpto('/index.html')">reality</button>
             <button class="header2_mode2_button" id="head2_furry" onclick="jumpto('/me/me_furry.html')">furry</button>
             <button class="header2_mode2_button" id="head2_cp" onclick="jumpto('/me/me_cp.html')">CP</button>
@@ -54,26 +57,26 @@
         </div>
         <button class="header_mode2_img" id="head_game" onclick="jumpto('/game/game_connect.html')">
             <div>
-                <img src ="/css/hud/game.svg" alt="HUD" width="27" height="27"><section class="header_content">游戏</section>
+                <img src ="/css/hud/game.svg" alt="HUD" width="27" height="27"><section class="header_main_content">游戏</section>
             </div>
         </button>
-        <div id="header2_mode2_game" class="header2_mode2" style="max-height: 300px;">
+        <div id="header2_mode2_game" class="header2_mode2" style="max-height: 150px;">
             <button class="header2_mode2_button" id="head2_connect" onclick="jumpto('/game/game_connect.html')">联机</button>
             <button class="header2_mode2_button" id="head2_game" onclick="jumpto('/game/game_mygame.html')">咱的游戏</button>
         </div>
         <button class="header_mode2_img" id="head_commission" onclick="jumpto('/commission/commission_draft.html')">
             <div>
-                <img src="/css/hud/dingdan.svg" alt="HUD" width="25" height="25"><section class="header_content">委托</section>
+                <img src="/css/hud/dingdan.svg" alt="HUD" width="25" height="25"><section class="header_main_content">委托</section>
             </div>
         </button>
-        <div id="header2_mode2_commission" class="header2_mode2" style="max-height: 300px;">
+        <div id="header2_mode2_commission" class="header2_mode2" style="max-height: 150px;">
             <button class="header2_mode2_button" id="head2_draft" onclick="jumpto('/commission_draft.html')">约稿</button>
             <button class="header2_mode2_button" id="head2_blacklist" onclick="jumpto('/index.html')">云黑名单</button>
             <button class="header2_mode2_button" id="head2_brightsunplan" onclick="jumpto('/index.html')">辉光计划</button>
         </div>
         <button id="head_diary" class="header_mode2_img" onclick="jumpto('/diary/diary.html')">
             <div>
-                <img src="/css/hud/xiugaidingdan.svg" alt="HUD" width="25" height="25"><section class="header_content">日志</section>
+                <img src="/css/hud/xiugaidingdan.svg" alt="HUD" width="25" height="25"><section class="header_main_content">日志</section>
             </div>
         </button>
     

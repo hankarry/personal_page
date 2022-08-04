@@ -96,7 +96,7 @@ AddSheetFile("/css/header_mode_2.css");
 // }
 
 // 导航栏数量,当前导航栏1的id,当前导航栏2的id,导航栏2的html
-function Headers(number, now_page1, now_page2, header2_gui, transparent) {
+function Headers(number, now_page1, now_page2) {
     header_number = number
     // document.write("<div id='header'></div>")
     var header = document.createElement("div");
@@ -136,7 +136,20 @@ function Headers(number, now_page1, now_page2, header2_gui, transparent) {
 }
 
 function jumpto(herf) {
-    
+    // var body_content = document.getElementById("body_right");
+    // body_content.innerHTML = "";
+
+    // var http = new XMLHttpRequest();
+    // http.onreadystatechange = function () {
+    //     if (this.readyState == 4 && this.status == 200) {
+    //         body_content.innerHTML = this.responseText;
+    //         // document.getElementsByTagName('body')[0].write = this.responseText
+    //         // document.write = this.responseText
+    //     }
+    // };
+    // http.open("GET", herf, false)
+    // http.send()
+
     var animation_card = document.getElementsByClassName('card');
     var animation_card_small = document.getElementsByClassName('card_small');
     for (var i = 0; i < animation_card.length; i++) {
@@ -198,12 +211,20 @@ function ChangeHeaderWidth() {
     var headerw = getComputedStyle(document.documentElement).getPropertyValue('--header_mode2_width')
     // console.log(headerw)
 
-    if (headerw == "110px") {
+    var header_width_short = "40px";
+    var header_width_long = "110px";
+
+    if (headerw == header_width_long) {
         // console.log("y")
-        header.style.width = "60px"
-        root.style.setProperty('--header_mode2_width', '60px')
+        header.style.width = header_width_short
+        root.style.setProperty('--header_mode2_width', header_width_short)
         // button.onclick = "ChangeHeaderWidth('60px')"
         button.style.animationName = "button_180"
+
+        var header_main_content = document.getElementsByClassName("header_main_content");
+        for (i = 0; i < header_main_content.length; i++) {
+            header_main_content[i].style.display = "none"
+        }
 
         var header2 = document.getElementsByClassName("header2_mode2")
         for (i = 0; i < header2.length; i++) {
@@ -211,15 +232,20 @@ function ChangeHeaderWidth() {
         }
     }
     else
-    if (headerw == "60px") {
+    if (headerw == header_width_short) {
         header.style.width = "110px"
-        root.style.setProperty('--header_mode2_width', '110px')
+        root.style.setProperty('--header_mode2_width', header_width_long)
         // button.onclick = "ChangeHeaderWidth('110px')"
         button.style.animationName = "button_360"
         
+        var header_main_content = document.getElementsByClassName("header_main_content");
+        for (i = 0; i < header_main_content.length; i++) {
+            header_main_content[i].style.display = "block"
+        }
+
         var header2 = document.getElementsByClassName("header2_mode2")
         for (i = 0; i < header2.length; i++) {
-            header2[i].style.maxHeight = "300px"
+            header2[i].style.maxHeight = "150px"
         }
     }
 }

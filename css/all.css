@@ -14,6 +14,7 @@
 } */
 
 * {
+    /* margin: 0; */
     font-family: MiSans, "Motiva Sans", Sans-serif, Microsoft YaHei, Arial, Helvetica;
 }
 
@@ -22,13 +23,13 @@
 }
 
 p {
-    margin: 0 0 0.5em 1em;
+    margin: 0 1em 0.5em 1em;
 }
 
 :root {    
     --maincolor:#94E9FF;
-    --maincolor_thin:rgba(148, 233, 255, 0.5); /* 菜单覆盖色 */
-    --maincolor_thin3:rgba(148, 233, 255, 0.3);
+    --maincolor_thin:rgb(201,244,255); /* 菜单覆盖色 */
+    --maincolor_thin3:rgb(223,248,255);
     --maincolor_thin4:rgba(148, 233, 255, 0.4);
     --gray:rgba(78, 78, 78, 0.3); /* 灰色 */
     --backgroundcolor:rgb(240, 249, 253);
@@ -37,7 +38,17 @@ p {
 
     --header_mode2_width:110px;
     --white:rgba(255, 255, 255, 1);
+
+    --test:rgb(0,0,0);
 }
+
+html, body{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    /* margin: 0; */
+}
+::-webkit-scrollbar{display: none;}
 
 body {
     /* height: 30em; */
@@ -48,13 +59,28 @@ body {
     /* background-attachment:fixed;        当内容高度大于图片高度时，背景图像的位置相对于viewport固定    此条属性必须设置否则可能无效 */
     background-color: var(--backgroundcolor);/* 设置背景颜色，背景图加载过程中会显示背景色 */
 }
+
 hr {
     background-color: var(--maincolor);
 }
 
 #body {
     display: none;
+    /* margin: 0; */
     /* overflow: hidden; */
+}
+
+#root {
+    /* position: ; */
+    /* position: relative; */
+    /* top: -15px; */
+}
+
+#body_right {
+    margin: 0 0 0 var(--header_mode2_width);
+    padding-top: 1em;
+    transition: margin 0.5s;
+    /* animation: card_move_right 1s ease 0s 1 normal both; */
 }
 
 @keyframes process25 {
@@ -133,10 +159,10 @@ hr {
     animation-fill-mode: both;
     -o-animation-fill-mode: both;
     -webkit-animation-fill-mode: both;
-    flex: 0 0 30%;
+    /* flex: 0 0 30%; */
     height: 100%;
     background-color: white;
-    margin: 1em auto 0 auto;
+    margin: 0 auto 1em auto;
     width: 90%;
     padding: 0.5em 0 0.5em 0;
     border: 0px solid var(--gray);
@@ -327,6 +353,10 @@ footer { /* 页脚 */
 
 #top_message {
     display: flex;
+    /* position: fixed; */
+    /* top: 0; */
+    width: 100%;
+
     /* background-color: var(--maincolor); */
     /* background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%); */
     background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
@@ -345,7 +375,7 @@ footer { /* 页脚 */
 @keyframes message_out {
     0% {right: 1em;}
     100% {right: -20em; display: none;}
-}
+}s
 .message_warn {
     position: fixed;
     bottom: 1em;
