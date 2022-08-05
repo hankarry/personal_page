@@ -198,7 +198,7 @@ function pageload(herf) {
                 {
                     script = script.toString().replace('<script>', '');
                     script = script.replace('</script>', '');
-                    // console.log(script);
+                    console.log(script);
                     eval(script);
                 }
                 
