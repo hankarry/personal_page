@@ -6,6 +6,7 @@ function AddSheetFile(path) {
     fileref.type = "text/css";
     fileref.href = path;
     var head = document.getElementsByTagName('head')[0];
+    // var body_content = document.getElementById("body_right");
     // head.insertBefore(fileref, head.childNodes[4]);
     head.appendChild(fileref);
     // appendChild()方法在最后插入
@@ -95,43 +96,119 @@ AddSheetFile("/css/header_mode_2.css");
 
 // }
 
+header_loaded = 0;
 // 导航栏数量,当前导航栏1的id,当前导航栏2的id,导航栏2的html
-function Headers(number, now_page1, now_page2) {
-    header_number = number
-    // document.write("<div id='header'></div>")
-    var header = document.createElement("div");
-    header.id = "div_header";
-    // header.innerHTML = "<div id='header'></div>";
-    // document.getElementsByTagName('body')[0].insertBefore(header, document.body.childNodes[2]);
-    document.getElementById("body").insertBefore(header, document.getElementById("body").childNodes[2]);
-    var xhttp
-    xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
+function Headers(number, page1, page2) {
+    if (header_loaded != 1 || header_loaded == undefined){
+
+        header_number = number
+        // document.write("<div id='header'></div>")
+        var header = document.createElement("div");
+        header.id = "div_header";
+        // header.innerHTML = "<div id='header'></div>";
+        // document.getElementsByTagName('body')[0].insertBefore(header, document.body.childNodes[2]);
+        document.getElementById("body").insertBefore(header, document.getElementById("body").childNodes[2]);
+        var xhttp
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("div_header").innerHTML = this.responseText;
+                // document.getElementsByTagName('body')[0].write = this.responseText
+                // document.write = this.responseText
+            }
+        };
+        xhttp.open("GET", "/header/header.html", false)
+        xhttp.send()
+
+    }
+
+    // 导航栏已载入
+    header_loaded = 1;
+
+    var header_page1 = document.getElementById(page1);
+    header_page1.onclick = "";
+
+    // document.getElementById(now_page1).style.backgroundColor = "var(--backgroundcolor)";
+    header_page1.style.borderWidth = "2px";
+    header_page1.style.borderRadius = "30px 0 0 30px"
+    
+    if (page2) {
+        var header_page2 = document.getElementById(page2);
+        header_page2.onclick = "";
+        header_page2.style.borderWidth = "1px";
+        header_page2.style.backgroundColor = "var(--maincolor_thin3)";
+        header_page2.style.borderRadius = "20px 0 0 20px";
+
+        now_page2 = page2;
+        now_page2_onclick = document.getElementById(page2).getAttribute("onclick");
+    }
+
+    // document.getElementById(now_page1).style.borderBottom = "unset"
+    now_page1 = page1;
+    now_page1_onclick = document.getElementById(page1).getAttribute("onclick");
+    // console.log(document.getElementById(page1).getAttribute("onclick"));
+    
+}
+
+function pageload(herf) {
+
+    var animation_card = document.getElementsByClassName('card');
+    var animation_card_small = document.getElementsByClassName('card_small');
+    for (var i = 0; i < animation_card.length; i++) {
+        animation_card[i].style.animationName = 'goout';
+    }
+    for (var i = 0; i < animation_card_small.length; i++) {
+        animation_card_small[i].style.animationName = 'hide_from_right';
+        animation_card_small[i].style.animationDelay = '0s';
+    }
+
+    var body_content = document.getElementById("body_right");
+    setTimeout(function() {
+        body_content.innerHTML = "";
+    }, 1000)
+
+    var page1 = document.getElementById(now_page1);
+    // console.log(now_page1_onclick);
+    page1.setAttribute("onclick", now_page1_onclick);
+
+    // document.getElementById(now_page1).style.backgroundColor = "var(--backgroundcolor)";
+    page1.style.borderWidth = "0px";
+    page1.style.borderRadius = "30px"
+    
+    if (now_page2) {
+        var page2 = document.getElementById(now_page2);
+        // console.log(now_page2_onclick);
+        page2.setAttribute("onclick", now_page2_onclick);
+        page2.style.borderWidth = "0px";
+        page2.style.backgroundColor = "var(--white)"
+        page2.style.borderRadius = "20px 0 0 20px"    
+    }
+
+    var http = new XMLHttpRequest();
+    http.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("div_header").innerHTML = this.responseText;
+            setTimeout(function() {
+                body_content.innerHTML = http.responseText;
+        
+                var content = http.responseText;
+                
+                document.getElementById("body_right").innerHTML=content;
+                var script = content.match("<script[^>]*>[^<]*</script>");
+                if (script != null)
+                {
+                    script = script.toString().replace('<script>', '');
+                    script = script.replace('</script>', '');
+                    // console.log(script);
+                    eval(script);
+                }
+                
+            }, 2000)
             // document.getElementsByTagName('body')[0].write = this.responseText
             // document.write = this.responseText
         }
     };
-    xhttp.open("GET", "/header/header.html", false)
-    xhttp.send()
-
-    var page1 = document.getElementById(now_page1);
-    page1.onclick = "unset";
-
-    // document.getElementById(now_page1).style.backgroundColor = "var(--backgroundcolor)";
-    page1.style.borderWidth = "2px";
-    page1.style.borderRadius = "30px 0 0 30px"
-    
-    if (now_page2) {
-        var page2 = document.getElementById(now_page2);
-        page2.onclick = "unset";
-        page2.style.borderWidth = "1px";
-        page2.style.backgroundColor = "var(--maincolor_thin3)"
-        page2.style.borderRadius = "20px 0 0 20px"    
-    }
-
-    // document.getElementById(now_page1).style.borderBottom = "unset"
+    http.open("GET", herf, false)
+    http.send()
 
 }
 

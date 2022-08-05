@@ -5,22 +5,22 @@
 <div id="header" style="display: none;">
     <div class="header_div" style="width: 100%; height: 40px;">
     </div>
-    <button class="header_img" id="head_me" onclick="jumpto('/index.html')">
+    <button class="header_img" id="head_me" onclick="pageload('/index.html')">
         <div>
             <img src="/css/hud/gerenzhongxin.svg" alt="HUD" width="25" height="25"><section class="header_content">我</section>
         </div>
     </button>
-    <button class="header_img" id="head_game" onclick="jumpto('/game/game_connect.html')">
+    <button class="header_img" id="head_game" onclick="pageload('/game/game_connect.html')">
         <div>
             <img src ="/css/hud/game.svg" alt="HUD" width="27" height="27"><section class="header_content">游戏</section>
         </div>
     </button>
-    <button class="header_img" id="head_commission" onclick="jumpto('/commission/commission_draft.html')">
+    <button class="header_img" id="head_commission" onclick="pageload('/commission/commission_draft.html')">
         <div>
             <img src="/css/hud/dingdan.svg" alt="HUD" width="25" height="25"><section class="header_content">委托</section>
         </div>
     </button>
-    <button class="header_img" id="head_diary" onclick="jumpto('/diary/diary.html')">
+    <button class="header_img" id="head_diary" onclick="pageload('/diary/diary.html')">
         <div>
             <img src="/css/hud/xiugaidingdan.svg" alt="HUD" width="25" height="25"><section class="header_content">日志</section>
         </div>
@@ -36,24 +36,24 @@
 
 <div id="header_mode2" style="width: 110px">
     <div id="div_logo">
-        <div id="logo" onclick="header_changemode()">
+        <div id="logo">
             <img src="/logo4.jpg" alt="logo" width="40" height="40">
         </div>
     </div>
     <div id="header_content">
         <div id="header_background"></div>
-        <button class="header_mode2_img" id="head_me" onclick="jumpto('/index.html')">
+        <button class="header_mode2_img" id="head_me" onclick="pageload('/index.html')">
             <div>
                 <img src="/css/hud/gerenzhongxin.svg" alt="HUD" width="25" height="25"><section class="header_main_content">我</section>
             </div>
         </button>
         <div id="header2_mode2_me" class="header2_mode2" style="max-height: 150px;">
-            <button class="header2_mode2_button" id="head2_reality" onclick="jumpto('/index.html')">reality</button>
-            <button class="header2_mode2_button" id="head2_furry" onclick="jumpto('/me/me_furry.html')">furry</button>
-            <button class="header2_mode2_button" id="head2_cp" onclick="jumpto('/me/me_cp.html')">CP</button>
-            <button class="header2_mode2_button" id="head2_goal" onclick="jumpto('/me/me_goal.html')">目标</button>
-            <button class="header2_mode2_button" id="head2_devices" onclick="jumpto('/me/me_devices.html')">设备配置</button>
-            <button class="header2_mode2_button" id="head2_littlepoet" onclick="jumpto('/me/me_littlepoet.html')">小言</button>
+            <button class="header2_mode2_button" id="head2_reality" onclick="pageload('/index.html')">reality</button>
+            <button class="header2_mode2_button" id="head2_furry" onclick="pageload('/me/me_furry_pageload.html')">furry</button>
+            <button class="header2_mode2_button" id="head2_cp" onclick="pageload('/me/me_cp_pageload.html')">CP</button>
+            <button class="header2_mode2_button" id="head2_goal" onclick="pageload('/me/me_goal_pageload.html')">目标</button>
+            <button class="header2_mode2_button" id="head2_devices" onclick="pageload('/me/me_devices_pageload.html')">设备配置</button>
+            <button class="header2_mode2_button" id="head2_littlepoet" onclick="pageload('/me/me_littlepoet_pageload.html')">小言</button>
         </div>
         <button class="header_mode2_img" id="head_game" onclick="jumpto('/game/game_connect.html')">
             <div>
@@ -74,7 +74,7 @@
             <button class="header2_mode2_button" id="head2_blacklist" onclick="jumpto('/index.html')">云黑名单</button>
             <button class="header2_mode2_button" id="head2_brightsunplan" onclick="jumpto('/index.html')">辉光计划</button>
         </div>
-        <button id="head_diary" class="header_mode2_img" onclick="jumpto('/diary/diary.html')">
+        <button id="head_diary" class="header_mode2_img" onclick="pageload('/diary/diary_pageload.html')">
             <div>
                 <img src="/css/hud/xiugaidingdan.svg" alt="HUD" width="25" height="25"><section class="header_main_content">日志</section>
             </div>

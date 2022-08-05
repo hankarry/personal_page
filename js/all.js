@@ -10,7 +10,7 @@
 var footer = "<hr id='foothr'><footer>Made by hankarry Version2.0</footer>";
 var foot = document.createElement('div');
 foot.id = 'foot';
-document.getElementById("body_right").appendChild(foot);
+document.getElementById("body").appendChild(foot);
 document.getElementById('foot').innerHTML = footer
 
 // function AddSheetFile(path) {
