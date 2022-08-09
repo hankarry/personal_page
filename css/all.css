@@ -353,6 +353,7 @@ footer { /* 页脚 */
 
 #top_message {
     display: flex;
+    height: 1.5em;
     /* position: fixed; */
     /* top: 0; */
     width: 100%;

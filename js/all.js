@@ -40,7 +40,18 @@ document.getElementById('foot').innerHTML = footer
 //     birthday_text = ""
 // }
 // document.write = "<div id='top_message'><img src='/css/hud/cake.svg' width='25' height='25'><section>咱的生日快到啦</section></div>"
-var newelement = document.createElement("div");
-newelement.id = "top_message";
-document.getElementById("root").insertBefore(newelement, document.getElementById("root").firstChild)
-document.getElementById("top_message").innerHTML = "<section></section>"
+message = 0
+if (message == 1 ) {
+    var newelement = document.createElement("div");
+    newelement.id = "top_message";
+    document.getElementById("root").insertBefore(newelement, document.getElementById("root").firstChild);
+    document.getElementById("top_message").innerHTML = "<section>qwq</section>";
+    setTimeout(function() {
+    // height1 = document.getElementById("top_message");
+        // height = getComputedStyle(height1, "height")
+        // console.log(height);
+    document.getElementById("header_mode2").style.setProperty("top", 1.5 + "em");
+    
+    }, 1300)
+
+}
