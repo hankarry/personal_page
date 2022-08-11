@@ -31,7 +31,7 @@ AddSheetFile("/css/header_mode_2.css");
 // AddSheetFile("css/all.css");
 
 // // 导航栏数量,当前导航栏1的id,当前导航栏2的id,导航栏2的html
-// function Headers(number, now_page1, now_page2, header2_gui, transparent) {
+// function Header(number, now_page1, now_page2, header2_gui, transparent) {
 //     header_number = number
 //     // document.write("<div id='header'></div>")
 //     var header = document.createElement("div");
@@ -98,7 +98,7 @@ AddSheetFile("/css/header_mode_2.css");
 
 header_loaded = 0;
 // 导航栏数量,当前导航栏1的id,当前导航栏2的id,导航栏2的html
-function Headers(number, page1, page2) {
+function Header(number, page1, page2) {
     if (header_loaded != 1 || header_loaded == undefined){
 
         header_number = number
@@ -150,6 +150,8 @@ function Headers(number, page1, page2) {
     
 }
 
+
+Ajax_script = 1;
 function pageload(herf) {
 
     var animation_card = document.getElementsByClassName('card');
@@ -163,9 +165,9 @@ function pageload(herf) {
     }
 
     var body_content = document.getElementById("body_right");
-    setTimeout(function() {
-        body_content.innerHTML = "";
-    }, 1000)
+    // setTimeout(function() {
+    //     body_content.innerHTML = "";
+    // }, 1000)
 
     var page1 = document.getElementById(now_page1);
     // console.log(now_page1_onclick);
@@ -187,22 +189,65 @@ function pageload(herf) {
     var http = new XMLHttpRequest();
     http.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            setTimeout(function() {
-                body_content.innerHTML = http.responseText;
+            // setTimeout(function() {
+                // body_content.innerHTML = http.responseText;
         
                 var content = http.responseText;
                 
-                document.getElementById("body_right").innerHTML=content;
-                var script = content.match("<script[^>]*>[^<]*</script>");
+                // var body_right = content.match("<div id='body_right'[^>]*>[^<]*</div>");
+                // console.log(body_right);
+                
+                document.getElementById("body_right").innerHTML = content;
+
+                // 查找传入的script元素
+                var match_content = /<script[^>]*>[^<]*<\/script>/g;
+                var script = content.match(match_content);
                 if (script != null)
                 {
-                    script = script.toString().replace('<script>', '');
-                    script = script.replace('</script>', '');
-                    console.log(script);
-                    eval(script);
+                    // 判断id为script的div元素是否存在
+                    if (document.getElementById("script")) {}
+                    else {
+                        
+                        var create_script_div = document.createElement("div");
+                        create_script_div.id = "script";
+                        document.getElementById("body_right").appendChild(create_script_div);
+                    }
+                    // console.log(typeof(script))
+                    // script = script.slice()
+
+                    // 处理传入的script,除去里面带着的<script></script>标签并创建新script元素放入id为script的div
+                    for (var i=0; i < script.length; i++) {
+                        var scripti = script[i].toString()
+                        var scripti = scripti.replace(/<script>/g, '');
+                        var scripti = scripti.replace(/<\/script>/g, '');
+
+                        var newscript_div = document.getElementById("script");
+                        var newscript = document.createElement("script");
+                        var script_id = "Ajax_script" + String(Ajax_script)
+                        newscript.id = script_id;
+
+                        // 判断是否有通过路径指向的script
+                        var script_src = scripti.match(/src=\"[^$\"]*\"/g)
+                        if (script_src != null) {
+                            var script_src_replace = script_src.toString();
+                            var script_src_replace = script_src_replace.replace(/src=/g, "");
+                            var script_src_replace = script_src_replace.replace(/\"/g, "");
+                            newscript.src = script_src_replace
+                        }
+
+                        // console.log(script_src_replace);
+                        // eval(scripti);
+                        
+                        newscript_div.appendChild(newscript);
+                        
+                        document.getElementById(script_id).innerHTML = scripti;
+                        
+                        Ajax_script += 1;
+                    }
+                    // document.getElementById("script").innerHTML = script
                 }
-                
-            }, 2000)
+                // console.log(2)
+            // }, 2000)
             // document.getElementsByTagName('body')[0].write = this.responseText
             // document.write = this.responseText
         }
@@ -322,7 +367,27 @@ function ChangeHeaderWidth() {
 
         var header2 = document.getElementsByClassName("header2_mode2")
         for (i = 0; i < header2.length; i++) {
-            header2[i].style.maxHeight = "150px"
+            header2[i].style.maxHeight = "200px"
         }
     }
 }
+
+// 通过函数放入script(弃用)
+// Ajax_script = 1;
+// function AddScript(path, content, defer) {
+//     var script_div = document.getElementById("script");
+//     var script = document.createElement("script");
+//     var script_id = "Ajax_script" + String(Ajax_script)
+//     script.id = script_id;
+//     if (content) {
+//         document.getElementById(script_id).innerHTML = content;
+//     }
+//     if (path) {
+//         script.src = path;
+//     }
+//     // if (defer == "true") {
+//         // script.defer = defer;
+//     // }
+//     script_div.appendChild(script);
+//     Ajax_script += 1;
+// }

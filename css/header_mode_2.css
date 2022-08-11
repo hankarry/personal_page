@@ -16,6 +16,7 @@
 
 #header_mode2 {
     /* width: var(--header_mode2_width); */
+    z-index: 50;
     transition: all 0.5s;
     position: fixed;
     top: 0;
@@ -58,8 +59,8 @@
     /* background: url(/logo2.png) no-repeat fixed -30vh center;
     background-size: 80vh; */
     /* grid-row: 1 / 2; */
-    /* flex: 150px; */
-    /* flex: 0 0 150px; */
+    /* flex: 200px; */
+    /* flex: 0 0 200px; */
     /* width: var(--header_mode2_width); */
     /* position: fixed; */
 }

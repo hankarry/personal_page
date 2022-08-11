@@ -28,7 +28,7 @@ AddSheetFile("/css/all.css");
 // AddSheetFile("css/all.css");
 
 // 导航栏数量,当前导航栏1的id,当前导航栏2的id,导航栏2的html
-function Headers(number, now_page1, now_page2, header2_gui, transparent) {
+function Header(number, now_page1, now_page2, header2_gui, transparent) {
     
     // document.write("<div id='header'></div>")
     var header = document.createElement("div");

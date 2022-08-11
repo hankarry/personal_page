@@ -7,7 +7,7 @@
 
 // window.onload = 
 
-var footer = "<hr id='foothr'><footer>Made by hankarry Version2.0</footer>";
+var footer = "<hr id='footer'><footer>Made by hankarry Version2.0</footer>";
 var foot = document.createElement('div');
 foot.id = 'foot';
 document.getElementById("body").appendChild(foot);
@@ -40,18 +40,21 @@ document.getElementById('foot').innerHTML = footer
 //     birthday_text = ""
 // }
 // document.write = "<div id='top_message'><img src='/css/hud/cake.svg' width='25' height='25'><section>咱的生日快到啦</section></div>"
-message = 0
+message = 0;
+message_height = "20px";
+
 if (message == 1 ) {
     var newelement = document.createElement("div");
     newelement.id = "top_message";
+    newelement.style.height = message_height
     document.getElementById("root").insertBefore(newelement, document.getElementById("root").firstChild);
     document.getElementById("top_message").innerHTML = "<section>qwq</section>";
-    setTimeout(function() {
-    // height1 = document.getElementById("top_message");
-        // height = getComputedStyle(height1, "height")
-        // console.log(height);
-    document.getElementById("header_mode2").style.setProperty("top", 1.5 + "em");
+    // setTimeout(function() {
+    // height1 = document.getElementById("top_message").style.getPropertyValue("height");
+        // height = height1.style.
+        // console.log(height1);
+    document.getElementById("header_mode2").style.setProperty("top", message_height);
     
-    }, 1300)
+    // }, 1300)
 
 }

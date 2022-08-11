@@ -24,7 +24,7 @@ function showhide(button, detail, text) {
 
 var servers_state = ['server_state_minecraft', 'server_state_Unturned', 'server_state_mumble'];
 // window.onload = function () {
-    for (i = 0; i < servers_state.length; i++) {
+    for (var i = 0; i < servers_state.length; i++) {
         if (document.getElementById(servers_state[i]).innerText == '关闭') {
             document.getElementById(servers_state[i]).style.color = 'red';
         }
