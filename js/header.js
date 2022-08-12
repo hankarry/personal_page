@@ -165,95 +165,103 @@ function pageload(herf) {
     }
 
     var body_content = document.getElementById("body_right");
-    // setTimeout(function() {
-    //     body_content.innerHTML = "";
-    // }, 1000)
+    // 等待动画完成
+    setTimeout(function() {
+        body_content.style.display = "none";
+        // setTimeout(function() {
+        //     body_content.innerHTML = "";
+        // }, 1000)
 
-    var page1 = document.getElementById(now_page1);
-    // console.log(now_page1_onclick);
-    page1.setAttribute("onclick", now_page1_onclick);
+        var page1 = document.getElementById(now_page1);
+        // console.log(now_page1_onclick);
+        page1.setAttribute("onclick", now_page1_onclick);
 
-    // document.getElementById(now_page1).style.backgroundColor = "var(--backgroundcolor)";
-    page1.style.borderWidth = "0px";
-    page1.style.borderRadius = "30px"
-    
-    if (now_page2) {
-        var page2 = document.getElementById(now_page2);
-        // console.log(now_page2_onclick);
-        page2.setAttribute("onclick", now_page2_onclick);
-        page2.style.borderWidth = "0px";
-        page2.style.backgroundColor = "var(--white)"
-        page2.style.borderRadius = "20px 0 0 20px"    
-    }
-
-    var http = new XMLHttpRequest();
-    http.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            // setTimeout(function() {
-                // body_content.innerHTML = http.responseText;
+        // document.getElementById(now_page1).style.backgroundColor = "var(--backgroundcolor)";
+        page1.style.borderWidth = "0px";
+        page1.style.borderRadius = "30px"
         
-                var content = http.responseText;
-                
-                // var body_right = content.match("<div id='body_right'[^>]*>[^<]*</div>");
-                // console.log(body_right);
-                
-                document.getElementById("body_right").innerHTML = content;
-
-                // 查找传入的script元素
-                var match_content = /<script[^>]*>[^<]*<\/script>/g;
-                var script = content.match(match_content);
-                if (script != null)
-                {
-                    // 判断id为script的div元素是否存在
-                    if (document.getElementById("script")) {}
-                    else {
-                        
-                        var create_script_div = document.createElement("div");
-                        create_script_div.id = "script";
-                        document.getElementById("body_right").appendChild(create_script_div);
-                    }
-                    // console.log(typeof(script))
-                    // script = script.slice()
-
-                    // 处理传入的script,除去里面带着的<script></script>标签并创建新script元素放入id为script的div
-                    for (var i=0; i < script.length; i++) {
-                        var scripti = script[i].toString()
-                        var scripti = scripti.replace(/<script>/g, '');
-                        var scripti = scripti.replace(/<\/script>/g, '');
-
-                        var newscript_div = document.getElementById("script");
-                        var newscript = document.createElement("script");
-                        var script_id = "Ajax_script" + String(Ajax_script)
-                        newscript.id = script_id;
-
-                        // 判断是否有通过路径指向的script
-                        var script_src = scripti.match(/src=\"[^$\"]*\"/g)
-                        if (script_src != null) {
-                            var script_src_replace = script_src.toString();
-                            var script_src_replace = script_src_replace.replace(/src=/g, "");
-                            var script_src_replace = script_src_replace.replace(/\"/g, "");
-                            newscript.src = script_src_replace
-                        }
-
-                        // console.log(script_src_replace);
-                        // eval(scripti);
-                        
-                        newscript_div.appendChild(newscript);
-                        
-                        document.getElementById(script_id).innerHTML = scripti;
-                        
-                        Ajax_script += 1;
-                    }
-                    // document.getElementById("script").innerHTML = script
-                }
-                // console.log(2)
-            // }, 2000)
-            // document.getElementsByTagName('body')[0].write = this.responseText
-            // document.write = this.responseText
+        if (now_page2) {
+            var page2 = document.getElementById(now_page2);
+            // console.log(now_page2_onclick);
+            page2.setAttribute("onclick", now_page2_onclick);
+            page2.style.borderWidth = "0px";
+            page2.style.backgroundColor = "transparent"
+            page2.style.borderRadius = "20px 0 0 20px"    
         }
-    };
-    http.open("GET", herf, false)
-    http.send()
+
+        var http = new XMLHttpRequest();
+        http.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                // setTimeout(function() {
+                    // body_content.innerHTML = http.responseText;
+            
+                    var content = http.responseText;
+                    
+                    // var body_right = content.match("<div id='body_right'[^>]*>[^<]*</div>");
+                    // console.log(body_right);
+                    
+                    document.getElementById("body_right").innerHTML = content;
+
+                    // 查找传入的script元素
+                    var match_content = /<script[^>]*>[^<]*<\/script>/g;
+                    var script = content.match(match_content);
+                    if (script != null)
+                    {
+                        // 判断id为script的div元素是否存在
+                        if (document.getElementById("script")) {}
+                        else {
+                            
+                            var create_script_div = document.createElement("div");
+                            create_script_div.id = "script";
+                            document.getElementById("body_right").appendChild(create_script_div);
+                        }
+                        // console.log(typeof(script))
+                        // script = script.slice()
+
+                        // 处理传入的script,除去里面带着的<script></script>标签并创建新script元素放入id为script的div
+                        for (var i=0; i < script.length; i++) {
+                            var scripti = script[i].toString()
+                            var scripti = scripti.replace(/<script>/g, '');
+                            var scripti = scripti.replace(/<\/script>/g, '');
+
+                            var newscript_div = document.getElementById("script");
+                            var newscript = document.createElement("script");
+                            var script_id = "Ajax_script" + String(Ajax_script)
+                            newscript.id = script_id;
+
+                            // 判断是否有通过路径指向的script
+                            var script_src = scripti.match(/src=\"[^$\"]*\"/g)
+                            if (script_src != null) {
+                                var script_src_replace = script_src.toString();
+                                var script_src_replace = script_src_replace.replace(/src=/g, "");
+                                var script_src_replace = script_src_replace.replace(/\"/g, "");
+                                newscript.src = script_src_replace
+                            }
+
+                            // console.log(script_src_replace);
+                            // eval(scripti);
+                            
+                            newscript_div.appendChild(newscript);
+                            
+                            document.getElementById(script_id).innerHTML = scripti;
+                            
+                            Ajax_script += 1;
+                        }
+                        // document.getElementById("script").innerHTML = script
+                    }
+                    // console.log(2)
+                setTimeout(function() {
+                    body_content.style.display = "block"
+                }, 500)
+                    
+                // }, 2000)
+                // document.getElementsByTagName('body')[0].write = this.responseText
+                // document.write = this.responseText
+            }
+        };
+        http.open("GET", herf, false)
+        http.send()
+    }, 1000)
 
 }
 
