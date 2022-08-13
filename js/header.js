@@ -167,10 +167,12 @@ function pageload(herf) {
     var body_content = document.getElementById("body_right");
     // 等待动画完成
     setTimeout(function() {
-        body_content.style.display = "none";
+        body_content.innerHTML = "<div id='page_loading' class='loadings'><div class='loading_style_1_1' style='--loading_wh:2em'></div><div class='loading_style_1_2' style='--loading_wh:2em'></div></div>";
+        // body_content.style.display = "none";
         // setTimeout(function() {
         //     body_content.innerHTML = "";
         // }, 1000)
+        // setTimeout(function() {
 
         var page1 = document.getElementById(now_page1);
         // console.log(now_page1_onclick);
@@ -199,11 +201,11 @@ function pageload(herf) {
                     
                     // var body_right = content.match("<div id='body_right'[^>]*>[^<]*</div>");
                     // console.log(body_right);
-                    
+                    body_content.style.display = "none";
                     document.getElementById("body_right").innerHTML = content;
 
                     // 查找传入的script元素
-                    var match_content = /<script[^>]*>[^<]*<\/script>/g;
+                    var match_content = /<script[^>]*>[^<]*<\/script>/gmi;
                     var script = content.match(match_content);
                     if (script != null)
                     {
@@ -215,14 +217,14 @@ function pageload(herf) {
                             create_script_div.id = "script";
                             document.getElementById("body_right").appendChild(create_script_div);
                         }
-                        // console.log(typeof(script))
+                        // console.log(script)
                         // script = script.slice()
 
                         // 处理传入的script,除去里面带着的<script></script>标签并创建新script元素放入id为script的div
                         for (var i=0; i < script.length; i++) {
                             var scripti = script[i].toString()
-                            var scripti = scripti.replace(/<script>/g, '');
-                            var scripti = scripti.replace(/<\/script>/g, '');
+                            var scripti = scripti.replace(/<script>/gmi, '');
+                            var scripti = scripti.replace(/<\/script>/gmi, '');
 
                             var newscript_div = document.getElementById("script");
                             var newscript = document.createElement("script");
@@ -230,15 +232,15 @@ function pageload(herf) {
                             newscript.id = script_id;
 
                             // 判断是否有通过路径指向的script
-                            var script_src = scripti.match(/src=\"[^$\"]*\"/g)
+                            var script_src = scripti.match(/src=\"[^$\"]*\"/gmi)
                             if (script_src != null) {
                                 var script_src_replace = script_src.toString();
-                                var script_src_replace = script_src_replace.replace(/src=/g, "");
-                                var script_src_replace = script_src_replace.replace(/\"/g, "");
+                                var script_src_replace = script_src_replace.replace(/src=/gmi, "");
+                                var script_src_replace = script_src_replace.replace(/\"/gmi, "");
                                 newscript.src = script_src_replace
                             }
 
-                            // console.log(script_src_replace);
+                            console.log(script_src_replace);
                             // eval(scripti);
                             
                             newscript_div.appendChild(newscript);
@@ -251,8 +253,10 @@ function pageload(herf) {
                     }
                     // console.log(2)
                 setTimeout(function() {
-                    body_content.style.display = "block"
+                    body_content.style.display = "block";
                 }, 500)
+
+
                     
                 // }, 2000)
                 // document.getElementsByTagName('body')[0].write = this.responseText
@@ -261,6 +265,8 @@ function pageload(herf) {
         };
         http.open("GET", herf, false)
         http.send()
+        
+    // }, 5000)
     }, 1000)
 
 }

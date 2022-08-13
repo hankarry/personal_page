@@ -18,7 +18,7 @@
 }
 .card_small {
     /* display: none; */
-    opacity: 0;
+    opacity: 1;
     position: relative;
     min-width: 40%;
     font-size: 1em;
@@ -35,7 +35,7 @@
 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-    animation-name: show_from_right;
+    /* animation-name: show_from_right; */
     animation-duration: 1s;
     animation-fill-mode: both;
     /* float: left; */

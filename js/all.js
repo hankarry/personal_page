@@ -58,3 +58,27 @@ if (message == 1 ) {
     // }, 1300)
 
 }
+
+function couldsee() {
+    console.log(q)
+}
+
+
+// 在进入视口时加载动画
+// window.onscroll = function() {
+//     if (document.getElementById("Scroll_Show")) {
+//         var tagret_number = document.getElementsByClassName("Scro")
+//         // console.log(1)
+//         var wHeight = document.documentElement.clientHeight;
+//         var target_class = document.getElementById("Scroll_Show");
+//         for (var i = 0; i < target_class.length; i++) {
+//             console.log(target_class.top)
+//             if (document.documentElement.scrollTop > target_class[i].offsetTop - wHeight * (3/4)) {
+//                 // target_class[i]
+//                 console.log(1)
+//             }
+//         }
+
+//     }
+    
+// }
