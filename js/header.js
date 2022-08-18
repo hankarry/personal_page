@@ -195,7 +195,9 @@ function pageload(herf) {
             page2.style.borderRadius = "20px 0 0 20px"    
         }
 
+        head_process.style.transitionDuration = "0s"
         head_process.style.width = "0%";
+        head_process.style.transitionDuration = "1.5s"
 
         var http = new XMLHttpRequest();
         http.onreadystatechange = function () {

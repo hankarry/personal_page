@@ -59,6 +59,9 @@ if (message == 1 ) {
 
 }
 
+var head_process = document.getElementById('head_process');
+head_process.style.width = "80%";
+
 // function couldsee() {
     // console.log(q)
 // }
