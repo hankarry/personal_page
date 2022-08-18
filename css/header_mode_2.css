@@ -21,6 +21,9 @@
     position: fixed;
     top: 0;
     bottom: 0;
+    height: 100%;
+    /* overflow: hidden; */
+    /* overflow-y: scroll; */
     /* height: var(--max_hight); */
     background-color: var(--white);
     animation: none 1s ease 0s 1 normal both;
@@ -53,9 +56,17 @@
 }
 
 #header_content {
-    margin: 5px 0 0 0;
-    /* height: 100%; */
-    overflow: hidden;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* position: relative; */
+    margin: 5px 0 50px 0;
+    /* max-height: 90px; */
+    /* top: 0px; */
+    /* bottom: 50px; */
+    /* padding: 0 0 50px 0; */
+    height: 100%;
+    overflow-y: auto;
+    /* overflow: hidden; */
     /* background: url(/logo2.png) no-repeat fixed -30vh center;
     background-size: 80vh; */
     /* grid-row: 1 / 2; */
@@ -103,6 +114,7 @@
 .header2_mode2 {
     transition: max-height 0.5s;
     overflow: hidden;
+    height: fit-content;
     /* height: 100%; */
 }
 
@@ -154,7 +166,7 @@
 }
 
 #div_flex {
-    /* position: relative; */
+    position: absolute;
     /* position: sticky; */
     margin-top: auto;
     border-top: 1px solid var(--gray);

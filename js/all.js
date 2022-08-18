@@ -7,7 +7,7 @@
 
 // window.onload = 
 
-var footer = "<hr id='footer'><footer>Made by hankarry Version2.0</footer>";
+var footer = "<hr id='footer'><footer>Made by hankarry Version2.1</footer>";
 var foot = document.createElement('div');
 foot.id = 'foot';
 document.getElementById("body").appendChild(foot);
@@ -59,9 +59,9 @@ if (message == 1 ) {
 
 }
 
-function couldsee() {
-    console.log(q)
-}
+// function couldsee() {
+    // console.log(q)
+// }
 
 
 // 在进入视口时加载动画

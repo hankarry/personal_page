@@ -12,18 +12,21 @@ document.onreadystatechange = function() {
     //     document.getElementById('process').style.animationName = 'process50';
     // }
     if (document.readyState == 'loading') {
-        document.getElementById('head_process').style.animationName = 'process75';
-        document.getElementById('head_process').style.animationDuration = '1.5s';
+        document.getElementById('head_process').style.width = "75%";
+        // document.getElementById('head_process').style.animationDuration = '1.5s';
         // document.getElementById('process').style.width = '50%';
     }
     // if (document.readyState == 3 ) {
     //     document.getElementById('process').style.animationName = 'process75';
     // }
     if (document.readyState == 'complete') {
-        document.getElementById('head_process').style.animationName = 'process100';
+        document.getElementById('head_process').style.width = "100%";
         // document.getElementById('process').style.width = '100%'
-        document.getElementById('div_head_process').style.animationName = 'process_leave'
-        document.getElementById('head_process').style.animationDuration = '1.5s';
+        // setTimeout(function() {
+            document.getElementById('div_head_process').style.animationName = 'process_leave'
+            // document.getElementById('head_process').style.animationDuration = '1.5s';
+
+        // }, 1000)
 
         // document.getElementById("loading").style.animation = "loading_show 1s ease 0s 1 reverse both"
         // document.getElementById("loading").lastChild.style.animation = "loading_font_show 1s ease 0s 1 reverse both"

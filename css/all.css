@@ -80,12 +80,13 @@ hr {
 #body_right {
     margin: 0 0 0 var(--header_mode2_width);
     padding-top: 1em;
-    transition: margin 0.5s;
-    transition: opacity 0.5s;
+    transition: all 0.5s;
+    min-height: 100vh;
+    /* transition: opacity 0.5s; */
     /* animation: card_move_right 1s ease 0s 1 normal both; */
 }
 
-@keyframes process25 {
+/* @keyframes process25 {
     0% {width: 0%;}
     100% {width: 25%;}
 }
@@ -100,10 +101,14 @@ hr {
 @keyframes process100 {
     0% {width: 75%;}
     100% {width: 100%;}
-}
+} */
 @keyframes process_leave {
     0% {top: 0;}
     100% {top: -0.5em;}
+}
+@keyframes process_in {
+    0% {top: -0.5em;}
+    100% {top: 0;}
 }
 
 #div_head_process {
@@ -111,7 +116,7 @@ hr {
     position: fixed;
     top: 1px;
     margin: 1px;
-    width: 100%;
+    width: 100vw;
     /* animation-name: process_leave; */
     animation-duration: 0.5s;
     animation-delay: 1.5s;
@@ -127,10 +132,11 @@ hr {
     margin: auto 0 auto 0;
     background-color: rgb(0, 157, 255);
     box-shadow: 0px 0px 10px 0px rgb(0 157 255);
-    animation-name: process75;
-    animation-duration: 1s;
-    animation-delay: 0;
-    animation-fill-mode: both;
+    /* animation-name: process75; */
+    /* animation-duration: 1s; */
+    /* animation-delay: 0; */
+    /* animation-fill-mode: both; */
+    transition: width 1s;
     /* transform: width 2s;
     transition-timing-function: ease; */
     /* transform: width 2s; */
@@ -215,7 +221,8 @@ hr {
     75% {left: var(--loading_wh); top: 0em;}
     100% {left: var(--loading_wh); top: var(--loading_wh);}
 }
-.loadings {
+
+.loadings_style_1 {
     width: var(--loading_wh);
     height: var(--loading_wh);
     position: relative;
@@ -265,8 +272,56 @@ hr {
 }
 
 #page_loading {
-    position: absolute;
+    /* position: absolute; */
     margin: auto;
+}
+
+@keyframes loading_style_2_1 {
+    0% {margin-left: 48%;box-shadow: 0 0 0px 0 var(--maincolor); width: 3%;}
+    30% {box-shadow: 0px 0 5px 0 var(--maincolor); width: 10%;}
+    60% {margin-left: 0%; box-shadow: 0 0 0px var(--maincolor); width: 3%;}
+    80% {box-shadow: 0px 0 5px 0 var(--maincolor); width: 10%;}
+    100% {margin-left: 48%; box-shadow: 0px 0 0px 0 var(--maincolor); width: 3%;}
+}
+@keyframes loading_style_2_2 {
+    0% {margin-right: 48%;box-shadow: 0 0 0px 0 var(--maincolor); width: 3%;}
+    30% {box-shadow: 0px 0 5px 0 var(--maincolor); width: 10%;}
+    60% {margin-right: 0%; box-shadow: 0 0 0px var(--maincolor); width: 3%;}
+    80% {box-shadow: 0px 0 5px 0 var(--maincolor); width: 10%;}
+    100% {margin-right: 48%; box-shadow: 0px 0 0px 0 var(--maincolor); width: 3%;}
+}
+
+.loadings_style_2 {
+    /* background-color: teal; */
+    width: 100%;
+    height: 10px;
+    overflow: hidden;
+    /* box-shadow: ; */
+}
+
+.loading_style_2_1 {
+    background-color: var(--maincolor);
+    position: relative;
+    margin: 0 auto 0 auto;
+    border-radius: 0%;
+    /* align-self: center; */
+    width: 20px;
+    height: 2px;
+    top: 5px;
+    animation: loading_style_2_1 2.5s ease 0s infinite normal both;
+    /* left: auto; */
+    /* right: auto; */
+}
+
+.loading_style_2_2 {
+    background-color: var(--maincolor);
+    position: relative;
+    border-radius: 0%;
+    margin: 0 auto 0 auto;
+    top: 3px;
+    animation: loading_style_2_2 2.5s ease 0s infinite normal both;
+    width: 20px;
+    height: 2px;
 }
 
 @keyframes button_180 {
@@ -467,4 +522,5 @@ footer { /* 页脚 */
     box-shadow: 0px 0px 10px 0px rgb(0 157 255);
     /* transform-origin: width 1s; */
     animation: process 1s ease-out 0s normal both;
+    /* transition: width 1s; */
 }

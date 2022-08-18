@@ -165,9 +165,13 @@ function pageload(herf) {
     }
 
     var body_content = document.getElementById("body_right");
+
+    var head_process = document.getElementById('head_process');
+    var div_head_process = document.getElementById('div_head_process');
+
     // 等待动画完成
     setTimeout(function() {
-        body_content.innerHTML = "<div id='page_loading' class='loadings'><div class='loading_style_1_1' style='--loading_wh:2em'></div><div class='loading_style_1_2' style='--loading_wh:2em'></div></div>";
+        body_content.innerHTML = "<div class='loadings_style_2'><div class='loading_style_2_1'></div><div class='loading_style_2_2'></div></div>";
         // body_content.style.display = "none";
         // setTimeout(function() {
         //     body_content.innerHTML = "";
@@ -191,8 +195,24 @@ function pageload(herf) {
             page2.style.borderRadius = "20px 0 0 20px"    
         }
 
+        head_process.style.width = "0%";
+
         var http = new XMLHttpRequest();
         http.onreadystatechange = function () {
+            if (this.readyState == 1) {
+                head_process.style.width = "30%";
+                div_head_process.style.animationDelay = '0s';
+                div_head_process.style.animationName = 'process_in';
+            }
+            if (this.readyState == 2) {
+                head_process.style.width = "60%";
+            }
+            if (this.readyState == 3) {
+                head_process.style.width = "90%";
+            }
+            if (this.status == 404) {
+                head_process.style.backgroundColor = "red";
+            }
             if (this.readyState == 4 && this.status == 200) {
                 // setTimeout(function() {
                     // body_content.innerHTML = http.responseText;
@@ -240,13 +260,16 @@ function pageload(herf) {
                                 newscript.src = script_src_replace
                             }
 
-                            console.log(script_src_replace);
+                            // console.log(script_src_replace);
                             // eval(scripti);
                             
                             newscript_div.appendChild(newscript);
                             
                             document.getElementById(script_id).innerHTML = scripti;
                             
+                            head_process.style.width = "100%";
+                            div_head_process.style.animationDelay = '1.5s';
+                            div_head_process.style.animationName = 'process_leave';
                             Ajax_script += 1;
                         }
                         // document.getElementById("script").innerHTML = script
@@ -262,8 +285,9 @@ function pageload(herf) {
                 // document.getElementsByTagName('body')[0].write = this.responseText
                 // document.write = this.responseText
             }
+            
         };
-        http.open("GET", herf, false)
+        http.open("GET", herf, true)
         http.send()
         
     // }, 5000)
