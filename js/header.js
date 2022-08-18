@@ -169,6 +169,9 @@ function pageload(herf) {
     var head_process = document.getElementById('head_process');
     var div_head_process = document.getElementById('div_head_process');
 
+    head_process.style.transitionDuration = "0s"
+    head_process.style.width = "0%";
+
     // 等待动画完成
     setTimeout(function() {
         body_content.innerHTML = "<div class='loadings_style_2'><div class='loading_style_2_1'></div><div class='loading_style_2_2'></div></div>";
@@ -195,9 +198,7 @@ function pageload(herf) {
             page2.style.borderRadius = "20px 0 0 20px"    
         }
 
-        head_process.style.transitionDuration = "0s"
-        head_process.style.width = "0%";
-        head_process.style.transitionDuration = "1.5s"
+        head_process.style.transitionDuration = "1s"
 
         var http = new XMLHttpRequest();
         http.onreadystatechange = function () {
