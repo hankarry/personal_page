@@ -7,23 +7,23 @@
 
 // window.onload = 
 
+function AddSheetFile(path) {
+    var fileref = document.createElement("link")
+    fileref.rel = "stylesheet";
+    fileref.type = "text/css";
+    fileref.href = path;
+    var head = document.getElementsByTagName('head')[0];
+    head.insertBefore(fileref, head.childNodes[4]);
+    // appendChild()方法在最后插入
+}
+AddSheetFile("css/footer.css");
+// AddSheetFile("css/all.css");
+
 var footer = "<hr id='footer'><footer>Made by hankarry Version2.1</footer>";
 var foot = document.createElement('div');
 foot.id = 'foot';
 document.getElementById("body").appendChild(foot);
 document.getElementById('foot').innerHTML = footer
-
-// function AddSheetFile(path) {
-//     var fileref = document.createElement("link")
-//     fileref.rel = "stylesheet";
-//     fileref.type = "text/css";
-//     fileref.href = path;
-//     var head = document.getElementsByTagName('head')[0];
-//     head.insertBefore(fileref, head.childNodes[4]);
-//     // appendChild()方法在最后插入
-// }
-// AddSheetFile("css/header.css");
-// AddSheetFile("css/all.css");
 
 // var d = new Date;
 // var birthday_count = 19 - d.getDate();

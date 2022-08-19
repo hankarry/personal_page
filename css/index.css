@@ -1,0 +1,78 @@
+@font-face {
+    font-family: MiSans;
+    src: url(ttf/MiSans-Normal.ttf);
+}
+@font-face {
+    font-family: MiSans;
+    src: url(ttf/MiSans-Bold.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: MiSans_thin;
+    src: url(ttf/MiSans-Thin.ttf);
+}
+
+::-webkit-scrollbar{display: none;}
+* {
+    /* margin: 0; */
+    /* font-size: 1em; */
+    font-family: MiSans, "Motiva Sans", Sans-serif, Microsoft YaHei, Arial, Helvetica;
+    
+}
+
+body {
+    margin: 0;
+}
+
+#index_background_1 {
+    /* background: url(/images/ori.jpeg) no-repeat; */
+    /* background-size: cover; */
+    /* background-position: center; */
+    /* background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
+    background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+    /* position: absolute; */
+    /* z-index: -1; */
+    /* position: absolute; */
+    width: 100vw;
+    height: 100vh;
+    /* background-position: ; */
+}
+
+@keyframes goin_left {
+    0% {left: -100vw;}
+    100% {left: 10px;}
+}
+
+@keyframes goin_right {
+    0% {right: -100vw;}
+    100% {right: 10px;}
+}
+
+#index_content_1 {
+    position: relative;
+    text-align: left;
+    width: fit-content;
+    font-size: 5em;
+    /* margin: auto auto auto auto; */
+    color: white;
+    animation: goin_left 0.5s ease 0s 1 normal both;
+}
+
+#index_background_2 {
+    position: relative;
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    font-size: 5em;
+    width: 100vw;
+    height: 100vh;
+}
+
+#index_content_2 {
+    position: relative;
+    text-align: right;
+    /* width: fit-content; */
+    /* right: 0; */
+    /* font-size: */
+    /* margin: auto auto auto auto; */
+    /* color: white; */
+    animation: goin_right 0.5s ease 0s 1 normal both;
+}

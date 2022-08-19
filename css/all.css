@@ -1,5 +1,5 @@
 /* 字体MiSans引用 */
-/* @font-face {
+@font-face {
     font-family: MiSans;
     src: url(ttf/MiSans-Normal.ttf);
 }
@@ -11,7 +11,7 @@
 @font-face {
     font-family: MiSans_thin;
     src: url(ttf/MiSans-Thin.ttf);
-} */
+}
 
 * {
     /* margin: 0; */
@@ -44,10 +44,10 @@ p {
 }
 
 html, body{
-    width: 100%;
-    height: 100%;
-    /* overflow-y: scroll; */
-    /* margin: 0; */
+    /* width: 100%; */
+    /* height: 100%; */
+    overflow-y: scroll;
+    margin: 0;
 }
 ::-webkit-scrollbar{display: none;}
 
@@ -82,6 +82,8 @@ hr {
     padding-top: 1em;
     transition: all 0.5s;
     min-height: 100vh;
+    height: 100%;
+    overflow-y: scroll;
     /* transition: opacity 0.5s; */
     /* animation: card_move_right 1s ease 0s 1 normal both; */
 }
@@ -403,13 +405,6 @@ hr {
     animation-fill-mode: forwards;
 }
 
-footer { /* 页脚 */
-    margin-left: var(--header_mode2_width);
-    text-align: center;
-    font-size: 0.5em;
-    color: #888888;
-}
-
 @keyframes max_hight {
     0% {max-height: 0;}
     100% {max-height: var(--max_hight);}
@@ -440,7 +435,7 @@ footer { /* 页脚 */
 @keyframes message_out {
     0% {right: 1em;}
     100% {right: -20em; display: none;}
-}s
+}
 .message_warn {
     position: fixed;
     bottom: 1em;

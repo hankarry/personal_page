@@ -35,3 +35,58 @@
 // }
 // // Observer.observe(target_class)
 //     // show_from_right 
+
+var Html = document.getElementsByTagName("html")[0];
+var scroll_target = document.querySelectorAll(".card_small");
+var window_height = window.innerHeight
+scroll_target_num = scroll_target.length;
+// for (var i=0; i<scroll_target.length; i++) {
+//     scroll_target[i].id = scroll_target[i].id + " auto_scroll_" + i
+// }
+
+// console.log(dis);
+
+// var scroll_top
+for (var i=0; i<scroll_target.length; i++) {
+    var ele_top = scroll_target.item(i).offsetTop;
+    
+    // var scroll_ = scroll_target.item(i).offsetTop;
+    // console.log(scroll_)
+    // if (dis + window_height + 200 > ele_top) {
+        //// console.log(1)
+        // scroll_target[i].style.visibility = "visible";
+        // scroll_target[i].style.display = "block";
+    // }
+
+//     // var dis = scroll_target[2].
+// }
+// for (var i=0; i<scroll_target_num; i++) {
+    // var offsetTop = document.getElementById("auto_scroll_" + i).offsetTop;
+    // console.log(offsetTop)
+}
+
+// var scroll_target = document.getElementsByClassName("card_small");
+window.onscroll = function() {
+    var dis = Html.scrollTop;
+    // console.log(dis);
+
+    // var scroll_top
+    for (var i=0; i<scroll_target.length; i++) {
+        var ele_top = document.querySelectorAll(".card_small").item(i).offsetTop;
+        
+        // var scroll_ = scroll_target.item(i).offsetTop;
+        // console.log(scroll_)
+        // if (dis + window_height + 200 > ele_top) {
+            // console.log(ele_top)
+            // scroll_target[i].style.visibility = "visible";
+            // scroll_target[i].style.display = "block";
+        // }
+
+    //     // var dis = scroll_target[2].
+    // }
+    // for (var i=0; i<scroll_target_num; i++) {
+        // var offsetTop = document.getElementById("auto_scroll_" + i).offsetTop;
+        // console.log(offsetTop)
+    }
+    // console.log(dis + window_height)
+}
