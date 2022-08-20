@@ -268,7 +268,10 @@ function pageload(herf) {
                             
                             newscript_div.appendChild(newscript);
                             
-                            document.getElementById(script_id).innerHTML = scripti;
+                            // 使js与页面显示同步
+                            setTimeout(function() {
+                                document.getElementById(script_id).innerHTML = scripti;
+                            },500)
                             
                             head_process.style.width = "100%";
                             div_head_process.style.animationDelay = '1.5s';

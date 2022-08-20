@@ -94,3 +94,45 @@ https://www.bbsmax.com/A/ke5jEAXVJr/
 
 大教训
 不要 不要 不要太相信vscode的自动填充 offestTop就是个大栗子
+
+https://www.nhooo.com/note/qa047f.html
+如何从JavaScript中的变量值创建对象属性？
+JS有2种用于创建对象属性的符号，即点符号和方括号符号。
+
+要从变量创建对象属性，您需要通过以下方式使用方括号表示法-
+
+示例
+const obj = {a: 'foo'}
+const prop = 'bar'
+//设置属性栏
+obj[prop] = 'baz'
+console.log(obj);
+输出结果
+
+这将给出输出-
+
+{
+   a: 'foo',
+   bar: 'baz'
+}
+ES6引入了计算属性名称，您可以执行以下操作：
+
+示例
+const prop = 'bar'
+const obj = {
+   //使用as键
+   a: 'foo',
+   //使用prop的值作为键
+   [prop]: 'baz'
+}
+console.log(obj);
+输出结果
+
+这将给出输出-
+
+{
+   a: 'foo',
+   bar: 'baz'
+}
+
+https://blog.csdn.net/peonyc/article/details/88752986
