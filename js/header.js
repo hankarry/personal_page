@@ -174,7 +174,15 @@ function pageload(herf) {
 
     // 等待动画完成
     setTimeout(function() {
-        body_content.innerHTML = "<div class='loadings_style_2'><div class='loading_style_2_1'></div><div class='loading_style_2_2'></div></div>";
+        body_content.innerHTML = "<div class='loadings_style_2' id='page_loading'><div class='loading_style_2_1'></div><div class='loading_style_2_2'></div></div>";
+        setTimeout(function() {
+            if (document.getElementById("page_loading")) {
+                var wait = document.createElement("div");
+                wait.id = "wait_text";
+                wait.innerHTML = "此过程比预期要长";
+                document.getElementById("page_loading").appendChild(wait);
+            }
+        }, 5000)
         // body_content.style.display = "none";
         // setTimeout(function() {
         //     body_content.innerHTML = "";

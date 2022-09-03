@@ -37,39 +37,33 @@
 //     // show_from_right 
 
 var Html = document.getElementsByTagName("html")[0];
-var scroll_target = document.querySelectorAll(".card_small");
+var scroll_target = document.querySelectorAll(".Scroll_Show");
 var window_height = window.innerHeight;
 scroll_target_num = scroll_target.length;
-// for (var i=0; i<scroll_target.length; i++) {
-//     scroll_target[i].id = scroll_target[i].id + " auto_scroll_" + i
-// }
 
-// console.log(dis);
-
-// var scroll_top
+var already_show = []
+var elements_top = []
 setTimeout(function() {
     for (var i=0; i<scroll_target.length; i++) {
-        already_show = {[i]: "false"}
+        already_show.push("false");
+        var eleheight = scroll_target.item(i).offsetTop - scroll_target.item(i).clientHeight;
+        elements_top.push(eleheight);
         // offsetHeight	元素在页面中占据的高度总和，包括 height、padding、border 以及滚动条的宽度
         // clientHeight	获取元素可视部分的高度，即 CSS 的 height 和 padding 属性值之和，元素边框和滚动条不包括在内，也不包含任何可能的滚动区域
         
         // console.log(already_show)
         // console.log(eleheight)
         
-        // console.log(already_show)
     //     // var dis = scroll_target[2].
     }
 
-    for (var i=0; i<scroll_target.length; i++) {
-        var eleheight = scroll_target.item(i).offsetTop - scroll_target.item(i).clientHeight;
-        var elements_top = {[i]: eleheight};
-    
+    for (var i=0; i<scroll_target.length;i++) {
         var dis = Html.scrollTop;
         var scroll_height = dis + window_height
         // console.log(already_show)
 
         if (scroll_height > elements_top[i] && already_show[i] == "false") {
-            // console.log(elements_top)
+            
             scroll_target[i].style.visibility = "visible";
             // scroll_target[i].style.display = "block";
             scroll_target[i].style.animationName = "show_from_right";
@@ -78,24 +72,15 @@ setTimeout(function() {
         }
     }
 
-    
     // var scroll_target = document.getElementsByClassName("card_small");
     window.onscroll = function() {
-        var eleheight = scroll_target.item(i).offsetTop - scroll_target.item(i).clientHeight;
-        var elements_top = {[i]: eleheight};
-    
         var dis = Html.scrollTop;
         var scroll_height = dis + window_height
-        console.log("HTML滚动高度: " + scroll_height);
+        // console.log("HTML滚动高度: " + scroll_height);
         // console.log(elements_top[1])
 
         // var scroll_top
         for (var i=0; i<scroll_target.length; i++) {
-            
-            // var ele_top4 = document.querySelectorAll(".card_small").item(6).offsetTop - scroll_target.item(6).offsetHeight;
-            // console.log(ele_top4)
-            // var scroll_ = scroll_target.item(i).offsetTop;
-            // console.log(elements_top)
             // console.log("元素" + i + "高度: " + elements_top[i])
             
             // 以i的值作为输入
@@ -107,18 +92,7 @@ setTimeout(function() {
                 already_show[i] = "true";
             }
 
-        //     // var dis = scroll_target[2].
-        // }
-        // for (var i=0; i<scroll_target_num; i++) {
-            // var offsetTop = document.getElementById("auto_scroll_" + i).offsetTop;
-            // console.log(offsetTop)
         }
-        // console.log(dis + window_height)
     }
 }, 1000)
-
-// for (var i=0; i<scroll_target_num; i++) {
-    // var offsetTop = document.getElementById("auto_scroll_" + i).offsetTop;
-    // console.log(offsetTop)
-// }
 

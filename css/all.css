@@ -414,9 +414,11 @@ hr {
     display: flex;
     /* height: 1.5em; */
     /* position: fixed; */
+    z-index: 100;
+    /* position: -webkit-sticky; Safari */
+    /* position: sticky; */
     /* top: 0; */
     width: 100%;
-
     /* background-color: var(--maincolor); */
     /* background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%); */
     background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
@@ -518,4 +520,9 @@ hr {
     /* transform-origin: width 1s; */
     animation: process 1s ease-out 0s normal both;
     /* transition: width 1s; */
+}
+
+#wait_text {
+    text-align: center;
+    font-size: 2em;
 }
