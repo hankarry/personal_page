@@ -6,29 +6,14 @@ function AddSheetFile(path) {
     fileref.type = "text/css";
     fileref.href = path;
     var head = document.getElementsByTagName('head')[0];
-    // var body_content = document.getElementById("body_right");
+    // var body_content = document.getElementById("body_right_content");
     // head.insertBefore(fileref, head.childNodes[4]);
     head.appendChild(fileref);
     // appendChild()方法在最后插入
 }
 AddSheetFile("/css/all.css");
+// AddSheetFile("/css/animation.css");
 AddSheetFile("/css/header_mode_2.css");
-
-// document.write("<div id='header'></div>")
-// var xhttp
-// xhttp = new XMLHttpRequest();
-// xhttp.onreadystatechange = function () {
-//     if (this.readyState == 4 && this.status == 200) {
-//         document.getElementById("header").innerHTML = this.responseText;
-//         // document.getElementsByTagName('body')[0].write = this.responseText
-//         // document.write = this.responseText
-//     }
-// };
-// xhttp.open("GET", "/header/header.html", false)
-// xhttp.send()
-
-// document.createElement('div').id = 'header'
-// AddSheetFile("css/all.css");
 
 // // 导航栏数量,当前导航栏1的id,当前导航栏2的id,导航栏2的html
 // function Header(number, now_page1, now_page2, header2_gui, transparent) {
@@ -164,7 +149,7 @@ function pageload(herf) {
         animation_card_small[i].style.animationDelay = '0s';
     }
 
-    var body_content = document.getElementById("body_right");
+    var body_content = document.getElementById("body_right_content");
 
     var head_process = document.getElementById('head_process');
     var div_head_process = document.getElementById('div_head_process');
@@ -230,10 +215,10 @@ function pageload(herf) {
             
                     var content = http.responseText;
                     
-                    // var body_right = content.match("<div id='body_right'[^>]*>[^<]*</div>");
-                    // console.log(body_right);
+                    // var body_right_content = content.match("<div id='body_right_content'[^>]*>[^<]*</div>");
+                    // console.log(body_right_content);
                     body_content.style.display = "none";
-                    document.getElementById("body_right").innerHTML = content;
+                    document.getElementById("body_right_content").innerHTML = content;
 
                     // 查找传入的script元素
                     var match_content = /<script[^>]*>[^<]*<\/script>/gmi;
@@ -246,7 +231,7 @@ function pageload(herf) {
                             
                             var create_script_div = document.createElement("div");
                             create_script_div.id = "script";
-                            document.getElementById("body_right").appendChild(create_script_div);
+                            document.getElementById("body_right_content").appendChild(create_script_div);
                         }
                         // console.log(script)
                         // script = script.slice()
@@ -310,7 +295,7 @@ function pageload(herf) {
 }
 
 function jumpto(herf) {
-    // var body_content = document.getElementById("body_right");
+    // var body_content = document.getElementById("body_right_content");
     // body_content.innerHTML = "";
 
     // var http = new XMLHttpRequest();
@@ -364,7 +349,7 @@ function jumpto(herf) {
 //     setTimeout(function() {
         
 //         document.getElementById("header_mode2").style.display = "block";
-//         document.getElementById("body_right").style.animation = "card_move_right 1s ease 0s 1 normal both";
+//         document.getElementById("body_right_content").style.animation = "card_move_right 1s ease 0s 1 normal both";
 //     }, 2000)
 
 //     document.cookie = "header_mode=2; path=/"

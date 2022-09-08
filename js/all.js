@@ -49,30 +49,6 @@ head_process.style.width = "80%";
     // console.log(q)
 // }
 
-message = 0;
-message_height = "20px";
-message_height_2 = "40px";
-message_height_add = "30px";
-
-// message为0时不通知,1时通知
-if (message == 1 ) {
-    var newelement = document.createElement("div");
-    newelement.id = "top_message";
-    newelement.style.height = message_height
-    document.getElementById("root").insertBefore(newelement, document.getElementById("root").firstChild);
-    document.getElementById("top_message").innerHTML = "<section>这是一条置顶消息</section>";
-    // setTimeout(function() {
-    // height1 = document.getElementById("top_message").style.getPropertyValue("height");
-        // height = height1.style.
-        // console.log(height1);
-    document.getElementById("header_mode2").style.setProperty("top", message_height);
-    // document.getElementById("header_mode2").style.setProperty("bottom", message_height_2);
-    // document.getElementById("body_right").style.paddingTop = message_height_add;
-    
-    // }, 1300)
-
-}
-
 // 在进入视口时加载动画
 // window.onscroll = function() {
 //     if (document.getElementById("Scroll_Show")) {
@@ -91,3 +67,66 @@ if (message == 1 ) {
 //     }
     
 // }
+
+var Html = document.getElementsByTagName("html")[0];
+var window_height = window.innerHeight;
+var scroll_up = document.getElementById("scroll_up");
+var scrolltop_image = document.getElementById("scroll_up_content")
+var scrollup_already_show = 0;
+window.addEventListener("scroll", function() {
+    var dis = Html.scrollTop;
+    // var scroll_height = dis + window_height;
+    // console.log("HTML滚动高度: " + dis);
+    // console.log(window_height * 0.5)
+    // console.log(elements_top[1])
+    // console.log(1)
+    
+    if (dis > 0.5 * window_height && scrollup_already_show == 0) {
+        scroll_up.style.animationName = "show_from_right";
+        // scroll_up.style.animationDirection = "normal";
+        // scroll_up.style.animationPlayState = "running";
+        scrollup_already_show = 1;
+        // console.log(1)
+    }
+
+    if (dis < 0.5 * window_height && scrollup_already_show == 1) {
+        scroll_up.style.animationName = "hide_from_right";
+        setTimeout(function() {
+            scrolltop_image.style.animationName = "none";
+        }, 1000)
+        // scrolltop_image.style.animationPlayState = "paused";
+        // scroll_up.style.animationDirection = "alternate";
+        // scroll_up.style.animationPlayState = "running";
+        scrollup_already_show = 0;
+    }
+})
+
+function scroll_to_top() {
+    window.scrollTo(0,0);
+    scrolltop_image.style.animationName = "scrolling";
+    // scrolltop_image.style.animationPlayState = "running";
+}
+
+message = 1;
+message_height = "20px";
+message_height_2 = "40px";
+message_height_add = "30px";
+
+// message为0时不通知,1时通知
+if (message == 1 ) {
+    var newelement = document.createElement("div");
+    newelement.id = "top_message";
+    newelement.style.height = message_height
+    document.getElementById("root").insertBefore(newelement, document.getElementById("root").firstChild);
+    document.getElementById("top_message").innerHTML = "<section>这是一条置顶消息</section>";
+    // setTimeout(function() {
+    // height1 = document.getElementById("top_message").style.getPropertyValue("height");
+        // height = height1.style.
+        // console.log(height1);
+    document.getElementById("header_mode2").style.setProperty("top", message_height);
+    // document.getElementById("header_mode2").style.setProperty("bottom", message_height_2);
+    // document.getElementById("body_right_content").style.paddingTop = message_height_add;
+    
+    // }, 1300)
+
+}
