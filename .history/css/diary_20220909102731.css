@@ -1,13 +1,11 @@
 #whole_diary {
     display: grid;
     grid-template-columns : 75% 25%;
-    /* grid-gap: 10px; */
-    /* grid-template-rows: min-content min-content; */
+    grid-template-rows: min-content min-content;
 }
 
 .card {
     width: 95%;
-    /* height: fit-content; */
     /* margin: 0 0 10px 0; */
 }
 

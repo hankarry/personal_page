@@ -96,3 +96,25 @@ setTimeout(function() {
     }
 }, 1000)
 
+
+var window_height = window.innerHeight;
+var scroll_up = document.getElementById("scroll_up");
+var already_showup = 0;
+window.onscroll = function() {
+    var dis = Html.scrollTop;
+    // var scroll_height = dis + window_height;
+    // console.log("HTML滚动高度: " + scroll_height);
+    // console.log(elements_top[1])
+    console.log(1)
+    
+    if (dis > 1 * window_height && already_showup == 0) {
+        scroll_up.style.animationDirection = "normal";
+        already_showup = 1;
+        console.log(1)
+    }
+
+    if (dis < 1 * window_height && already_showup == 1) {
+        scroll_up.style.animationDirection = "alternate";
+        already_showup = 0
+    }
+}

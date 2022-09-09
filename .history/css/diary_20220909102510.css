@@ -1,21 +1,18 @@
-#whole_diary {
-    display: grid;
-    grid-template-columns : 75% 25%;
-    /* grid-gap: 10px; */
-    /* grid-template-rows: min-content min-content; */
-}
-
-.card {
-    width: 95%;
-    /* height: fit-content; */
-    /* margin: 0 0 10px 0; */
-}
-
 @media screen and (max-width: 600px) {
     #whole_diary {
         display: grid;
         grid-template-columns : 100%;
     }
+}
+
+#whole_diary {
+    display: grid;
+    grid-template-columns : 75% 25%;
+}
+
+.card {
+    width: 95%;
+    /* margin: 0 0 10px 0; */
 }
 
 #diary {

@@ -1,7 +1,6 @@
 #whole_diary {
     display: grid;
     grid-template-columns : 75% 25%;
-    /* grid-gap: 10px; */
     /* grid-template-rows: min-content min-content; */
 }
 

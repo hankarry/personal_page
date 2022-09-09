@@ -1,0 +1,24 @@
+@keyframes show_from_right {
+    0% {right: var(--show_right_start);}
+    100% {right: var(--show_right_end);}
+}
+
+@keyframes hide_from_right {
+    0% {right: var(--hide_right_start);}
+    100% {right: var(--hide_right_end);}
+}
+
+@keyframes process {
+    0% {width: 0;}
+    100% {width: var(--process);}
+}
+
+@keyframes max_hight {
+    0% {max-height: 0;}
+    100% {max-height: var(--max_hight);}
+}
+
+@keyframes height_change {
+    0% {height: var(--height_change_start);}
+    100% {height: var(--height_change_end);}
+}

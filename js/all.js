@@ -82,7 +82,7 @@ window.addEventListener("scroll", function() {
     // console.log(1)
     
     if (dis > 0.5 * window_height && scrollup_already_show == 0) {
-        scroll_up.style.animationName = "show_from_right";
+        scroll_up.style.animationName = "show_from_right_";
         // scroll_up.style.animationDirection = "normal";
         // scroll_up.style.animationPlayState = "running";
         scrollup_already_show = 1;
@@ -90,7 +90,7 @@ window.addEventListener("scroll", function() {
     }
 
     if (dis < 0.5 * window_height && scrollup_already_show == 1) {
-        scroll_up.style.animationName = "hide_from_right";
+        scroll_up.style.animationName = "hide_from_right_";
         setTimeout(function() {
             scrolltop_image.style.animationName = "none";
         }, 1000)

@@ -190,7 +190,6 @@ hr {
     background-color: white;
     margin: 0 auto 10px auto;
     width: 90%;
-    height: fit-content;
     padding: 5px 0 5px 0;
     border: 0px solid var(--gray);
     border-radius: 15px;
