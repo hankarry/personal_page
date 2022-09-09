@@ -1,6 +1,6 @@
 #whole_diary {
     display: grid;
-    grid-template-columns : 75% 25%;
+    grid-template-columns : 100%;
     /* grid-gap: 10px; */
     /* grid-template-rows: min-content min-content; */
 }
@@ -11,10 +11,11 @@
     /* margin: 0 0 10px 0; */
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 600px) {
     #whole_diary {
         display: grid;
-        grid-template-columns : 100%;
+        grid-template-columns : 75% 25%;
+
     }
 }
 
@@ -28,20 +29,26 @@
 }
 
 .diary_title {
-    font-size: 1.5em;
+    font-size: 1.25em;
     background-color: var(--backgroundcolor_card);
-    /* margin-left: 10px; */
+    width: fit-content;
+    padding: 0 5px 0 5px;
+    border: 1px solid var(--gray);
+    border-radius: 10px;
+    background-color: var(--maincolor_thin);    /* margin-left: 10px; */
 }
 
 .diary_content {
     position: relative;
     /* display: inline-block; */
-    padding-left: 15px;
-    margin-left: 0px;
+    padding-left: 20px;
+    margin: 3px 0 3px 0;
+    /* margin-left: 0px; */
 }
 
 #diary > li {
     display: list-item;
+    margin: 0 0 5px 0;
     /* overflow: hidden; */
 
     /* 对于absolute定位的层总是相对于其最近的定义为absolute或relative的父层 */
@@ -53,9 +60,10 @@
     position: absolute;
     height: 100%;
     top: 0;
-    left: 5px;
+    left: 15px;
     width: 1px;
-    background-color: var(--gray);
+    /* box-shadow: 0px 0px 5px 5px var(--maincolor_thin); */
+    background-color: var(--maincolor);
     /* z-index: 0; */
 }
 

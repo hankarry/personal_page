@@ -36,7 +36,7 @@
 
 * {
     /* margin: 0; */
-    /* font-size: 1em; */
+    font-size: 1em;
     font-family: MiSans, "Motiva Sans", Sans-serif, Microsoft YaHei, Arial, Helvetica;
     color: var(--font_color);
 }
@@ -171,6 +171,7 @@ hr {
 
 .card { /* 主体设置 */
     position: relative;
+    overflow: hidden;
     /* display: inline-block; */
     /* display: flexbox; */
     /* display: inline-flex; */

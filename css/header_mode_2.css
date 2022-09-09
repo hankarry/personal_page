@@ -125,6 +125,7 @@
     border-right: 0px;
     /* border-bottom: 1px solid var(--gray); */
     height: 30px;
+    font-size: small;
     background-color: transparent;
     text-align: left;
     /* font-size: 1em; */
