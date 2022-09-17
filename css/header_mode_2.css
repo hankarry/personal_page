@@ -24,12 +24,12 @@
     /* height: 100%; */
     /* overflow: hidden; */
     /* overflow-y: scroll; */
-    /* height: var(--max_hight); */
+    /* height: var(--max_height); */
     background-color: var(--white);
     animation: none 1s ease 0s 1 normal both;
-    animation-name: header_mode2_show, max_hight;
-    --max_hight: 100vh;
-    /* animation: max_hight 1s ease 0s 1 normal both; */
+    animation-name: header_mode2_show, max_height_forward;
+    --max_height: 100vh;
+    /* animation: max_height_start 1s ease 0s 1 normal both; */
     /* display: flex; */
     /* height: fit-content; */
     /* grid-row: 1 / 2; */

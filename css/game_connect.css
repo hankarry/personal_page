@@ -14,21 +14,37 @@
 .grip_left {
     border-left: unset !important;
 }
+/* 
+@keyframes showfrom_top {
+    0% {height: 0em;}
+    100% {height: 10em;}
+}
+
+@keyframes hidefrom {
+    0% {height: 10em;}
+    100% {height: 0;}
+} */
 
 .button_detail {
+    position: relative;
+
+    animation: none 0.5s ease 0s 1 normal both;
+    height: fit-content !important;
     /* min-height: 1em; */
     /* display: block; */
     /* height: 5em !important; */
     width: 100%;
-    animation-fill-mode: both;
     /* height: 5em; */
     background-color: var(--white_gray);
     grid-column: 1 / 5;
 
+    --max_height:100px;
 }
 .button_detail_text {
     border-top: unset !important;
     height: 100%;
+    text-align: left;
+    font-size: small;
 }
 
 #server_game {
@@ -96,8 +112,27 @@
 }
 
 #server_voice section, #server_game section {
-    width: fit-content;
+    /* width: fit-content; */
+    width: 100%;
+    text-align: center;
     margin: 1em auto 1em auto;
+}
+
+.gameserver_address {
+    position: relative;
+}
+
+.copy_div {
+    position: absolute;
+    right: 0;
+    /* display: none; */
+    display: inline-block;
+    visibility: hidden;
+    height: 1.5em;
+    width: 1.5em;
+    background: url(/css/hud/fuzhi.svg) no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 /* #server_detail_button_mumble img:hover {

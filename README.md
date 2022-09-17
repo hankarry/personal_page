@@ -136,3 +136,12 @@ console.log(obj);
 }
 
 https://blog.csdn.net/peonyc/article/details/88752986
+
+html 盒子水平居中和水平垂直居中的一些方法
+https://blog.csdn.net/Suowi/article/details/123384501
+
+为什么 :before 和 :after 伪元素需要 'content' 属性？
+https://www.likecs.com/ask-523800.html
+
+javascript - 我的网站如何检测浏览器是否使用暗色/浅色主题，而不是操作系统使用主题色？
+https://www.nuomiphp.com/eplan/184298.html

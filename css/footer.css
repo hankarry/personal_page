@@ -4,3 +4,9 @@ footer { /* 页脚 */
     font-size: 0.5em;
     color: #888888;
 }
+
+#footer_hr {
+    /* height: 1px; */
+    border: none;
+    border-bottom: 1px solid gray;
+}

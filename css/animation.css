@@ -13,9 +13,14 @@
     100% {width: var(--process);}
 }
 
-@keyframes max_hight {
+@keyframes max_height_forward {
     0% {max-height: 0;}
-    100% {max-height: var(--max_hight);}
+    100% {max-height: var(--max_height);}
+}
+
+@keyframes max_height_backward {
+    0% {max-height: var(--max_height);}
+    100% {max-height: 0;}
 }
 
 @keyframes height_change {

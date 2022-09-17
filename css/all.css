@@ -3,6 +3,8 @@
 
 :root {    
     --maincolor:#94E9FF;
+    /* #94E9FF */
+    /* #5FCBF5 */
     --maincolor_thin:rgb(201,244,255); /* 菜单覆盖色 */
     --maincolor_thin3:rgb(223,248,255);
     --maincolor_thin4:rgba(148, 233, 255, 0.4);
@@ -69,10 +71,6 @@ body {
     /* background-size:cover;  让背景图基于容器大小伸缩 */
     /* background-attachment:fixed;        当内容高度大于图片高度时，背景图像的位置相对于viewport固定    此条属性必须设置否则可能无效 */
     background-color: var(--backgroundcolor);/* 设置背景颜色，背景图加载过程中会显示背景色 */
-}
-
-hr {
-    background-color: var(--maincolor);
 }
 
 #body {
@@ -179,10 +177,10 @@ hr {
     -o-animation-name: gointo;
     -moz-animation-name: gointo;
     -webkit-animation-name: gointo;
-    animation-duration: 1s;
-    -o-animation-duration: 1s;
-    -moz-animation-duration: 1s;
-    -webkit-animation-duration: 1s;
+    animation-duration: 0.8s;
+    -o-animation-duration: 0.8s;
+    -moz-animation-duration: 0.8s;
+    -webkit-animation-duration: 0.8s;
     animation-fill-mode: both;
     -o-animation-fill-mode: both;
     -webkit-animation-fill-mode: both;
@@ -380,10 +378,6 @@ hr {
     }
 }
 
-@keyframes hidefrom {
-    0% {height: 10em;}
-    100% {height: 0;}
-}
 @keyframes showfrom_top_text {
     0% {opacity: 0;}
     100% {opacity: 1;}
@@ -401,24 +395,6 @@ hr {
 
     /* animation-name: button_180; */
     animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-.button_detail {
-    position: relative;
-
-    --height_change_start:0;
-    --height_change_end:10em;
-
-    animation-name: height;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-.button_detail_text {
-    text-align: left;
-    opacity: 0;
-    animation-name: showfrom_top_text;
-    animation-duration: 0.2s;
-    animation-delay: 0.5s;
     animation-fill-mode: forwards;
 }
 
@@ -439,8 +415,8 @@ hr {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    --max_hight: 3em;
-    animation: max_hight 2s ease 1s 1 normal both;
+    --max_height: 3em;
+    animation: max_height_forward 2s ease 1s 1 normal both;
     /* animation-name: max_height; */
 }
 
@@ -459,6 +435,7 @@ hr {
     background-color: white;
     /* border: 0px solid var(--maincolor); */
     border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
     animation-name: message_into, message_out;
     -o-animation-name: message_into, message_out;
@@ -500,7 +477,7 @@ hr {
     /* max-height: 0; */
     background-color: white;
     /* border-radius: 10px; */
-    --max_hight: 10em;
+    --max_height: 10em;
 }
 
 .error_div {
@@ -509,7 +486,7 @@ hr {
     border: 1.5px solid rgb(255, 0, 0);
     color: rgb(255, 0, 0);
     padding: 3px;
-    animation: max_hight 2s ease 0s 1 normal both;
+    animation: max_height 2s ease 0s 1 normal both;
     /* animation: showwarn 5s ease 0s 1 normal both; */
     /* border-radius: 10px; */
 }
@@ -536,15 +513,6 @@ hr {
 #wait_text {
     text-align: center;
     font-size: 2em;
-}
-
-@keyframes show_from_right_ {
-    0% {right: -100%;}
-    100% {right: 1em;}
-}
-@keyframes hide_from_right_ {
-    0% {right: 1em;}
-    100% {right: -100%;}
 }
 
 #scroll_up {

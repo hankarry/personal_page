@@ -276,7 +276,7 @@ function pageload(herf) {
                     // console.log(2)
                 setTimeout(function() {
                     body_content.style.display = "block";
-                }, 500)
+                }, 1000)
 
 
                     
@@ -290,7 +290,7 @@ function pageload(herf) {
         http.send()
         
     // }, 5000)
-    }, 1000)
+    }, 800)
 
 }
 
