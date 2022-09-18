@@ -28,7 +28,9 @@
 .button_detail {
     position: relative;
 
-    animation: none 0.5s ease 0s 1 normal both;
+    /* animation: none 0.5s ease 0s 1 normal both; */
+    max-height: 10em;
+    transition: all 1s;
     height: fit-content !important;
     /* min-height: 1em; */
     /* display: block; */

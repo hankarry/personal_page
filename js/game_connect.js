@@ -1,7 +1,8 @@
 function showhide(button, detail, text) {
     if (document.getElementById(detail).style.display == "block") {
 
-        document.getElementById(detail).style.animationName = "max_height_backward";
+        // document.getElementById(detail).style.animationName = "max_height_backward";
+        document.getElementById(detail).style.maxHeight = "0em";
         // document.getElementById(text).style.animationName = "hidefrom_text";
         // document.getElementById(text).style.animationDelay = "0s";
         
@@ -16,7 +17,8 @@ function showhide(button, detail, text) {
     // document.getElementById(text).style.animationName = "show_top_text";
     // document.getElementById(text).style.animationDelay = "0.5s";
     document.getElementById(detail).style.display = "block";
-    document.getElementById(detail).style.animationName = "max_height_forward";
+    // document.getElementById(detail).style.animationName = "max_height_forward";
+    document.getElementById(detail).style.maxHeight = "10em";
     
     document.getElementById(button).style.animationName = "button_180";
     }

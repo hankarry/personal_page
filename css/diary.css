@@ -104,3 +104,12 @@
     border-radius: 2px;
     color: white;
 }
+
+.bushu {
+    display: inline-block;
+    background-color: var(--maincolor);
+    padding: 0 2px 0 2px;
+    margin-right: 2px;
+    border-radius: 2px;
+    color: black;
+}
