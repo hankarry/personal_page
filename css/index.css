@@ -64,6 +64,7 @@ body {
 
 #main_1 {
     position: relative;
+    overflow-x: hidden;
     height: 100vh;
     width: 100vw;
 }
@@ -97,6 +98,7 @@ body {
     text-align: center;
     
     background-color: var(--background_color_ope);
+    overflow-x: hidden;
     /* height: 100vh; */
     /* color: white; */
     animation: card_1_in 0.5s ease-out 0s 1 normal both;
