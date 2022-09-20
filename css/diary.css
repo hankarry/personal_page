@@ -69,6 +69,7 @@
 
 .xiufu {
     display: inline-block;
+    text-align: center;
     background-color: rgb(240, 190, 50);
     padding: 0 2px 0 2px;
     margin-right: 2px;
@@ -78,6 +79,7 @@
 
 .xinzeng {
     display: inline-block;
+    text-align: center;
     background-color: rgb(50, 240, 60);
     padding: 0 2px 0 2px;
     margin-right: 2px;
@@ -87,6 +89,7 @@
 
 .yichu {
     display: inline-block;
+    text-align: center;
     background-color: rgb(255,0,0);
     padding: 0 2px 0 2px;
     margin-right: 2px;
@@ -97,6 +100,7 @@
 
 .xiugai {
     display: inline-block;
+    text-align: center;
     background-color: rgb(50,50,50);
     padding: 0 2px 0 2px;
     margin-right: 2px;
@@ -107,6 +111,7 @@
 
 .bushu {
     display: inline-block;
+    text-align: center;
     background-color: var(--maincolor);
     padding: 0 2px 0 2px;
     margin-right: 2px;

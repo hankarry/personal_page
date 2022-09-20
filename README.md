@@ -145,3 +145,6 @@ https://www.likecs.com/ask-523800.html
 
 javascript - 我的网站如何检测浏览器是否使用暗色/浅色主题，而不是操作系统使用主题色？
 https://www.nuomiphp.com/eplan/184298.html
+
+JS中onclick事件四种传参方式
+https://wenku.baidu.com/view/8a13f03117791711cc7931b765ce050876327579.html

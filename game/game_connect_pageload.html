@@ -22,15 +22,47 @@
     <div class="connect">
         <div id="server_game" style="border: 0;">
             <div class="grip_title grip_left"><section>服务端</section></div><div class="grip_title"><section>状态</section></div><div class="grip_title"><section>地址</section></div><div class="grip_title"><section>详情</section></div>
-            <div class="grip_left" id="Minecraft"><section>Minecraft</section></div><div><section id="server_state_minecraft">关闭</section></div><div><section class="gameserver_address" onmouseleave="hide_copybutton(this)" onmouseover="show_copybutton(this)">无<div class="copy_div" onclick="address_copy(this)"></div></section></div><div><section><button type="button" class="button_arrow" id="server_detail_button_minecraft" onclick="showhide('server_detail_button_minecraft', 'server_detail_minecraft', 'server_detail_minecraft_text')"><img src="/css/hud/jiantou-xia.svg" width="25" height="25"></button></section></div>
-            <div class="grip_left button_detail" id="server_detail_minecraft" style="display: none;">
+            <div class="grip_left" id="Minecraft">
+                <section>Minecraft</section>
+            </div>
+            <div>
+                <section id="server_state_minecraft">关闭</section>
+            </div>
+            <div>
+                <section class="gameserver_address copy_button">无</section>
+            </div>
+            <div>
+                <section>
+                    <button type="button" class="button_arrow" id="server_detail_button_minecraft" onclick="showhide('server_detail_button_minecraft', 'server_detail_minecraft', 'server_detail_minecraft_text')">
+                        <img src="/css/hud/jiantou-xia.svg" width="25" height="25">
+                    </button>
+                </section>
+            </div>
+            <div class="grip_left button_detail" id="server_detail_minecraft">
                 <div class="button_detail_text grip_left" id="server_detail_minecraft_text">
                     
                 </div>
             </div>
 
-            <div class="grip_left" id="Unturned"><section>Unturned</section></div><div><section id="server_state_Unturned">关闭</section></div><div><section class="gameserver_address">无</section></div><div><section><button type="button" class="button_arrow" id="server_detail_button_Unturned" onclick="showhide('server_detail_button_Unturned', 'server_detail_Unturned', 'server_detail_Unturned_text')"><img src="/css/hud/jiantou-xia.svg" width="25" height="25"></button></section></div>
-            <div class="grip_left button_detail" id="server_detail_Unturned" style="display: none;">
+            <div class="grip_left" id="Unturned">
+                <section>Unturned</section>
+            </div>
+            <div>
+                <section id="server_state_Unturned">关闭</section>
+            </div>
+            <div>
+                <section class="gameserver_address copy_button">
+                    无
+                </section>
+            </div>
+            <div>
+                <section>
+                    <button type="button" class="button_arrow" id="server_detail_button_Unturned" onclick="showhide('server_detail_button_Unturned', 'server_detail_Unturned', 'server_detail_Unturned_text')">
+                        <img src="/css/hud/jiantou-xia.svg" width="25" height="25">
+                    </button>
+                </section>
+            </div>
+            <div class="grip_left button_detail" id="server_detail_Unturned">
                 <div class="button_detail_text grip_left" id="server_detail_Unturned_text">
                     
                 </div>
@@ -66,9 +98,9 @@
         <div id="server_voice" style="border: 0;">
             <div class="grip_title grip_left"><section>服务端</section></div><div class="grip_title"><section>状态</section></div><div class="grip_title"><section>地址</section></div><div class="grip_title"><section>详情</section></div>
         
-            <div class="grip_left" id="mumble"><section><img src="/css/images/icon_mumble.svg" width="25" height="25">Mumble</section></div><div><section id="server_state_mumble">关闭</section></div><div><section class="gameserver_address">mumble.hankarry.com</section></div><div><section><button type="button" class="button_arrow" id="server_detail_button_mumble" onclick="showhide('server_detail_button_mumble', 'server_detail_mumble', 'server_detail_mumble_text')"><img src="/css/hud/jiantou-xia.svg" width="25" height="25"></button></section></div>
+            <div class="grip_left" id="mumble"><section><img src="/css/images/icon_mumble.svg" width="25" height="25">Mumble</section></div><div><section id="server_state_mumble">关闭</section></div><div><section class="gameserver_address copy_button">mumble.hankarry.com</section></div><div><section><button type="button" class="button_arrow" id="server_detail_button_mumble" onclick="showhide('server_detail_button_mumble', 'server_detail_mumble', 'server_detail_mumble_text')"><img src="/css/hud/jiantou-xia.svg" width="25" height="25"></button></section></div>
                 
-            <div class="grip_left button_detail" id="server_detail_mumble" style="display: none;">
+            <div class="grip_left button_detail" id="server_detail_mumble">
                 <div id="server_detail_mumble_text" class="button_detail_text">
                     下载连接:<br/>
                     (官网,可能需要魔法)<a href="https://www.mumble.info/downloads/" target="_blank">Mumble</a><br/>

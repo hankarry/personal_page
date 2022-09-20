@@ -28,9 +28,10 @@
 .button_detail {
     position: relative;
 
-    /* animation: none 0.5s ease 0s 1 normal both; */
-    max-height: 10em;
-    transition: all 1s;
+    animation: none 0.5s ease 0s 1 normal both;
+    display: none;
+    /* max-height: 0em; */
+    /* transition: all 0.7s; */
     height: fit-content !important;
     /* min-height: 1em; */
     /* display: block; */
@@ -43,6 +44,7 @@
     --max_height:100px;
 }
 .button_detail_text {
+    padding: 5px 5px 5px 5px;
     border-top: unset !important;
     height: 100%;
     text-align: left;
@@ -135,6 +137,7 @@
     background: url(/css/hud/fuzhi.svg) no-repeat;
     background-position: center;
     background-size: cover;
+    /* visibility: visible; */
 }
 
 /* #server_detail_button_mumble img:hover {

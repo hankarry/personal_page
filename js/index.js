@@ -1,3 +1,11 @@
+setTimeout(function(){
+    document.getElementById("body").style.display = "block";
+}, 6000)
+
+setTimeout(function(){
+    document.getElementById("loading").style.display = "none";
+}, 10000)
+
 function pageleave() {
     document.getElementById("bodyleave").style.display = "block";
     document.getElementById("bodyleave").style.animationName = "body_leave";

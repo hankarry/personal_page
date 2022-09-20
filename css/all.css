@@ -565,3 +565,17 @@ body {
     /* animation-play-state: paused; */
     /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
+
+@keyframes copy_success {
+    0% {top: -20px; opacity: 1;}
+    100% {top: -70px; opacity: 0;}
+}
+.copy_success {
+    position: absolute;
+    
+    font-size: 0.5em;
+    font-weight: 600;
+    color: rgb(0, 157, 255);
+    text-shadow: black 1px 0 0;
+    animation: copy_success 0.7s ease-in 0s 1 normal both;
+}
