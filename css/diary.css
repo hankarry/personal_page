@@ -67,6 +67,11 @@
     /* z-index: 0; */
 }
 
+.diary_content_text {
+    display: inline;
+    /* width: 50%; */
+}
+
 .xiufu {
     display: inline-block;
     text-align: center;

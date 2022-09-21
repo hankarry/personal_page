@@ -146,7 +146,7 @@ body {
     height: 100vh;
     width: 100vw;
     background: url(/css/images/ori_back.jpg) no-repeat;
-    background-size: cover;
+    background-size: contain;
     z-index: -1;
 }
 
@@ -191,6 +191,20 @@ body {
     /* color: white; */
     animation: card_1_in 0.5s ease-out 0s 1 normal both;
     transform-origin: bottom center;
+}
+
+@media screen and (max-width: 480px) {
+    #card_1 {
+        position: relative;
+        width: 80%;
+        margin: 0 auto;
+        left: unset;
+        /* margin-left: -40%; */
+    }
+
+    #my_friends {
+        flex-direction: column;
+    }
 }
 
 #headphoto {
@@ -356,15 +370,21 @@ body {
 
 .my_friends_div {
     width: fit-content;
-    margin: 0 10px 0 10px;
+    margin: 0 10px 10px 10px;
     padding: 5px;
     border-radius: 10px;
     background-color: var(--background_color_black_1);
 }
 
 .my_friends_head {
-    width: 2em;
-    height: 2em;
+    width: 5em;
+    height: 5em;
     border: 1px solid white;
     border-radius: 100%;
+}
+
+#my_friends_head_2 {
+    background: url(/css/images/my_friend/jinjulingmeng.png) no-repeat;
+    background-position: center;
+    background-size: contain;
 }

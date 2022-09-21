@@ -39,7 +39,7 @@ setTimeout (function(){
 setTimeout (function(){
     document.getElementById("body").style.display = "block";
     document.getElementById("body").style.animationName = "";
-}, 1000)
-// setTimeout (function(){
-//     document.getElementById("loading").style.display = "none";
-// }, 3000)
+}, 2500)
+setTimeout (function(){
+    document.getElementById("loading").style.display = "none";
+}, 3000)
