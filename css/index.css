@@ -353,6 +353,10 @@ body {
     background-color: var(--background_color_black);
 }
 
+.title_text {
+    
+}
+
 .title_div {
     display: flex;
     margin-left: 1em;
@@ -365,26 +369,61 @@ body {
 
 #my_friends {
     display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
     padding: 10px;
+    
+}
+
+@keyframes my_friends_div_show {
+    0% {right: -50px; opacity: 0;}
+    100% {right: 0px; opacity: 1;}
 }
 
 .my_friends_div {
+    position: relative;
+    display: flex;
+    /* visibility: hidden; */
+    opacity: 0;
+    
+    align-items: center;
     width: fit-content;
     margin: 0 10px 10px 10px;
     padding: 5px;
     border-radius: 10px;
     background-color: var(--background_color_black_1);
+
+    animation: none 0.5s ease 0s 1 normal both;
+    animation-fill-mode: both;
+
+    transition: all 0.7s;
+}
+
+.my_friends_div:hover {
+    /* width: 20em; */
 }
 
 .my_friends_head {
     width: 5em;
     height: 5em;
-    border: 1px solid white;
+    background-color: gray;
+    /* border: 1px solid white; */
     border-radius: 100%;
+}
+
+.my_friends_name {
+    font-size: 1.2em;
+    margin-left: 5px;
+    width: fit-content;
+    /* height: 100%; */
+    text-align: center;
 }
 
 #my_friends_head_2 {
     background: url(/css/images/my_friend/jinjulingmeng.png) no-repeat;
     background-position: center;
     background-size: contain;
+}
+#my_friends_name_2 {
+    color: gold;
 }

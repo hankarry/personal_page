@@ -19,7 +19,7 @@ create.style = "position: fixed;z-index: 60;top: 0;width: 100vw;height: 100vh;an
 document.body.insertBefore(create, document.body.childNodes[3]);
 var create_child = document.createElement("section")
 create_child.id = "loading_section"
-create_child.style = "position: absolute;width: 90vw;color: rgb(80, 153, 198);margin: 40vh auto 40vh auto;font-size: 8vw;text-align: center;animation: loading_font_show 1s ease 0s 1 normal both;"
+create_child.style = "position: absolute;width: 90vw;color: rgb(80, 153, 198);margin: 40vh auto 40vh auto;font-size: 8vw;text-align: center;animation: loading_font_show 1s ease 0s 1 normal both; padding-left: 25px;"
 document.getElementById("loading").appendChild(create_child)
 document.getElementById("loading_section").innerHTML = "Loading..."
 

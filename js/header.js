@@ -381,12 +381,12 @@ function ChangeHeaderWidth() {
         button.style.animationName = "button_180"
 
         var header_main_content = document.getElementsByClassName("header_main_content");
-        for (i = 0; i < header_main_content.length; i++) {
+        for (var i = 0; i < header_main_content.length; i++) {
             header_main_content[i].style.display = "none"
         }
 
         var header2 = document.getElementsByClassName("header2_mode2")
-        for (i = 0; i < header2.length; i++) {
+        for (var i = 0; i < header2.length; i++) {
             header2[i].style.maxHeight = "0px"
         }
     }
@@ -398,12 +398,12 @@ function ChangeHeaderWidth() {
         button.style.animationName = "button_360"
         
         var header_main_content = document.getElementsByClassName("header_main_content");
-        for (i = 0; i < header_main_content.length; i++) {
+        for (var i = 0; i < header_main_content.length; i++) {
             header_main_content[i].style.display = "block"
         }
 
         var header2 = document.getElementsByClassName("header2_mode2")
-        for (i = 0; i < header2.length; i++) {
+        for (var i = 0; i < header2.length; i++) {
             header2[i].style.maxHeight = "200px"
         }
     }

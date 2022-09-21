@@ -41,7 +41,7 @@ var servers_state = ['server_state_minecraft', 'server_state_Unturned', 'server_
 
 var copy_button_need = document.getElementsByClassName("copy_button");
 console.log(copy_button_need)
-for (i=0; i<copy_button_need.length; i++) {
+for (var i=0; i<copy_button_need.length; i++) {
     // copy_button_need
     copy_button_need[i].setAttribute("onmouseleave", "hide_copybutton(this)");
     copy_button_need[i].setAttribute("onmouseover", "show_copybutton(this)");
@@ -64,7 +64,7 @@ function address_copy(ele) {
 }
 
 function show_copybutton(ele) {
-    for (i=0; i<ele.children.length; i++) {
+    for (var i=0; i<ele.children.length; i++) {
         if (ele.children[i].className == "copy_div") {
             // console.log(ele.children[i].style.display);
             ele.children[i].style.visibility = "visible";
@@ -73,7 +73,7 @@ function show_copybutton(ele) {
 }
 
 function hide_copybutton(ele) {
-    for (i=0; i<ele.children.length; i++) {
+    for (var i=0; i<ele.children.length; i++) {
         if (ele.children[i].className == "copy_div") {
             // console.log(ele.children[i].style.display);
             ele.children[i].style.visibility = "hidden";
