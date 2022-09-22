@@ -27,7 +27,7 @@ var scroll_target_2 = document.getElementsByClassName("my_friends_div");
 
 window.onscroll = function() {
     var scroll_height = Html.scrollTop + window_height;
-    console.log(scroll_height)
+    // console.log(scroll_height)
     if (scroll_height - 100 > scroll_target.offsetTop) {
         for (var i=0; i<scroll_target_2.length; i++) {
             // scroll_target_2[i].style.visibility = "visible";
