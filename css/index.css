@@ -153,6 +153,30 @@ body {
     z-index: -1;
 }
 
+@keyframes sign_scroll_to_bottom {
+    0% {bottom: 5px;}
+    50% {bottom: 0px;}
+    100% {bottom: 5px;}
+}
+@keyframes sign_scroll_to_bottom_leave {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+#sign_scroll_to_bottom  {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: var(--maincolor);
+    pointer-events: none;
+}
+#sign_scroll_to_bottom_1 {
+    bottom: 5px;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    animation: sign_scroll_to_bottom 1s ease 0s infinite normal both;
+}
+
 #main_1 {
     position: relative;
     overflow-x: hidden;
@@ -481,6 +505,32 @@ body {
 }
 #my_friends_name_5 {
     color: rgb(250, 200, 10);
+}
+#yubai {
+    /* position: relative; */
+}
+#yubai_bavkground {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    left: -10px;
+    /* top: -5px; */
+    margin-top: -30px;
+    pointer-events: none; /* 点击穿透 */
+    background: url(/css/images/my_friend/yubai_background.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+    /* z-index: 5; */
+}
+
+#my_friends_head_6 {
+    background: url(/css/images/my_friend/xiaoai.jpg) no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+#my_friends_name_6 {
+    color: #FFF8E7;
 }
 
 .my_friends_content {

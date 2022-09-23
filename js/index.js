@@ -24,6 +24,7 @@ var scroll_target = document.getElementById("my_friends");
 var window_height = window.innerHeight;
 var scroll_target_2 = document.getElementsByClassName("my_friends_div");
 
+var scroll_bottom_sign = 0
 
 window.onscroll = function() {
     var scroll_height = Html.scrollTop + window_height;
@@ -36,4 +37,9 @@ window.onscroll = function() {
         }
     }
 
+    if (scroll_bottom_sign == 0) {
+        document.getElementById("sign_scroll_to_bottom_1").style.animationName = "sign_scroll_to_bottom_leave";
+        document.getElementById("sign_scroll_to_bottom_1").style.animationIterationCount = "1";
+        scroll_bottom_sign = 1;
+    }
 }
