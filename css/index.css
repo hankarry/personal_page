@@ -239,7 +239,7 @@ body {
 }
 
 #my_name {
-    margin: 40px auto 0 auto;
+    margin: 40px auto 1em auto;
     font-size: 1.25em;
 }
 
@@ -361,14 +361,19 @@ body {
 .card_2 {
     width: 90%;
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border: 1px solid rgb(20,100,150);
     border-radius: 10px;
     background-color: var(--background_color_black);
 }
 
+@keyframes title_text {
+    0% {transform: rotateX(-100deg); opacity: 0.5;}
+    100% {transform: rotateX(0deg); opacity: 1;}
+}
+
 .title_text {
-    
+    /* animation: title_text 0.7s ease 0s infinite normal both; */
 }
 
 .title_div {
@@ -456,6 +461,12 @@ body {
     text-align: center;
 }
 
+.CP_label {
+    background-color: pink;
+    color: palevioletred;
+    border-radius: 5px;
+}
+
 #my_friends_head_1 {
     background: url(/css/images/my_friend/woer.png) no-repeat;
     background-position: center;
@@ -509,7 +520,7 @@ body {
 #yubai {
     /* position: relative; */
 }
-#yubai_bavkground {
+#yubai_background {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -591,10 +602,15 @@ body {
     }
 }
 
-#my_setting_div {
-    width: 95%;
+#my_setting_padding {
     height: 70vh;
-    margin: 10px auto 10px auto;
+    padding: 10px;
+}
+
+#my_setting_div {
+    /* width: 95%; */
+    /* margin: 10px auto 10px auto; */
+    height: 100%;
     border-radius: 20px;
     background-color: var(--background_color_black_1);
 }
@@ -616,4 +632,23 @@ body {
     /* height: 100%; */
     text-align: center;
     
+}
+
+#my_goals_padding {
+    height: 50vh;
+    padding: 10px;
+}
+
+#my_goals_div {
+    height: 100%;
+    /* width: 100%; */
+    width: auto;
+    background-color: var(--background_color_black_1);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.my_goals {
+    color: white;
+    margin-bottom: 0.25em;
 }

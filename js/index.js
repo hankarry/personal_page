@@ -1,6 +1,6 @@
 setTimeout(function(){
     document.getElementById("body").style.display = "block";
-}, 2000)
+}, 2300)
 
 setTimeout(function(){
     document.getElementById("loading").style.display = "none";
@@ -29,7 +29,7 @@ var scroll_bottom_sign = 0
 window.onscroll = function() {
     var scroll_height = Html.scrollTop + window_height;
     // console.log(scroll_height)
-    if (scroll_height - 50 > scroll_target.offsetTop) {
+    if (scroll_height - 100 > scroll_target.offsetTop) {
         for (var i=0; i<scroll_target_2.length; i++) {
             // scroll_target_2[i].style.visibility = "visible";
             scroll_target_2[i].style.animationName = "my_friends_div_show";
