@@ -252,15 +252,23 @@ body {
     color: transparent; */
 }
 
+#my_content {
+    
+}
+
 #connect_me {
-    position: relative;
+    position: absolute;
     /* padding: 5px 0 5px 0; */
     background-color: var(--background_color);
-    width: 90%;
+    /* width: 90%; */
     height: 50px;
-    margin: 0 auto;
-    margin-top: 1em;
-
+    /* margin: 0 auto; */
+    /* margin-top: 1em; */
+    /* margin: 1em 5% 0 5%; */
+    margin-bottom: 10px;
+    left: 5%;
+    right: 5%;
+    bottom: 0;
     border: 1px solid gray;
     border-radius: 10px;
 }
