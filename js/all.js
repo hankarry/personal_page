@@ -20,7 +20,7 @@ AddSheetFile("css/footer.css");
 // AddSheetFile("css/all.css");
 
 // 页脚信息
-var footer = "<hr id='footer_hr'><footer>Made by hankarry Version2.3</footer>";
+var footer = "<hr id='footer_hr'><footer>Made by hankarry Version3.0.8</footer>";
 var foot = document.createElement('div');
 foot.id = 'foot';
 document.getElementById("body").appendChild(foot);
