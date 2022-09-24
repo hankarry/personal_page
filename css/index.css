@@ -368,12 +368,19 @@ body {
 }
 
 @keyframes title_text {
-    0% {transform: rotateX(-100deg); opacity: 0.5;}
-    100% {transform: rotateX(0deg); opacity: 1;}
+    /* 0% {transform: rotateX(-90deg); opacity: 0.5;} */
+    0% {top: -2em; opacity: 0;}
+    /* 100% {transform: rotateX(0deg); opacity: 1;} */
+    100% {top: 0; opacity: 1;}
 }
 
 .title_text {
-    /* animation: title_text 0.7s ease 0s infinite normal both; */
+    position: relative;
+    animation: none 0.5s ease 0s 1 normal both;
+    animation-fill-mode: both;
+    opacity: 0;
+    /* transform: rotateX(-90deg); */
+    top: -2em;
 }
 
 .title_div {
@@ -383,6 +390,7 @@ body {
     justify-items: center;
     font-size: 1.25em;
     color: var(--maincolor);
+    overflow: hidden;
     /* display: inline; */
 }
 

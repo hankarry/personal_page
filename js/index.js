@@ -19,21 +19,24 @@ function pageleave() {
 }
 
 var Html = document.getElementsByTagName("html")[0];
-var scroll_target = document.getElementById("my_friends");
-// var scroll_target = document.querySelectorAll(".my_friends_div");
 var window_height = window.innerHeight;
-var scroll_target_2 = document.getElementsByClassName("my_friends_div");
+
+var my_friends = document.getElementById("my_friends");
+// var my_friends = document.querySelectorAll(".my_friends_div");
+var my_friends_div = document.getElementsByClassName("my_friends_div");
+
+var title_text = document.getElementsByClassName("title_text");
 
 var scroll_bottom_sign = 0
 
 window.onscroll = function() {
     var scroll_height = Html.scrollTop + window_height;
-    // console.log(scroll_height)
-    if (scroll_height - 100 > scroll_target.offsetTop) {
-        for (var i=0; i<scroll_target_2.length; i++) {
-            // scroll_target_2[i].style.visibility = "visible";
-            scroll_target_2[i].style.animationName = "my_friends_div_show";
-            scroll_target_2[i].style.animationDelay = 0.2 * i + "s";
+    // console.log(scroll_height);
+    if (scroll_height - 150 > my_friends.offsetTop) {
+        for (var i=0; i<my_friends_div.length; i++) {
+            // my_friends_div[i].style.visibility = "visible";
+            my_friends_div[i].style.animationName = "my_friends_div_show";
+            my_friends_div[i].style.animationDelay = 0.2 * i + "s";
         }
     }
 
@@ -41,5 +44,17 @@ window.onscroll = function() {
         document.getElementById("sign_scroll_to_bottom_1").style.animationName = "sign_scroll_to_bottom_leave";
         document.getElementById("sign_scroll_to_bottom_1").style.animationIterationCount = "1";
         scroll_bottom_sign = 1;
+    }
+
+    for (var i=0; i<title_text.length; i++) {
+        if (scroll_height - 150 > title_text[i].offsetTop) {
+            title_text[i].style.animationName = "title_text";
+        }
+    }
+}
+
+for (var i=0; i<title_text.length; i++) {
+    if (scroll_height - 150 > title_text[i].offsetTop) {
+        title_text[i].style.animationName = "title_text";
     }
 }
