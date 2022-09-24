@@ -241,6 +241,15 @@ body {
 #my_name {
     margin: 40px auto 1em auto;
     font-size: 1.25em;
+    
+    font-weight: bold;
+    color: rgb(10, 170, 255);
+    /* text-shadow: 0 0 2px bla7ck; */
+    
+    /* height: fit-content;
+    background-image: linear-gradient(to bottom right, var(--maincolor), skyblue);
+    -webkit-background-clip: text;
+    color: transparent; */
 }
 
 #connect_me {
@@ -552,6 +561,15 @@ body {
     color: #FFF8E7;
 }
 
+#my_friends_head_7 {
+    background: url(/css/images/my_friend/hanlin.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+#my_friends_name_7 {
+    color: rgb(10, 170, 255);
+}
+
 .my_friends_content {
     /* visibility: hidden; */
     /* padding: 0 5px 0 5px; */
@@ -643,7 +661,8 @@ body {
 }
 
 #my_goals_padding {
-    height: 50vh;
+    /* height: 50vh; */
+    width: auto;
     padding: 10px;
 }
 
@@ -654,6 +673,14 @@ body {
     background-color: var(--background_color_black_1);
     border-radius: 20px;
     padding: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@keyframes my_goals {
+    0% {left: 100px; opacity: 0;}
+    100% {left: 0px; opacity: 1;}
 }
 
 .my_goals {
@@ -661,13 +688,22 @@ body {
     color: white;
     margin-bottom: 0.25em;
     padding: 5px 1em 5px 1em;
-    margin-bottom: 0.5em;
+    margin: 0 1em 0.5em 0;
     border: 1px solid var(--background_color_black_2);
     border-radius: 10px;
+
+    width: fit-content;
+    height: fit-content;
 
     transition: all 0.5s;
     top: 0;
     left: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+    animation: none 0.5s ease 0s 1 normal both;
+    animation-fill-mode: both;
 }
 
 .my_goals:hover {
@@ -675,4 +711,13 @@ body {
     left: -5px;
     box-shadow: 1px 2px 10px var(--maincolor);
     background-color: var(--background_color_black_2);
+}
+
+.my_goals_background_number {
+    position: absolute;
+    right: 0;
+    /* left: 0; */
+    top: -2px;
+    font-size: 2em;
+    color: rgba(100,100,100, 0.5);
 }

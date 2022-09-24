@@ -26,13 +26,25 @@ var my_friends = document.getElementById("my_friends");
 var my_friends_div = document.getElementsByClassName("my_friends_div");
 
 var title_text = document.getElementsByClassName("title_text");
+var my_goals = document.getElementsByClassName("my_goals");
 
 var scroll_bottom_sign = 0
+
+var scroll_height = Html.scrollTop + window_height;
+for (var i=0; i<title_text.length; i++) {
+    if (scroll_height - 100 > title_text[i].offsetTop) {
+        // title_text[i].style.animationName = "title_text";
+    }
+}
+
+for (var i=0; i< my_goals.length; i++) {
+    my_goals[i].style.animationDelay = 0.2*i +"s";
+}
 
 window.onscroll = function() {
     var scroll_height = Html.scrollTop + window_height;
     // console.log(scroll_height);
-    if (scroll_height - 150 > my_friends.offsetTop) {
+    if (scroll_height - 100 > my_friends.offsetTop) {
         for (var i=0; i<my_friends_div.length; i++) {
             // my_friends_div[i].style.visibility = "visible";
             my_friends_div[i].style.animationName = "my_friends_div_show";
@@ -47,14 +59,17 @@ window.onscroll = function() {
     }
 
     for (var i=0; i<title_text.length; i++) {
-        if (scroll_height - 150 > title_text[i].offsetTop) {
+        if (scroll_height - 50 > title_text[i].offsetTop) {
             title_text[i].style.animationName = "title_text";
         }
     }
-}
 
-for (var i=0; i<title_text.length; i++) {
-    if (scroll_height - 150 > title_text[i].offsetTop) {
-        title_text[i].style.animationName = "title_text";
+    for (var i=0; i< my_goals.length; i++) {
+        if (scroll_height - 50 > my_goals[i].offsetTop) {
+            my_goals[i].style.animationName = "my_goals";
+        }
     }
+
+    // console.log("HTML滚动高度: " + scroll_height);
+    
 }
