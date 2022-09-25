@@ -1,10 +1,10 @@
 setTimeout(function(){
     document.getElementById("body").style.display = "block";
-}, 2300)
+}, 3300)
 
 setTimeout(function(){
     document.getElementById("loading").style.display = "none";
-}, 4000)
+}, 5000)
 
 function pageleave() {
     document.getElementById("bodyleave").style.display = "block";

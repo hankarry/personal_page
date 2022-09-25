@@ -65,7 +65,7 @@ body {
     height: 100vh;
     background-color: white;
     
-    animation: loading_leave 1.5s ease 2s 1 normal both;
+    animation: loading_leave 1.5s ease 3s 1 normal both;
     z-index: 1000;
 }
 
@@ -714,6 +714,10 @@ body {
     animation-fill-mode: both;
 }
 
+.my_goals > section {
+    z-index: 15;
+}
+
 .my_goals:hover {
     top: -5px;
     left: -5px;
@@ -729,4 +733,22 @@ body {
     font-size: 2em;
     font-style: italic;
     color: rgba(100,100,100, 0.5);
+}
+
+
+@keyframes my_goals_doing {
+    0% {left: -100%;}
+    100% {left: 150%;}
+}
+.my_goals_doing {
+    position: absolute;
+    top: -50%;
+    height: 200%;
+    width: 0px;
+    /* background-color: ; */
+    /* background-color: rgba(0,255,0,0.5); */
+    box-shadow: 0 0 10px 10px rgba(0,255,0,0.3);
+    z-index: -1;
+
+    animation: my_goals_doing 2s linear 0s infinite normal both;
 }
