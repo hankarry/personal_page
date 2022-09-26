@@ -169,13 +169,13 @@ body {
     position: fixed;
     bottom: 0;
     width: 100%;
-    color: var(--maincolor);
     pointer-events: none;
 }
 #sign_scroll_to_bottom_1 {
     bottom: 5px;
     position: relative;
     width: 100%;
+    color: var(--maincolor);
     text-align: center;
     animation: sign_scroll_to_bottom 1s ease 0s infinite normal both;
 }
@@ -307,6 +307,7 @@ body {
     /* height: 10px; */
     height: 1.15em;
     border-radius: 5px 5px 0 0;
+    /* color: var(--maincolor); */
     /* animation: card_content_title 1s ease 0s 1 normal both; */
     width: fit-content;
     /* border: 1px solid gray; */
@@ -350,10 +351,16 @@ body {
 }
 
 #button_to_detail_arrow_2 {
+    color: #5FCBF5;
+}
+
+#button_to_detail_arrow_2 {
+    color: #5FCBF5;
     animation-delay: 0.1s;
 }
 
 #button_to_detail_arrow_1 {
+    color: #5FCBF5;
     animation-delay: 0.2s;
 }
 
@@ -404,6 +411,7 @@ body {
     opacity: 0;
     /* transform: rotateX(-90deg); */
     top: -2em;
+    color: var(--maincolor);
 }
 
 .title_div {
@@ -611,14 +619,16 @@ body {
 
 .my_friends_link_content {
     display: flex;
+    width: 100%;
     /* margin: 0 auto; */
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
-/* .my_friends_link_content > *{
+
+.my_friends_link_content > a{
     flex: 1;
-    width: auto;
-} */
+}
 
 
 @media screen and (max-width: 480px) {
@@ -733,6 +743,7 @@ body {
     background-color: var(--background_color_black_2);
 
     /* height: 5em; */
+    /* width: 20em; */
 }
 
 .my_goals_background_number {

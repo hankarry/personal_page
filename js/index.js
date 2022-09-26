@@ -67,6 +67,10 @@ window.onscroll = function() {
     for (var i=0; i< my_goals.length; i++) {
         if (scroll_height - 50 > my_goals[i].offsetTop) {
             my_goals[i].style.animationName = "my_goals";
+            // var eleHeight = my_goals[i].scrollHeight;
+            // var ele_Hover = window.getComputedStyle(my_goals[i], "::hover");
+            // ele_Hover.setProperty("height", toString(eleHeight));
+            // console.log(ele_Hover.height)
         }
     }
 
