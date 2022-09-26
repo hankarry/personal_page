@@ -153,4 +153,7 @@ https://wenku.baidu.com/view/8a13f03117791711cc7931b765ce050876327579.html
 https://blog.csdn.net/lyq2534480922/article/details/79697746
 https://blog.csdn.net/violetjack0808/article/details/71405896/
 
+使用JS控制伪元素的几种方法
+http://www.wjhsh.net/lzc521-p-6742295.html
+
 https://www.zyglq.cn/

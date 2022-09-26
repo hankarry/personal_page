@@ -1,6 +1,6 @@
 setTimeout(function(){
     document.getElementById("body").style.display = "block";
-}, 3300)
+}, 3000)
 
 setTimeout(function(){
     document.getElementById("loading").style.display = "none";
