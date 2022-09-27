@@ -83,29 +83,39 @@ window.onscroll = function() {
     
 }
 
-var now_date = new Date();
 var gaokao_year = 2024;
 var gaokao_month = 6;
 var gaokao_day = 7;
-gaokao_date = new Date("2024-6-7 00:00:00");
-function leftTimer(year,month,day,hour,minute,second){ 
- var leftTime = (new Date(year,month-1,day,hour,minute,second)) - (new Date()); //计算剩余的毫秒数 
- var days = parseInt(leftTime / 1000 / 60 / 60 / 24 , 10); //计算剩余的天数 
- var hours = parseInt(leftTime / 1000 / 60 / 60 % 24 , 10); //计算剩余的小时 
- var minutes = parseInt(leftTime / 1000 / 60 % 60, 10);//计算剩余的分钟 
- var seconds = parseInt(leftTime / 1000 % 60, 10);//计算剩余的秒数 
- days = checkTime(days); 
- hours = checkTime(hours); 
- minutes = checkTime(minutes); 
- seconds = checkTime(seconds); 
- setInterval("leftTimer(2016,11,11,11,11,11)",1000); 
- document.getElementById("timer").innerHTML = days+"天" + hours+"小时" + minutes+"分"+seconds+"秒"; 
-} 
-function checkTime(i){ //将0-9的数字前面加上0，例1变为01 
- if(i<10) 
- { 
- i = "0" + i; 
- } 
- return i; 
-} 
-// leftTimer("2024","06","07","00","00","00")
+// console.log(now_date.getTime())
+
+var gaokao_date = new Date("2024-06-07 00:00:00");
+var gaokao_time = parseInt(gaokao_date.getTime())
+// console.log(gaokao_date.getTime())
+
+function gaokao_countdown() {
+    var now_date = new Date();
+
+    var leftTime = gaokao_time - parseInt(now_date.getTime())
+    // var years = Math.floor(leftTime / 1000 / 60 / 60 / 24 / 365);
+    // var months = Math.floor((leftTime - years*31536000000) / 1000 / 60 / 60 / 24 / 30)
+    // var days = Math.floor((leftTime - years*31536000000 - months*86400000)/ 1000 / 60 / 60 / 24);
+    var days = Math.floor(leftTime / 1000 / 60 / 60 / 24);
+    var hours = Math.floor((leftTime - days * 86400000) / 1000 / 60 / 60);
+    var minutes = Math.floor((leftTime - days * 86400000 - hours * 3600000) / 1000 / 60);
+    var seconds = Math.floor((leftTime - days * 86400000 - hours * 3600000 - minutes * 60000) / 1000);
+    // document.getElementById("gaokao_countdown").innerText = years + "年" + months + "月" + days + "日" + hours + "时" + minutes + "分" + seconds + "秒"; 
+    document.getElementById("gaokao_countdown").innerHTML = days + "天" + hours + "时" + minutes + "分" + seconds + "秒"; 
+    // setTimeout(gaokao_countdown(), 1000)
+    // console.log(1)
+    setTimeout(gaokao_countdown, 1000)
+
+}
+gaokao_countdown()
+
+function Add_Copy(ele, conetnt) {
+    navigator.clipboard.writeText(conetnt);
+    var copy_success = document.createElement("div");
+    copy_success.className = "copy_success";
+    copy_success.innerText = "Copied!";
+    ele.appendChild(copy_success);
+}

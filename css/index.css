@@ -220,7 +220,7 @@ body {
     
     /* height: 100vh; */
     /* color: white; */
-    animation: card_1_in 0.5s ease-out 0s 1 normal both;
+    animation: card_1_in 0.5s ease-out 1s 1 normal both;
     transform-origin: bottom center;
 }
 
@@ -313,7 +313,7 @@ body {
 #connect_me_div > a {
     /* width: 50%; */
     flex: 1;
-
+    position: relative;
 }
 
 /* @keyframes card_content_title {
@@ -407,7 +407,7 @@ body {
     display: none;
 }
 
-#main_2 {
+#main_4 {
     width: 100vw;
 }
 
@@ -841,4 +841,21 @@ body {
     background-position: center;
     background-size: contain;
     /* background-color: rgba(0,255,0,0.3); */
+}
+
+@keyframes copy_success {
+    0% {top: -20px; opacity: 1;}
+    100% {top: -70px; opacity: 0;}
+}
+
+.copy_success {
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    font-size: 0.5em;
+    font-weight: 600;
+    color: rgb(0, 157, 255);
+    text-shadow: black 1px 0 0;
+    animation: copy_success 0.7s ease-in 0s 1 normal both;
 }
