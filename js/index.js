@@ -41,6 +41,11 @@ for (var i=0; i< my_goals.length; i++) {
     my_goals[i].style.animationDelay = 0.2*i +"s";
 }
 
+var my_goals_already_show = []
+for (var i=0; i< my_goals.length; i++) {
+    my_goals_already_show.push(0)
+}
+
 window.onscroll = function() {
     var scroll_height = Html.scrollTop + window_height;
     // console.log(scroll_height);
@@ -65,15 +70,42 @@ window.onscroll = function() {
     }
 
     for (var i=0; i< my_goals.length; i++) {
-        if (scroll_height - 50 > my_goals[i].offsetTop) {
-            my_goals[i].style.animationName = "my_goals";
-            // var eleHeight = my_goals[i].scrollHeight;
-            // var ele_Hover = window.getComputedStyle(my_goals[i], "::hover");
-            // ele_Hover.setProperty("height", toString(eleHeight));
-            // console.log(ele_Hover.height)
+        if (my_goals_already_show[i] == 0) {
+            if (scroll_height - 50 > my_goals[i].offsetTop) {
+                my_goals[i].style.animationName = "my_goals";
+                my_goals_already_show[i] = 1;
+            }
+            
         }
     }
 
     // console.log("HTML滚动高度: " + scroll_height);
     
 }
+
+var now_date = new Date();
+var gaokao_year = 2024;
+var gaokao_month = 6;
+var gaokao_day = 7;
+gaokao_date = new Date("2024-6-7 00:00:00");
+function leftTimer(year,month,day,hour,minute,second){ 
+ var leftTime = (new Date(year,month-1,day,hour,minute,second)) - (new Date()); //计算剩余的毫秒数 
+ var days = parseInt(leftTime / 1000 / 60 / 60 / 24 , 10); //计算剩余的天数 
+ var hours = parseInt(leftTime / 1000 / 60 / 60 % 24 , 10); //计算剩余的小时 
+ var minutes = parseInt(leftTime / 1000 / 60 % 60, 10);//计算剩余的分钟 
+ var seconds = parseInt(leftTime / 1000 % 60, 10);//计算剩余的秒数 
+ days = checkTime(days); 
+ hours = checkTime(hours); 
+ minutes = checkTime(minutes); 
+ seconds = checkTime(seconds); 
+ setInterval("leftTimer(2016,11,11,11,11,11)",1000); 
+ document.getElementById("timer").innerHTML = days+"天" + hours+"小时" + minutes+"分"+seconds+"秒"; 
+} 
+function checkTime(i){ //将0-9的数字前面加上0，例1变为01 
+ if(i<10) 
+ { 
+ i = "0" + i; 
+ } 
+ return i; 
+} 
+// leftTimer("2024","06","07","00","00","00")
