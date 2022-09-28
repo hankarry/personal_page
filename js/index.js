@@ -83,12 +83,8 @@ window.onscroll = function() {
     
 }
 
-var gaokao_year = 2024;
-var gaokao_month = 6;
-var gaokao_day = 7;
-// console.log(now_date.getTime())
 
-var gaokao_date = new Date("2024-06-07 00:00:00");
+var gaokao_date = new Date("2024-06-07 09:00:00");
 var gaokao_time = parseInt(gaokao_date.getTime())
 // console.log(gaokao_date.getTime())
 
