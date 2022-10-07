@@ -64,14 +64,14 @@ window.onscroll = function() {
     }
 
     for (var i=0; i<title_text.length; i++) {
-        if (scroll_height - 50 > title_text[i].offsetTop) {
+        if (scroll_height - 100 > title_text[i].offsetTop) {
             title_text[i].style.animationName = "title_text";
         }
     }
 
     for (var i=0; i< my_goals.length; i++) {
         if (my_goals_already_show[i] == 0) {
-            if (scroll_height - 50 > my_goals[i].offsetTop) {
+            if (scroll_height - 100 > my_goals[i].offsetTop) {
                 my_goals[i].style.animationName = "my_goals";
                 my_goals_already_show[i] = 1;
             }
@@ -85,9 +85,9 @@ window.onscroll = function() {
 
 
 var gaokao_date = new Date("2024-06-07 09:00:00");
-var gaokao_time = parseInt(gaokao_date.getTime())
+var gaokao_time = parseInt(gaokao_date.getTime());
 // console.log(gaokao_date.getTime())
-
+var gaokao_countdown_ele = document.getElementById("gaokao_countdown");
 function gaokao_countdown() {
     var now_date = new Date();
 
@@ -100,7 +100,7 @@ function gaokao_countdown() {
     var minutes = Math.floor((leftTime - days * 86400000 - hours * 3600000) / 1000 / 60);
     var seconds = Math.floor((leftTime - days * 86400000 - hours * 3600000 - minutes * 60000) / 1000);
     // document.getElementById("gaokao_countdown").innerText = years + "年" + months + "月" + days + "日" + hours + "时" + minutes + "分" + seconds + "秒"; 
-    document.getElementById("gaokao_countdown").innerHTML = days + "天" + hours + "时" + minutes + "分" + seconds + "秒"; 
+    gaokao_countdown_ele.innerHTML = days + "天" + hours + "小时" + minutes + "分" + seconds + "秒"; 
     // setTimeout(gaokao_countdown(), 1000)
     // console.log(1)
     setTimeout(gaokao_countdown, 1000)
