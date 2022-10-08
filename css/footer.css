@@ -3,6 +3,7 @@ footer { /* 页脚 */
     text-align: center;
     font-size: 0.5em;
     color: #888888;
+    margin-bottom: 1em;
 }
 
 #footer_hr {
