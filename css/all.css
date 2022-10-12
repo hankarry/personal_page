@@ -87,6 +87,10 @@ body {
     /* top: -15px; */
 }
 
+button {
+    cursor: pointer;
+}
+
 #body_right {
     padding-top: 1em;
     padding-bottom: 1em;
@@ -396,9 +400,10 @@ body {
     background-color: unset;
     border: 0px;
 
+    transform-origin: center;
     /* animation-name: button_180; */
     animation-duration: 0.5s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: both;
 }
 
 #top_message {

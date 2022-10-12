@@ -32,6 +32,7 @@
     --background_color_black_3:rgba(60,60,80,1);
     --background_color_black_4:rgba(80,80,100,1);
 
+    --card_2_border:rgb(20,100,150);
 
     --maincolor:#94E9FF;
     --maincolor_2:#5FCBF5;
@@ -86,6 +87,40 @@ html {
 body {
     margin: 0;
     background-color: var(--background_color_black);
+}
+
+hr {
+    margin: 0;
+    border: none;
+    background-color: var(--maincolor);
+    height: 1px;
+    box-sizing: content-box;
+
+    /* border-bottom: 1px solid var(--maincolor); */
+    /* border-color: var(--maincolor); */
+}
+
+a {
+    position: relative;
+    border: none;
+    text-decoration: none;
+    color: var(--maincolor);
+}
+
+a::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: var(--maincolor);
+    transform: scaleX(0);
+    transition: all 0.3s;
+}
+
+a:hover::after {
+    transform: scaleX(1);
 }
 
 .parallelogram
@@ -397,6 +432,7 @@ body {
 }
 
 .connect_me_icon {
+    cursor: pointer;
     /* flex: auto; */
 }
 
@@ -416,6 +452,7 @@ body {
     border: none;
     background-color: transparent;
     
+    cursor: pointer;
     /* border: 1px solid gray; */
     /* border-radius: 5px; */
 }
@@ -465,9 +502,20 @@ body {
     width: 90%;
     margin: 0 auto;
     margin-bottom: 10px;
-    border: 1px solid rgb(20,100,150);
+    border: 1px solid var(--card_2_border);
     border-radius: 10px;
     background-color: var(--background_color_black);
+}
+
+.card_3 {
+    width: 100%;
+    /* height: 50em; */
+    background-color: var(--background_color_black_1);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 @keyframes title_text {
@@ -502,6 +550,7 @@ body {
 #my_favourite_game {
     text-align: center;
     padding: 1em;
+    overflow: hidden;
     /* height: 30vh; */
 }
 
@@ -528,7 +577,8 @@ body {
     top: 0;
     left: 0;
 
-    animation: my_favourite_game 0.5s ease 0s 1 direction fill-mode;
+    animation: my_favourite_game 0.5s ease 0s 1 normal both;
+    animation-play-state: paused;
 }
 
 .my_favourite_game:last-child {
@@ -947,7 +997,12 @@ body {
     animation: my_goals_doing 2s linear 0s infinite normal both;
 }
 
+.my_goals_content {
+    margin: 1em 0 0 0;
+}
+
 .my_goals_content_ul {
+    margin: 0;
     padding: 0;
     width: 100%;
 }
@@ -966,6 +1021,10 @@ body {
     margin-bottom: 5px;
     list-style: none;
     overflow: hidden;
+
+    transition: all 0.5s;
+    top: 0;
+    left: 0;
 }
 
 .my_goals_content_ul > li:hover {
@@ -1007,3 +1066,217 @@ body {
     text-shadow: black 1px 0 0;
     animation: copy_success 0.7s ease-in 0s 1 normal both;
 }
+
+@keyframes button_180 {
+    0% {
+        transform: rotate(0deg);
+        -ms-transform:rotate(0deg); 	/* IE 9 */
+        -moz-transform:rotate(0deg); 	/* Firefox */
+        -webkit-transform:rotate(0deg); /* Safari 和 Chrome */
+        -o-transform:rotate(0deg); 	/* Opera */
+    }
+    100% {
+        transform: rotate(180deg);
+        -ms-transform:rotate(180deg); 	/* IE 9 */
+        -moz-transform:rotate(180deg); 	/* Firefox */
+        -webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+        -o-transform:rotate(180deg); 	/* Opera */
+    }
+}
+@keyframes button_360 {
+    0% {
+        transform: rotate(180deg);
+        -ms-transform:rotate(180deg); 	/* IE 9 */
+        -moz-transform:rotate(180deg); 	/* Firefox */
+        -webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+        -o-transform:rotate(180deg); 	/* Opera */
+    }
+    100% {
+        transform: rotate(360deg);
+        -ms-transform:rotate(360deg); 	/* IE 9 */
+        -moz-transform:rotate(360deg); 	/* Firefox */
+        -webkit-transform:rotate(360deg); /* Safari 和 Chrome */
+        -o-transform:rotate(360deg); 	/* Opera */
+    }
+}
+
+@keyframes an_maxheight_show {
+    0% {max-height: 0;}
+    100% {max-height: var(--this_maxheight);}
+}
+
+@keyframes an_maxheight_hide {
+    0% {max-height: var(--this_maxheight);}
+    100% {max-height: 0;}
+}
+
+#guidang_div {
+    margin-top: 1em;
+}
+
+.guidang {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 5px 1em 5px 1em;
+    border: 1px solid var(--background_color_black_3);
+    border-radius: 10px;
+}
+
+.guidang_title {
+    position: relative;
+    width: 100%;
+    font-size: 1.25em;
+    color: var(--maincolor);
+}
+
+.guidang_button_arrow {
+    position: absolute;
+    right: 1em;
+    background-color: transparent;
+    border: unset;
+    padding: unset;
+    cursor: pointer;
+    transform-origin: center;
+
+    animation: none 0.5s ease 0s 1 normal both;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+
+.guidang_content {
+    overflow: hidden;
+    margin: 5px 1em 5px 1em;
+    max-height: 0;
+
+    animation: none 1s ease 0s 1 normal both;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+
+#diary {
+    overflow: hidden;
+    margin: 1em 1em 0 1em;
+    /* padding: 0 1em 0 1em; */
+    list-style-position: inside;
+    list-style: none;
+    padding: 0;
+    max-height: 0px;
+
+    animation: none 2s ease 0s 1 normal both;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+
+.diary_title {
+    position: relative;
+    font-size: 1.25em;
+    background-color: var(--backgroundcolor_card);
+    width: fit-content;
+    padding: 0 5px 0 5px;
+    border: 1px solid var(--gray);
+    border-radius: 10px;
+    background-color: var(--maincolor_thin);    /* margin-left: 10px; */
+}
+
+#diary_button_arrow {
+    position: absolute;
+    right: 1em;
+    background-color: transparent;
+    border: unset;
+    padding: unset;
+    cursor: pointer;
+    transform-origin: center;
+
+    animation: none 0.5s ease 0s 1 normal both;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+
+.diary_content {
+    position: relative;
+    /* display: inline-block; */
+    padding-left: 20px;
+    margin: 3px 0 3px 0;
+    /* margin-left: 0px; */
+}
+
+#diary > li {
+    display: list-item;
+    margin: 0 0 5px 0;
+    /* overflow: hidden; */
+
+    /* 对于absolute定位的层总是相对于其最近的定义为absolute或relative的父层 */
+    position: relative;
+}
+
+.diary_content::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 15px;
+    width: 2px;
+    /* box-shadow: 0px 0px 5px 5px var(--maincolor_thin); */
+    background-color: var(--maincolor);
+    /* z-index: 0; */
+}
+
+.diary_content_text {
+    display: inline;
+    /* width: 50%; */
+}
+
+.xiufu {
+    display: inline-block;
+    text-align: center;
+    background-color: rgb(240, 190, 50);
+    padding: 3px 5px 3px 5px;
+    margin-right: 2px;
+    border-radius: 2px;
+    color: white;
+}
+
+.xinzeng {
+    display: inline-block;
+    text-align: center;
+    background-color: rgb(0,255,0);
+    padding: 3px 5px 3px 5px;
+    margin-right: 2px;
+    border-radius: 2px;
+    color: white;
+    
+}
+
+.yichu {
+    display: inline-block;
+    text-align: center;
+    background-color: rgb(255,0,0);
+    padding: 3px 5px 3px 5px;
+    margin-right: 2px;
+    /* border: 1px solid var(--gray); */
+    border-radius: 2px;
+    color: white;
+}
+
+.xiugai {
+    display: inline-block;
+    text-align: center;
+    background-color: rgb(50,50,50);
+    padding: 3px 5px 3px 5px;
+    margin-right: 2px;
+    /* border: 1px solid var(--gray); */
+    border-radius: 2px;
+    color: white;
+}
+
+.bushu {
+    display: inline-block;
+    text-align: center;
+    background-color: var(--maincolor);
+    padding: 3px 5px 3px 5px;
+    margin-right: 2px;
+    border-radius: 2px;
+    color: black;
+}
+

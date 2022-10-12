@@ -1,5 +1,6 @@
 setTimeout(function(){
     document.getElementById("card_1").style.animationPlayState = "running";
+    document.getElementsByTagName("html")[0].style.overflowY = "auto";
 }, 3000)
 
 setTimeout(function(){
@@ -28,6 +29,9 @@ var my_friends_div = document.getElementsByClassName("my_friends_div");
 var title_text = document.getElementsByClassName("title_text");
 var my_goals = document.getElementsByClassName("my_goals");
 
+var my_favourite_game_id = document.getElementById("my_favourite_game");
+var my_favourite_game_class = document.getElementsByClassName("my_favourite_game");
+
 var scroll_bottom_sign = 0
 
 var scroll_height = Html.scrollTop + window_height;
@@ -49,6 +53,7 @@ for (var i=0; i< my_goals.length; i++) {
 var my_friends_showstate = 0;
 var my_goals_already_show_completely = 0;
 var title_text_completely = 0;
+var my_favourite_game_already_show = 0;
 
 window.onscroll = function() {
     var scroll_height = Html.scrollTop + window_height;
@@ -96,6 +101,15 @@ window.onscroll = function() {
         }
     }
 
+    if (my_favourite_game_already_show == 0) {
+        if (scroll_height - 100 > my_favourite_game_id.offsetTop) {
+            for (var i = 0;i<my_favourite_game_class.length;i++){
+                my_favourite_game_class[i].style.animationPlayState = "running";
+                my_favourite_game_class[i].style.animationDelay = i * 0.2 +"s"
+            }
+            my_favourite_game_already_show = 1;
+        }
+    }
     // console.log("HTML滚动高度: " + scroll_height);
     
 }
@@ -131,4 +145,50 @@ function Add_Copy(ele, conetnt) {
     copy_success.className = "copy_success";
     copy_success.innerText = "Copied!";
     ele.appendChild(copy_success);
+}
+
+
+
+function Show_guidang_content(ele) {
+    for (var i=0;i<ele.parentElement.parentElement.children.length;i++) {
+        if (ele.parentElement.parentElement.children[i].className.match(/[^]js_maxheight/g)) {
+            // console.log(ele.parentElement.parentElement.children[i])
+            if (ele.value == "0") {
+                ele.value = "1";
+                ele.style.animationName = "button_180";
+                ele.parentElement.parentElement.children[i].style.animationName = "an_maxheight_show";
+            }
+            else {
+                ele.value = "0"
+                ele.style.animationName = "button_360";
+                ele.parentElement.parentElement.children[i].style.animationName = "an_maxheight_hide";
+            }
+        }
+    }
+}
+
+// document.getElementById("diary").style.setProperty("--this_maxheight", String(document.getElementById("diary").scrollHeight) + "px");
+
+function Show_diary_content(ele) {
+    for (var i=0;i<ele.parentElement.parentElement.children.length;i++) {
+        if (ele.parentElement.parentElement.children[i].id == "diary") {
+            // console.log(ele.parentElement.parentElement.children[i])
+            if (ele.value == "0") {
+                ele.value = "1";
+                ele.style.animationName = "button_180";
+                ele.parentElement.parentElement.children[i].style.animationName = "an_maxheight_show";
+            }
+            else {
+                ele.value = "0"
+                ele.style.animationName = "button_360";
+                ele.parentElement.parentElement.children[i].style.animationName = "an_maxheight_hide";
+            }
+        }
+    }
+}
+
+var js_needgetmaxheight = document.getElementsByClassName("js_maxheight");
+for (var i=0;i<js_needgetmaxheight.length;i++) {
+    js_needgetmaxheight[i].style.setProperty("--this_maxheight", String(js_needgetmaxheight[i].scrollHeight) + "px");
+    // js_needgetmaxheight[i].scrollHeight
 }
