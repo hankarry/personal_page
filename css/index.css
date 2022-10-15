@@ -99,7 +99,6 @@ a {
     border: none;
     text-decoration: none;
     cursor: pointer;
-    /* color: var(--maincolor); */
     color: white;
 }
 
@@ -1195,9 +1194,11 @@ a:hover::after {
     animation-timing-function: ease;
     animation-fill-mode: both;
 }
+
 .guidang_content > a {
     word-wrap: break-word;
 }
+
 #diary {
     overflow: hidden;
     margin: 1em 1em 0 1em;
