@@ -873,7 +873,7 @@ a:hover::after {
     color: rgb(100, 190, 255);
 }
 #yuchen_background {
-    background: url(/css/images/my_friend/yuchen_background.jpeg) no-repeat;
+    background: url(/css/images/my_friend/yuchen_background.png) no-repeat;
     background-position: center;
     background-size: contain;
 }
