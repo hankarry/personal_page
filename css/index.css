@@ -564,7 +564,7 @@ a:hover::after {
 }
 
 @keyframes my_favourite_game {
-    0% {left: -50%; opacity: 0;}
+    0% {left: -25%; opacity: 0;}
     100% {left: 0%; opacity: 1;}
 }
 
@@ -619,8 +619,8 @@ a:hover::after {
     /* left: -50%; */
     padding: 5px;
     border-radius: 5px;
-    width: 100px;
-    margin-left: -50px;
+    width: 120px;
+    margin-left: -60px;
     background-color: var(--background_color_black_4);
     color: white;
     cursor: default;
@@ -665,12 +665,7 @@ a:hover::after {
 
 .my_friends_div {
     position: relative;
-    /* display: flex; */
-    /* visibility: hidden; */
     opacity: 0;
-    /* height: 6em; */
-    /* align-items: center; */
-    /* width: fit-content; */
     width: 10em;
     height: 5em;
     margin: 0 auto 10px auto;
@@ -681,10 +676,8 @@ a:hover::after {
     animation-fill-mode: both;
     transition: all 0.5s;
     top: 0px;
-    /* left: 0px; */
     z-index: 10;
     overflow: hidden;
-    /* flex: 1; */
 }
 
 .my_friends_div:hover {
@@ -695,11 +688,49 @@ a:hover::after {
     box-shadow: 1px 2px 10px var(--maincolor);
     
     height: 200px;
-    /* height: fit-content; */
     z-index: 15;
 }
-.my_friends_div:active {
-    /* flex: 2; */
+
+.my_friends_cp_div {
+    position: relative;
+    /* opacity: 0; */
+    padding: 10px;
+    margin: 0 auto;
+    width: 90%;
+    box-sizing: border-box;
+    border: 1px solid pink;
+    border-radius: 10px;
+    background-color: rgba(255,150,200, 0.1);
+    z-index: 10;
+    overflow: hidden;
+}
+
+.my_friends_cp {
+    position: relative;
+    overflow: hidden;
+    width: 10em;
+    height: 5em;
+
+    margin: 0 auto 10px auto;
+    padding: 5px;
+    animation: none 0.5s ease 0s 1 normal both;
+    animation-fill-mode: both;
+    background-color: var(--background_color_black_1);
+    border-radius: 5px;
+    transition: all 0.5s;
+    top: 0px;
+}
+
+.my_friends_cp:hover {
+    top: -10px;
+    left: -5px;
+    width: 90%;
+    box-shadow: 1px 2px 10px var(--maincolor);
+    
+    height: 200px;
+    z-index: 15;
+    transition: all 0.5s;
+
 }
 
 .my_friends_header {
@@ -783,7 +814,7 @@ a:hover::after {
 }
 
 #my_friends_head_5 {
-    background: url(/css/images/my_friend/yubai.jpeg) no-repeat;
+    background: url(/css/images/my_friend/kaliyubai.jpg) no-repeat;
     background-position: center;
     background-size: contain;
 }
@@ -820,7 +851,7 @@ a:hover::after {
 }
 
 #my_friends_head_8 {
-    background: url(/css/images/my_friend/chuibing.jpg) no-repeat;
+    background: url(/css/images/my_friend/chuibing.png) no-repeat;
     background-position: center;
     background-size: contain;
 }

@@ -24,7 +24,7 @@ var window_height = window.innerHeight;
 
 var my_friends = document.getElementById("my_friends");
 // var my_friends = document.querySelectorAll(".my_friends_div");
-var my_friends_div = document.getElementsByClassName("my_friends_div");
+var my_friends_div = document.getElementsByClassName("need_scroll_show");
 
 var title_text = document.getElementsByClassName("title_text");
 var my_goals = document.getElementsByClassName("my_goals");
