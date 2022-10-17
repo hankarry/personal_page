@@ -648,9 +648,9 @@ a:hover::after {
 }
 
 #my_friends {
-    /* display: flex; */
+    display: flex;
     /* flex-flow: row; */
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     display: grid;
     grid-template-columns: repeat(2, 50%);
     /* grid-template-rows: repeat(3,100px); */
@@ -693,8 +693,8 @@ a:hover::after {
 
 .my_friends_cp_div {
     position: relative;
-    /* opacity: 0; */
-    padding: 10px;
+    opacity: 0;
+    padding: 15px;
     margin: 0 auto;
     width: 90%;
     box-sizing: border-box;
@@ -710,6 +710,7 @@ a:hover::after {
 
 .my_friends_cp {
     position: relative;
+    /* display: inline-block; */
     overflow: hidden;
     width: 10em;
     height: 5em;
