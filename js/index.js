@@ -125,19 +125,37 @@ function gaokao_countdown_time() {
     var leftTime = gaokao_time - parseInt(now_date.getTime())
     // var years = Math.floor(leftTime / 1000 / 60 / 60 / 24 / 365);
     // var months = Math.floor((leftTime - years*31536000000) / 1000 / 60 / 60 / 24 / 30)
-    // var days = Math.floor((leftTime - years*31536000000 - months*86400000)/ 1000 / 60 / 60 / 24);
-    var days = Math.floor(leftTime / 1000 / 60 / 60 / 24);
-    var hours = Math.floor((leftTime - days * 86400000) / 1000 / 60 / 60);
-    var minutes = Math.floor((leftTime - days * 86400000 - hours * 3600000) / 1000 / 60);
-    var seconds = Math.floor((leftTime - days * 86400000 - hours * 3600000 - minutes * 60000) / 1000);
-    // document.getElementById("gaokao_countdown").innerText = years + "年" + months + "月" + days + "日" + hours + "时" + minutes + "分" + seconds + "秒"; 
-    gaokao_countdown_ele.innerHTML = days + "天" + hours + "小时" + minutes + "分" + seconds + "秒"; 
-    setTimeout(gaokao_countdown_time, 1000)
+    // var gaokao_days = Math.floor((leftTime - years*31536000000 - months*86400000)/ 1000 / 60 / 60 / 24);
+    gaokao_days = Math.floor(leftTime / 1000 / 60 / 60 / 24);
+    gaokao_hours = Math.floor((leftTime - gaokao_days * 86400000) / 1000 / 60 / 60);
+    gaokao_minutes = Math.floor((leftTime - gaokao_days * 86400000 - gaokao_hours * 3600000) / 1000 / 60);
+    gaokao_seconds = Math.floor((leftTime - gaokao_days * 86400000 - gaokao_hours * 3600000 - gaokao_minutes * 60000) / 1000);
+    // document.getElementById("gaokao_countdown").innerText = years + "年" + months + "月" + gaokao_days + "日" + gaokao_hours + "时" + gaokao_minutes + "分" + gaokao_seconds + "秒"; 
+    gaokao_countdown_ele.innerHTML = gaokao_days + "天" + gaokao_hours + "小时" + gaokao_minutes + "分" + gaokao_seconds + "秒"; 
+    // setTimeout(gaokao_countdown_time, 1000)
     // console.log(1)
     // setTimeout(gaokao_countdown, 1000)
+    setInterval(gaokao_countdown_next, 1000)
 
 }
 gaokao_countdown_time()
+
+function gaokao_countdown_next() {
+    gaokao_seconds -= 1;
+    if (gaokao_seconds == -1) {
+        gaokao_seconds = 59;
+        gaokao_minutes -= 1;
+        if (gaokao_minutes == -1) {
+            gaokao_minutes = 59;
+            gaokao_hours -= 1;
+            if (gaokao_hours == -1) {
+                gaokao_hours = 23;
+                gaokao_days -= 1;
+            }
+        }
+    }
+    gaokao_countdown_ele.innerHTML = gaokao_days + "天" + gaokao_hours + "小时" + gaokao_minutes + "分" + gaokao_seconds + "秒"; 
+}
 
 function Add_Copy(ele, conetnt) {
     navigator.clipboard.writeText(conetnt);

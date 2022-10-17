@@ -412,19 +412,31 @@ a:hover::after {
     left: 1em;
     font-size: 1.15em;
     /* height: 10px; */
-    height: 1.15em;
+    height: 0.8em;
     border-radius: 5px 5px 0 0;
     /* color: var(--maincolor); */
     /* animation: card_content_title 1s ease 0s 1 normal both; */
-    width: fit-content;
-    /* border: 1px solid gray; */
-    border-bottom: 3px solid var(--maincolor);
-    /* background-color: var(--maincolor); */
-    /* background-color: var(--background_color); */
+    /* width: fit-content; */
+    border-bottom: 5px solid var(--maincolor);
     background-color: var(--background_color_black_2_ope);
     /* background-color: rgba(255,255,255,1); */
     /* flex: none; */
+    /* z-index: 50; */
 }
+
+/* .card_content_content {
+    z-index: 50;
+}
+
+.card_content_title::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 2px;
+    left: 0;
+    z-index: 40;
+    border-bottom: 5px solid var(--maincolor);
+} */
 
 .connect_me_icon {
     cursor: pointer;
@@ -547,12 +559,12 @@ a:hover::after {
 #my_favourite_game {
     text-align: center;
     padding: 1em;
-    overflow: hidden;
+    /* overflow: hidden; */
     /* height: 30vh; */
 }
 
 @keyframes my_favourite_game {
-    0% {left: -100%; opacity: 0;}
+    0% {left: -50%; opacity: 0;}
     100% {left: 0%; opacity: 1;}
 }
 
@@ -817,6 +829,20 @@ a:hover::after {
 }
 #chuibing_background {
     background: url(/css/images/dayemao.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#my_friends_head_9 {
+    background: url(/css/images/my_friend/yuchen.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+#my_friends_name_9 {
+    color: rgb(100, 190, 255);
+}
+#yuchen_background {
+    background: url(/css/images/my_friend/yuchen_background.jpeg) no-repeat;
     background-position: center;
     background-size: contain;
 }
