@@ -651,8 +651,8 @@ a:hover::after {
     display: flex;
     /* flex-flow: row; */
     flex-wrap: wrap;
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
+    /* display: grid; */
+    /* grid-template-columns: repeat(2, 50%); */
     /* grid-template-rows: repeat(3,100px); */
     padding: 10px;
     
@@ -684,7 +684,8 @@ a:hover::after {
     /* flex: 2; */
     top: -10px;
     left: -5px;
-    width: 90%;
+    /* width: 90%; */
+    width: 15em;
     box-shadow: 1px 2px 10px var(--maincolor);
     
     height: 200px;
@@ -693,39 +694,49 @@ a:hover::after {
 
 .my_friends_cp_div {
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     opacity: 0;
-    padding: 15px;
+    /* padding: 15px; */
     margin: 0 auto;
-    width: 90%;
+    margin-bottom: 10px;
+    /* width: 90%; */
     box-sizing: border-box;
     border: 1px solid pink;
     border-radius: 10px;
     background-color: rgba(255,150,200, 0.1);
     z-index: 10;
-    overflow: hidden;
+    /* overflow: hidden; */
 
     animation: none 0.5s ease 0s 1 normal both;
     animation-fill-mode: both;
 }
 
 .my_friends_cp {
+    /* flex: 1; */
     position: relative;
     /* display: inline-block; */
     overflow: hidden;
     width: 10em;
     height: 5em;
-    margin: 0 auto 10px auto;
+    /* margin: 0 auto; */
+    margin-right: 10px;
     padding: 5px;
     background-color: var(--background_color_black_1);
-    border-radius: 5px;
+    border-radius: 10px;
     transition: all 0.5s;
     top: 0px;
+}
+
+.my_friends_cp_1 {
 }
 
 .my_friends_cp:hover {
     top: -10px;
     left: -5px;
-    width: 90%;
+    /* width: 90%; */
+    width: 15em;
     box-shadow: 1px 2px 10px var(--maincolor);
     
     height: 200px;
@@ -1221,20 +1232,22 @@ a:hover::after {
     cursor: pointer;
     padding: 0 1em;
     box-sizing: border-box;
+    display: flex;
 }
 
 .title_button > section {
     box-sizing: border-box;
     width: 100%;
-    padding-right: 30px;
+    /* padding-right: 30px; */
     color: var(--maincolor);
 }
 
 .button_arrow {
-    position: absolute;
+    /* position: absolute; */
+    position: relative;
     /* display: inline; */
     top: 5px;
-    right: 5px;
+    /* right: 5px; */
     transform-origin: center;
 
     animation: none 0.5s ease 0s 1 normal both;
