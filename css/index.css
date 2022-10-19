@@ -648,11 +648,10 @@ a:hover::after {
 }
 
 #my_friends {
-    display: flex;
-    /* flex-flow: row; */
-    flex-wrap: wrap;
-    /* display: grid; */
-    /* grid-template-columns: repeat(2, 50%); */
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
     /* grid-template-rows: repeat(3,100px); */
     padding: 10px;
     
@@ -665,6 +664,7 @@ a:hover::after {
 
 .my_friends_div {
     position: relative;
+    /* flex: 1; */
     opacity: 0;
     width: 10em;
     height: 5em;
@@ -694,12 +694,14 @@ a:hover::after {
 
 .my_friends_cp_div {
     position: relative;
+    grid-column: span 2;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     opacity: 0;
-    /* padding: 15px; */
-    margin: 0 auto;
+    padding: 5px;
+    /* margin: 0 auto; */
+    width: 100%;
     margin-bottom: 10px;
     /* width: 90%; */
     box-sizing: border-box;
@@ -720,8 +722,7 @@ a:hover::after {
     overflow: hidden;
     width: 10em;
     height: 5em;
-    /* margin: 0 auto; */
-    margin-right: 10px;
+    margin: 0 auto;
     padding: 5px;
     background-color: var(--background_color_black_1);
     border-radius: 10px;
@@ -730,6 +731,7 @@ a:hover::after {
 }
 
 .my_friends_cp_1 {
+    /* margin-right: 10px; */
 }
 
 .my_friends_cp:hover {
@@ -945,14 +947,27 @@ a:hover::after {
     }
 
     #my_friends {
-        /* flex-direction: column; */
         grid-template-columns: 100%;
+    }
+    .my_friends_cp_div {
+        /* width: auto; */
+        flex-direction: column;
+        grid-column: auto;
+    }
+    .my_friends_cp_1 {
+        margin-bottom: 10px;
     }
 }
 
 @media screen and (min-width: 900px) {
     #my_friends {
         grid-template-columns: repeat(4, 25%);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #my_friends {
+        grid-template-columns: repeat(6, auto);
     }
 }
 
