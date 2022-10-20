@@ -520,6 +520,11 @@ a:hover::after {
         margin-bottom: 1em;
     }
     #connect_me {
+        position: absolute;
+        bottom: 1.5em;
+        left: 1em;
+        right: 1em;
+
     }
 }
 
