@@ -196,3 +196,32 @@ function Show_content(ele) {
         }
     }
 }
+
+var Html = document.getElementsByTagName("html")[0];
+var window_height = window.innerHeight;
+var scroll_up = document.getElementById("scroll_up");
+var scrolltop_image = document.getElementById("scroll_up_content")
+var scrollup_already_show = 0;
+window.addEventListener("scroll", function() {
+    var dis = Html.scrollTop;
+    // var scroll_height = dis + window_height;
+    // console.log("HTML滚动高度: " + dis);
+    
+    if (dis > 0.5 * window_height && scrollup_already_show == 0) {
+        scroll_up.style.animationName = "show_from_right";
+        // scroll_up.style.animationDirection = "normal";
+        // scroll_up.style.animationPlayState = "running";
+        scrollup_already_show = 1;
+    }
+
+    if (dis < 0.5 * window_height && scrollup_already_show == 1) {
+        scrolltop_image.style.animationName = "none";
+        scroll_up.style.animationName = "hide_from_right";
+        scrollup_already_show = 0;
+    }
+})
+
+function scroll_to_top() {
+    window.scrollTo(0,0);
+    scrolltop_image.style.animationName = "scrolling";
+}

@@ -58,28 +58,13 @@ window.addEventListener("scroll", function() {
     var dis = Html.scrollTop;
     // var scroll_height = dis + window_height;
     // console.log("HTML滚动高度: " + dis);
-    // console.log(window_height * 0.5)
-    // console.log(elements_top[1])
-    // console.log(1)
     
     if (dis > 0.5 * window_height && scrollup_already_show == 0) {
-        scroll_up.style.animationName = "show_from_right_";
+        scroll_up.style.animationName = "show_from_right";
         // scroll_up.style.animationDirection = "normal";
         // scroll_up.style.animationPlayState = "running";
         scrollup_already_show = 1;
-        // console.log(1)
     }
-
-    // if (dis < 0.5 * window_height && scrollup_already_show == 1) {
-    //     scroll_up.style.animationName = "hide_from_right_";
-    //     setTimeout(function() {
-    //         scrolltop_image.style.animationName = "none";
-    //     }, 1000)
-    //     // scrolltop_image.style.animationPlayState = "paused";
-    //     // scroll_up.style.animationDirection = "alternate";
-    //     // scroll_up.style.animationPlayState = "running";
-    //     scrollup_already_show = 0;
-    // }
 })
 
 function scroll_to_top() {
@@ -87,7 +72,7 @@ function scroll_to_top() {
     scrolltop_image.style.animationName = "scrolling";
     setTimeout(function() {
         scrolltop_image.style.animationName = "none";
-        scroll_up.style.animationName = "hide_from_right_";
+        scroll_up.style.animationName = "hide_from_right";
         scrollup_already_show = 0;
     }, 2000)
     // scrolltop_image.style.animationPlayState = "running";
