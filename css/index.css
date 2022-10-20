@@ -487,6 +487,7 @@ a:hover::after {
 @media screen and (min-width:800px) {
     #card_1 {
         display: grid;
+        padding: 0;
         grid-template-columns: 50% 50%;
     }
     #card_1_1 {
@@ -504,9 +505,13 @@ a:hover::after {
         right: 0;
         border-right: 1px solid gray;
     }
+    #card_1_1_content {
+        width: 100%;
+    }
     #card_1_2 {
         display: flex;
         align-items: center;
+        box-sizing: border-box;
         width: 100%;
         padding: 10px;
     }
