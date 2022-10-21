@@ -318,7 +318,7 @@ a:hover::after {
     /* box-sizing: border-box; */
     margin: 0 auto;
     top: 10%;
-    width: 80%;
+    width: 60%;
     height: 80%;
     border: 1px solid var(--maincolor_2);
     border-radius: 10px;
@@ -487,6 +487,7 @@ a:hover::after {
 @media screen and (min-width:800px) {
     #card_1 {
         display: grid;
+        width: 90%;
         padding: 0;
         grid-template-columns: 50% 50%;
     }
@@ -1042,7 +1043,7 @@ a:hover::after {
     }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 900px) and (max-width: 1200px) {
     #my_friends {
         grid-template-columns: repeat(4, 25%);
     }
