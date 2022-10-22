@@ -180,14 +180,14 @@ function Show_content(ele) {
                         ele_buttonarrow = ele.children[i];
                     }
                 }
-                if (ele.value == "0") {
+                if (ele.dataset.buttonstate == "0") {
                     
-                    ele.value = "1";
+                    ele.dataset.buttonstate = "1";
                     ele_buttonarrow.style.animationName = "button_180";
                     ele.parentElement.children[ii].style.animationName = "an_maxheight_show";
                 }
                 else {
-                    ele.value = "0"
+                    ele.dataset.buttonstate = "0"
                     ele_buttonarrow.style.animationName = "button_360";
                     ele.parentElement.children[ii].style.animationName = "an_maxheight_hide";
                 }

@@ -983,6 +983,20 @@ a:hover::after {
     background-size: contain;
 }
 
+#my_friends_head_10 {
+    background: url(/css/images/my_friend/chuanlinmomeng_fix.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#my_friends_name_10 {
+    color: rgb(100, 190, 255);
+}
+#chuanlin_background {
+    background: url(/css/images/my_friend/) no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
 .my_friends_content {
     /* visibility: hidden; */
     /* padding: 0 5px 0 5px; */
@@ -1489,8 +1503,8 @@ a:hover::after {
     position: fixed;
     right: -100%;
     bottom: 2em;
-    height: 3em;
-    width: 2.5em;
+    height: 35px;
+    width: 30px;
     border: 1px solid gray;
     border-radius: 5px;
     background-color: var(--background_color_black_3_ope);
@@ -1521,7 +1535,7 @@ a:hover::after {
 
     background: url(/css/hud/Arrow-up.svg) no-repeat;
     background-position: center;
-    background-size: 50px;
+    background-size: 40px;
     margin: auto;
     width: 85%;
     height: 95%;
