@@ -1,3 +1,10 @@
+var test_mode = 0;
+if (test_mode == 1) {
+    document.getElementById("card_1").style.animationPlayState = "running";
+    document.getElementsByTagName("html")[0].style.overflowY = "auto";
+    document.getElementById("loading").style.display = "none";
+}
+
 setTimeout(function(){
     document.getElementById("card_1").style.animationPlayState = "running";
     document.getElementsByTagName("html")[0].style.overflowY = "auto";
@@ -36,7 +43,7 @@ var scroll_bottom_sign = 0
 
 var scroll_height = Html.scrollTop + window_height;
 for (var i=0; i<title_text.length; i++) {
-    if (scroll_height - 100 > title_text[i].offsetTop) {
+    if (scroll_height - 50 > title_text[i].offsetTop) {
         // title_text[i].style.animationName = "title_text";
     }
 }
@@ -59,7 +66,7 @@ window.onscroll = function() {
     var scroll_height = Html.scrollTop + window_height;
     // console.log(scroll_height);
     if (my_friends_showstate == 0) {
-        if (scroll_height - 100 > my_friends.offsetTop) {
+        if (scroll_height - 50 > my_friends.offsetTop) {
             for (var i=0; i<my_friends_div.length; i++) {
                 // my_friends_div[i].style.visibility = "visible";
                 my_friends_div[i].style.animationName = "my_friends_div_show";
@@ -77,7 +84,7 @@ window.onscroll = function() {
 
     if (title_text_completely == 0) {
         for (var i=0; i<title_text.length; i++) {
-            if (scroll_height - 100 > title_text[i].offsetTop) {
+            if (scroll_height - 50 > title_text[i].offsetTop) {
                 title_text[i].style.animationName = "title_text";
                 if (i == title_text.length - 1) {
                     title_text_completely == 1;
@@ -90,7 +97,7 @@ window.onscroll = function() {
         
         for (var i=0; i< my_goals.length; i++) {
             if (my_goals_already_show[i] == 0) {
-                if (scroll_height - 100 > my_goals[i].offsetTop) {
+                if (scroll_height - 50 > my_goals[i].offsetTop) {
                     my_goals[i].style.animationName = "my_goals";
                     my_goals_already_show[i] = 1;
                     if (i == my_goals.length - 1) {
@@ -102,7 +109,7 @@ window.onscroll = function() {
     }
 
     if (my_favourite_game_already_show == 0) {
-        if (scroll_height - 100 > my_favourite_game_id.offsetTop) {
+        if (scroll_height - 50 > my_favourite_game_id.offsetTop) {
             for (var i = 0;i<my_favourite_game_class.length;i++){
                 my_favourite_game_class[i].style.animationPlayState = "running";
                 my_favourite_game_class[i].style.animationDelay = i * 0.2 +"s"

@@ -42,6 +42,7 @@
 
     --maincolor:#94E9FF;
     --maincolor_2:#5FCBF5;
+    --maincolor_3:rgb(15,150,250);
 }
 /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
 ::-webkit-scrollbar
@@ -69,6 +70,10 @@
 
 ::-webkit-scrollbar-button {
     display: none;
+}
+
+::selection {
+    background: var(--maincolor_3);
 }
 
 .sanjiao {
@@ -452,7 +457,7 @@ a:hover::after {
     
     #little_speak {
         position: relative;
-        /* margin-bottom: 2em; */
+        margin-bottom: 2em;
     }
     
     #little_speak::after {
@@ -487,7 +492,7 @@ a:hover::after {
 @media screen and (min-width:800px) {
     #card_1 {
         display: grid;
-        width: 90%;
+        width: 70%;
         padding: 0;
         grid-template-columns: 50% 50%;
     }
@@ -779,7 +784,7 @@ a:hover::after {
     width: 15em;
     box-shadow: 1px 2px 10px var(--maincolor);
     
-    height: 230px;
+    height: 200px;
     z-index: 15;
 }
 
@@ -989,7 +994,7 @@ a:hover::after {
     background-size: cover;
 }
 #my_friends_name_10 {
-    color: rgb(0,133,115);
+    color: rgb(100, 190, 255);
 }
 #chuanlin_background {
     background: url(/css/images/my_friend/) no-repeat;
@@ -1139,9 +1144,10 @@ a:hover::after {
     border-radius: 10px;
 
     min-width: fit-content;
-    height: 1.25em;
+    max-height: 1.25em;
 
     transition: all 0.5s;
+
     top: 0;
     left: 0;
 
@@ -1166,10 +1172,7 @@ a:hover::after {
     left: -5px;
     box-shadow: 1px 2px 10px var(--maincolor);
     background-color: var(--background_color_black_2);
-
-    /* height: 8em; */
-    height: 10em;
-    /* width: 20em; */
+    max-height: var(--this_maxheight);
 }
 
 .my_goals_background_number {
@@ -1510,6 +1513,7 @@ a:hover::after {
     background-color: var(--background_color_black_3_ope);
     overflow: hidden;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
 
     --show_right_start:-100%;
     --show_right_end:1em;
