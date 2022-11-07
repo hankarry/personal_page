@@ -177,6 +177,14 @@ for (var i=0;i<js_needgetmaxheight.length;i++) {
     js_needgetmaxheight[i].style.setProperty("--this_maxheight", String(js_needgetmaxheight[i].scrollHeight) + "px");
     // js_needgetmaxheight[i].scrollHeight
 }
+window.onresize = function () {
+    var js_needgetmaxheight = document.getElementsByClassName("js_maxheight");
+    for (var i=0;i<js_needgetmaxheight.length;i++) {
+        js_needgetmaxheight[i].style.setProperty("--this_maxheight", String(js_needgetmaxheight[i].scrollHeight) + "px");
+        // js_needgetmaxheight[i].scrollHeight
+    }
+}
+
 
 function Show_content(ele) {
     for (var ii=0;ii<ele.parentElement.children.length;ii++) {
