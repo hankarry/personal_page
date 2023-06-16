@@ -53,7 +53,7 @@ for (var i=0; i<copy_button_need.length; i++) {
 
 function address_copy(ele) {
     // console.log(ele.parentNode.innerText);
-    navigator.clipboard.writeText(ele.parentNode.innerText);
+    navigator.clipboard.writeText(ele.parentNode.nodeValue);
     var copy_success = document.createElement("div");
     copy_success.className = "copy_success";
     copy_success.innerText = "Copied!";
