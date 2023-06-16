@@ -68,7 +68,7 @@
 
 #Minecraft {
     /* overflow: auto; */
-    background: url(images/icon_minecraft.png);
+    background: url(./images/icon_minecraft.png);
     background-repeat: no-repeat;
     background-size: 7em;
     background-position: top;
@@ -79,7 +79,7 @@
 }
 #Unturned {
     /* overflow: auto; */
-    background: url(images/icon_unturned.png);
+    background: url(./images/icon_unturned.png);
     background-repeat: no-repeat;
     background-size: 7em;
     background-position: top;
@@ -134,7 +134,7 @@
     visibility: hidden;
     height: 1.5em;
     width: 1.5em;
-    background: url(/css/hud/fuzhi.svg) no-repeat;
+    background: url(./css/hud/fuzhi.svg) no-repeat;
     background-position: center;
     background-size: cover;
     /* visibility: visible; */

@@ -1,5 +1,5 @@
 /* 导入动画样式表 */
-@import url("/css/animation.css");
+@import url("./animation.css");
 
 :root {    
     --maincolor:#94E9FF;
@@ -22,19 +22,19 @@
 }
 
 /* 字体MiSans引用 */
-/* @font-face {
+@font-face {
     font-family: MiSans;
-    src: url(ttf/MiSans-Normal.ttf);
+    src: url(./ttf/MiSans-Normal.ttf);
 }
 @font-face {
     font-family: MiSans;
-    src: url(ttf/MiSans-Bold.ttf);
+    src: url(./ttf/MiSans-Bold.ttf);
     font-weight: bold;
 }
 @font-face {
     font-family: MiSans_thin;
-    src: url(ttf/MiSans-Thin.ttf);
-} */
+    src: url(./ttf/MiSans-Thin.ttf);
+}
 
 * {
     /* margin: 0; */
@@ -551,7 +551,7 @@ button {
 #scroll_up_content {
     position: relative;
 
-    background: url(/css/hud/Arrow-up.svg) no-repeat;
+    background: url(./hud/Arrow-up.svg) no-repeat;
     background-position: center;
     background-size: 50px;
     margin: auto;

@@ -9,7 +9,7 @@ function AddSheetFile(path) {
     head.insertBefore(fileref, head.childNodes[4]);
     // appendChild()方法在最后插入
 }
-AddSheetFile("/css/all.css");
+AddSheetFile("./css/all.css");
 
 // document.write("<div id='header'></div>")
 // var xhttp
@@ -44,7 +44,7 @@ function Header(number, now_page1, now_page2, header2_gui, transparent) {
             // document.write = this.responseText
         }
     };
-    xhttp.open("GET", "/header/header.html", false)
+    xhttp.open("GET", "./header/header.html", false)
     xhttp.send()
 
     document.getElementById(now_page1).onclick = "unset"
@@ -53,9 +53,9 @@ function Header(number, now_page1, now_page2, header2_gui, transparent) {
     document.getElementById(now_page1).style.borderBottom = "unset"
 
     if (transparent == 'true') {
-        AddSheetFile("/css/header_transparent.css")
+        AddSheetFile("./css/header_transparent.css")
     } else {
-        AddSheetFile("/css/header.css")
+        AddSheetFile("./css/header.css")
     }
 
     if (number == 2) {
@@ -70,7 +70,7 @@ function Header(number, now_page1, now_page2, header2_gui, transparent) {
         
             //     page_request("header2_me.html")
             // }
-        AddSheetFile("/css/header2.css")
+        AddSheetFile("./css/header2.css")
         
         var xhttp
         xhttp = new XMLHttpRequest();
@@ -89,7 +89,7 @@ function Header(number, now_page1, now_page2, header2_gui, transparent) {
     }
 }
 
-function jumpto(herf) {
+function jumpto(href) {
     
     var animation_card = document.getElementsByClassName('card');
     var animation_card_small = document.getElementsByClassName('card_small');
@@ -102,7 +102,7 @@ function jumpto(herf) {
     }
 
     setTimeout (function() {
-        // window.location.href = herf;
+        // window.location.href = href;
         var http = new XMLHttpRequest();
         http.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {

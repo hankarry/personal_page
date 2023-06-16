@@ -11,9 +11,9 @@ function AddSheetFile(path) {
     head.appendChild(fileref);
     // appendChild()方法在最后插入
 }
-AddSheetFile("/css/all.css");
+AddSheetFile("./css/all.css");
 // AddSheetFile("/css/animation.css");
-AddSheetFile("/css/header_mode_2.css");
+AddSheetFile("./css/header_mode_2.css");
 
 // // 导航栏数量,当前导航栏1的id,当前导航栏2的id,导航栏2的html
 // function Header(number, now_page1, now_page2, header2_gui, transparent) {
@@ -102,7 +102,7 @@ function Header(number, page1, page2) {
                 // document.write = this.responseText
             }
         };
-        xhttp.open("GET", "/header/header.html", false)
+        xhttp.open("GET", "./header/header.html", false)
         xhttp.send()
 
     }
@@ -137,7 +137,7 @@ function Header(number, page1, page2) {
 
 
 Ajax_script = 1;
-function pageload(herf) {
+function pageload(href) {
 
     var animation_card = document.getElementsByClassName('card');
     var animation_card_small = document.getElementsByClassName('card_small');
@@ -286,7 +286,7 @@ function pageload(herf) {
             }
             
         };
-        http.open("GET", herf, true)
+        http.open("GET", href, true)
         http.send()
         
     // }, 5000)
@@ -294,7 +294,7 @@ function pageload(herf) {
 
 }
 
-function jumpto(herf) {
+function jumpto(href) {
     // var body_content = document.getElementById("body_right_content");
     // body_content.innerHTML = "";
 
@@ -306,7 +306,7 @@ function jumpto(herf) {
     //         // document.write = this.responseText
     //     }
     // };
-    // http.open("GET", herf, false)
+    // http.open("GET", href, false)
     // http.send()
 
     var animation_card = document.getElementsByClassName('card');
@@ -320,7 +320,7 @@ function jumpto(herf) {
     }
 
     setTimeout(function() {
-        window.location.href = herf;
+        window.location.href = href;
     }, 500)
 }
 

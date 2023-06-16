@@ -22,7 +22,7 @@ function pageleave() {
         // document.getElementById("body_right_content").style.display = "none";
         document.getElementById("bodyleave").style.width = "100vw";
 
-        location.href = '/index_main.html';
+        location.href = './index_main.html';
     }, 1000)
 }
 

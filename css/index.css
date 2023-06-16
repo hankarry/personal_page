@@ -14,13 +14,13 @@
 
 @font-face {
     font-family: Alimama;
-    src: url(/css/ttf/Alimama_ShuHeiTi_Bold.ttf);
+    src: url(./ttf/Alimama_ShuHeiTi_Bold.ttf);
     font-weight: bold;
 }
 
 @font-face {
     font-family: Ds-digital;
-    src: url(/css/ttf/DS-Digital/DS-DIGI-1.ttf);
+    src: url(./ttf/DS-Digital/DS-DIGI-1.ttf);
 }
 
 :root {
@@ -221,7 +221,7 @@ a:hover::after {
     margin-top: 20vh;
     width: 40vw;
     height: 40vh;
-    background: url(/logo2.png) no-repeat;
+    background: url(../logo2.png) no-repeat;
     background-position: center;
     background-size: contain;
 
@@ -265,11 +265,12 @@ a:hover::after {
 #body_background {
     /* position: fixed; */
     position: absolute;
-    top: 0;
+    top: 0%;
     height: 100vh;
     width: 100vw;
-    background: url(/css/images/ori_back.jpg) no-repeat;
-    background-size: contain;
+    background: url(./images/ori_back.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
     z-index: -1;
 }
 
@@ -299,7 +300,7 @@ a:hover::after {
 
 #main_1 {
     position: relative;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     height: 100vh;
     width: 100vw;
 }
@@ -322,10 +323,15 @@ a:hover::after {
 #card_1 {
     position: relative;
     /* box-sizing: border-box; */
-    margin: 0 auto;
-    top: 10%;
+    /* top: 10%; */
+    /* top: 50%; */
+    /* transform: translateY(-50%); */
+
     width: 60%;
     height: 80%;
+
+    max-height: 550px;
+
     border: 1px solid var(--maincolor_2);
     border-radius: 10px;
     box-shadow: 0 0 10px 0 var(--maincolor);
@@ -337,9 +343,14 @@ a:hover::after {
     
     /* height: 100vh; */
     /* color: white; */
-    animation: card_1_in 0.5s ease-out 1s 1 normal both;
+    /* animation: card_1_in 0.5s ease-out 1s 1 normal both; */
     animation-play-state: paused;
     transform-origin: bottom center;
+
+    box-sizing: border-box;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 
@@ -355,7 +366,7 @@ a:hover::after {
     border: 1px solid gray;
     border-radius: 100%;
     background-color: white;
-    background: url(/images/me.jpg) no-repeat;
+    background: url(../images/me.jpg) no-repeat;
     background-position: center;
     /* background-size: 85px; */
     background-size: cover;
@@ -494,6 +505,8 @@ a:hover::after {
     #card_1 {
         display: grid;
         width: 70%;
+        max-width: 600px;
+        max-height: 400px;
         padding: 0;
         grid-template-columns: 50% 50%;
     }
@@ -656,7 +669,7 @@ a:hover::after {
 #my_favourite_game {
     text-align: center;
     padding: 1em;
-    /* overflow: hidden; */
+    overflow: hidden;
     /* height: 30vh; */
 }
 
@@ -883,7 +896,7 @@ a:hover::after {
 }
 
 #my_friends_head_1 {
-    background: url(/css/images/my_friend/woer.png) no-repeat;
+    background: url(./images/my_friend/woer.png) no-repeat;
     background-position: center;
     background-size: contain;
 }
@@ -893,7 +906,7 @@ a:hover::after {
 }
 
 #my_friends_head_2 {
-    background: url(/css/images/my_friend/jinjulingmeng.png) no-repeat;
+    background: url(./images/my_friend/jinjulingmeng.png) no-repeat;
     background-position: center;
     background-size: contain;
 }
@@ -906,14 +919,14 @@ a:hover::after {
     color: transparent;
 }
 #lingmeng_background {
-    background: url(/css/images/my_friend/lingmeng_background.png) no-repeat;
+    background: url(./images/my_friend/lingmeng_background.png) no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 
 #my_friends_head_3 {
-    background: url(/css/images/my_friend/haideng.png) no-repeat;
+    background: url(./images/my_friend/haideng.png) no-repeat;
     background-position: center;
     background-size: contain;
 }
@@ -922,7 +935,7 @@ a:hover::after {
 }
 
 #my_friends_head_4 {
-    background: url(/css/images/my_friend/chacha.png) no-repeat;
+    background: url(./images/my_friend/chacha.png) no-repeat;
     background-position: center;
     background-size: contain;
 }
@@ -931,7 +944,7 @@ a:hover::after {
 }
 
 #my_friends_head_5 {
-    background: url(/css/images/my_friend/kaliyubai.jpg) no-repeat;
+    background: url(./images/my_friend/kaliyubai.jpg) no-repeat;
     background-position: center;
     background-size: contain;
 }
@@ -942,7 +955,7 @@ a:hover::after {
     /* position: relative; */
 }
 #yubai_background {
-    background: url(/css/images/my_friend/yubai_background.png) no-repeat;
+    background: url(./images/my_friend/yubai_background.png) no-repeat;
     background-position: center;
     background-size: contain;
     left: -10px;
@@ -950,7 +963,7 @@ a:hover::after {
 }
 
 #my_friends_head_6 {
-    background: url(/css/images/my_friend/xiaoai.jpg) no-repeat;
+    background: url(./images/my_friend/xiaoai.jpg) no-repeat;
     background-position: center;
     background-size: contain;
 }
@@ -959,7 +972,7 @@ a:hover::after {
 }
 
 #my_friends_head_7 {
-    background: url(/css/images/my_friend/hanlin.png) no-repeat;
+    background: url(./images/my_friend/hanlin.png) no-repeat;
     background-position: center;
     background-size: contain;
 }
@@ -968,7 +981,7 @@ a:hover::after {
 }
 
 #my_friends_head_8 {
-    background: url(/css/images/my_friend/chuibing.png) no-repeat;
+    background: url(./images/my_friend/chuibing.png) no-repeat;
     background-position: center;
     background-size: contain;
 }
@@ -976,13 +989,13 @@ a:hover::after {
     color: rgb(85,85,255);
 }
 #chuibing_background {
-    background: url(/css/images/dayemao.png) no-repeat;
+    background: url(./images/dayemao.png) no-repeat;
     background-position: center;
     background-size: contain;
 }
 
 #my_friends_head_9 {
-    background: url(/css/images/my_friend/yuchen.png) no-repeat;
+    background: url(./images/my_friend/yuchen.png) no-repeat;
     background-position: center;
     background-size: contain;
 }
@@ -990,13 +1003,13 @@ a:hover::after {
     color: rgb(100, 190, 255);
 }
 #yuchen_background {
-    background: url(/css/images/my_friend/yuchen_background.png) no-repeat;
+    background: url(./images/my_friend/yuchen_background.png) no-repeat;
     background-position: center;
     background-size: contain;
 }
 
 #my_friends_head_10 {
-    background: url(/css/images/my_friend/chuanlinmomeng_fix.png) no-repeat;
+    background: url(./images/my_friend/chuanlinmomeng_fix.png) no-repeat;
     background-position: center;
     background-size: cover;
 }
@@ -1004,7 +1017,7 @@ a:hover::after {
     color: rgb(100, 190, 255);
 }
 #chuanlin_background {
-    background: url(/css/images/my_friend/) no-repeat;
+    background: url(./images/my_friend/) no-repeat;
     background-position: center;
     background-size: contain;
 }
@@ -1071,11 +1084,23 @@ a:hover::after {
 
 @media screen and (min-width: 900px) and (max-width: 1200px) {
     #my_friends {
+        grid-template-columns: repeat(3, 33%);
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1500px) {
+    #my_friends {
         grid-template-columns: repeat(4, 25%);
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1500px) and (max-width: 1800px) {
+    #my_friends {
+        grid-template-columns: repeat(5, 20%);
+    }
+}
+
+@media screen and (min-width: 1800px) {
     #my_friends {
         grid-template-columns: repeat(6, auto);
     }
@@ -1153,7 +1178,7 @@ a:hover::after {
     min-width: fit-content;
     max-height: 1.25em;
 
-    transition: all 0.5s;
+    transition: all 0.8s;
 
     top: 0;
     left: 0;
@@ -1174,9 +1199,9 @@ a:hover::after {
 }
 
 .my_goals:hover {
-    flex: 2;
-    top: -5px;
-    left: -5px;
+    /* flex: 2; */
+    /* top: -5px; */
+    /* left: -5px; */
     box-shadow: 1px 2px 10px var(--maincolor);
     background-color: var(--background_color_black_2);
     max-height: var(--this_maxheight);
@@ -1256,7 +1281,7 @@ a:hover::after {
     margin-left: 5px;
     width: 1em;
     height: 1em;
-    background: url(/css/hud/finish.svg) no-repeat;
+    background: url(./hud/finish.svg) no-repeat;
     background-position: center;
     background-size: contain;
     /* background-color: rgba(0,255,0,0.3); */
@@ -1515,9 +1540,11 @@ a:hover::after {
     right: -100%;
     bottom: 2em;
     height: 35px;
-    width: 30px;
+    width: 35px;
+    /* width: 30px; */
     border: 1px solid gray;
-    border-radius: 5px;
+    /* border-radius: 5px; */
+    border-radius: 100%;
     background-color: var(--background_color_black_3_ope);
     overflow: hidden;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -1545,9 +1572,9 @@ a:hover::after {
 #scroll_up_content {
     position: relative;
 
-    background: url(/css/hud/Arrow-up.svg) no-repeat;
+    background: url(./hud/Arrow-up.svg) no-repeat;
     background-position: center;
-    background-size: 40px;
+    background-size: 35px;
     margin: auto;
     width: 85%;
     height: 95%;

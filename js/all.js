@@ -74,6 +74,6 @@ function scroll_to_top() {
         scrolltop_image.style.animationName = "none";
         scroll_up.style.animationName = "hide_from_right";
         scrollup_already_show = 0;
-    }, 2000)
+    }, 800)
     // scrolltop_image.style.animationPlayState = "running";
 }

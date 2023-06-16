@@ -7,15 +7,15 @@
 		<!-- <meta http-equiv="refresh" content="2"> -->
 		<!-- <script src="js/me.js"></script> -->
 
-		<script src="/js/all.js" defer="true"></script>
+		<script src="./js/all.js" defer="true"></script>
 	
-		<script src="/js/game_connect.js" defer="true"></script>
+		<script src="./js/game_connect.js" defer="true"></script>
 
 		<!-- <link rel="stylesheet" type="text/css" href="css/all.css">
 		<link rel="stylesheet" type="text/css" href="css/header.css">
 		<link rel="stylesheet" type="text/css" href="css/header2.css"> -->
-		<link rel="stylesheet" type="text/css" href="/css/connect.css">
-		<link rel="stylesheet" type="text/css" href="/css/game_connect.css">
+		<link rel="stylesheet" type="text/css" href="./css/connect.css">
+		<link rel="stylesheet" type="text/css" href="./css/game_connect.css">
 
 		<link rel="shortcut icon" href="/logo4.jpg">
 	
@@ -24,8 +24,8 @@
 
 	<body>
 		<noscript>You need to enable JavaScript to run this app.</noscript>
-		<script src="/js/process.js"></script>
-		<script src="/js/loading.js"></script>
+		<script src="./js/process.js"></script>
+		<script src="./js/loading.js"></script>
 		<!-- <div class="loading_div">
 			<div id="loadings"><div id="loading1"></div><div id="loading2"></div></div>
 		</div> -->
@@ -33,12 +33,12 @@
 		<div id="root">
 			
 			<div id="body">
-				<script src="/js/header.js" onload="Header(2, 'head_game', 'head2_connect', '/header/header2_game.html');"></script>
+				<script src="./js/header.js" onload="Header(2, 'head_game', 'head2_connect', '/header/header2_game.html');"></script>
 
 				<div id="body_right">
 
 					<div class="card">
-						<div class="title_div"><img src="/css/hud/fuwuqi.svg" width="25" height="25"><section class="p_title">联机服务端信息</section></div>
+						<div class="title_div"><img src="./css/hud/fuwuqi.svg" width="25" height="25"><section class="p_title">联机服务端信息</section></div>
 						<hr>
 						<!-- <div class="connect">
 							<table class="server" border="0" >
@@ -57,14 +57,14 @@
 						<div class="connect">
 							<div id="server_game" style="border: 0;">
 								<div class="grip_title grip_left"><section>服务端</section></div><div class="grip_title"><section>状态</section></div><div class="grip_title"><section>地址</section></div><div class="grip_title"><section>详情</section></div>
-								<div class="grip_left" id="Minecraft"><section>Minecraft</section></div><div><section id="server_state_minecraft">关闭</section></div><div><section>无</section></div><div><section><button type="button" class="button_arrow" id="server_detail_button_minecraft" onclick="showhide('server_detail_button_minecraft', 'server_detail_minecraft', 'server_detail_minecraft_text')"><img src="/css/hud/jiantou-xia.svg" width="25" height="25"></button></section></div>
+								<div class="grip_left" id="Minecraft"><section>Minecraft</section></div><div><section id="server_state_minecraft">关闭</section></div><div><section>无</section></div><div><section><button type="button" class="button_arrow" id="server_detail_button_minecraft" onclick="showhide('server_detail_button_minecraft', 'server_detail_minecraft', 'server_detail_minecraft_text')"><img src="./css/hud/jiantou-xia.svg" width="25" height="25"></button></section></div>
 								<div class="grip_left button_detail" id="server_detail_minecraft" style="display: none;">
 									<div class="button_detail_text grip_left" id="server_detail_minecraft_text">
 										
 									</div>
 								</div>
 			
-								<div class="grip_left" id="Unturned"><section>Unturned</section></div><div><section id="server_state_Unturned">关闭</section></div><div><section>无</section></div><div><section><button type="button" class="button_arrow" id="server_detail_button_Unturned" onclick="showhide('server_detail_button_Unturned', 'server_detail_Unturned', 'server_detail_Unturned_text')"><img src="/css/hud/jiantou-xia.svg" width="25" height="25"></button></section></div>
+								<div class="grip_left" id="Unturned"><section>Unturned</section></div><div><section id="server_state_Unturned">关闭</section></div><div><section>无</section></div><div><section><button type="button" class="button_arrow" id="server_detail_button_Unturned" onclick="showhide('server_detail_button_Unturned', 'server_detail_Unturned', 'server_detail_Unturned_text')"><img src="./css/hud/jiantou-xia.svg" width="25" height="25"></button></section></div>
 								<div class="grip_left button_detail" id="server_detail_Unturned" style="display: none;">
 									<div class="button_detail_text grip_left" id="server_detail_Unturned_text">
 										
@@ -93,13 +93,13 @@
 					</div> -->
 			
 					<div class="card">
-						<div class="title_div"><img src="/css/hud/maikefeng.svg" width="25" height="25"><section class="p_title">语音服务端信息</section></div>
+						<div class="title_div"><img src="./css/hud/maikefeng.svg" width="25" height="25"><section class="p_title">语音服务端信息</section></div>
 						<hr>
 						<div class="connect">
 							<div id="server_voice" style="border: 0;">
 								<div class="grip_title grip_left"><section>服务端</section></div><div class="grip_title"><section>状态</section></div><div class="grip_title"><section>地址</section></div><div class="grip_title"><section>详情</section></div>
 							
-								<div class="grip_left" id="mumble"><section><img src="/css/images/icon_mumble.svg" width="25" height="25">Mumble</section></div><div><section id="server_state_mumble">关闭</section></div><div><section>mumble.hankarry.com</section></div><div><section><button type="button" class="button_arrow" id="server_detail_button_mumble" onclick="showhide('server_detail_button_mumble', 'server_detail_mumble', 'server_detail_mumble_text')"><img src="/css/hud/jiantou-xia.svg" width="25" height="25"></button></section></div>
+								<div class="grip_left" id="mumble"><section><img src="./css/images/icon_mumble.svg" width="25" height="25">Mumble</section></div><div><section id="server_state_mumble">关闭</section></div><div><section>mumble.hankarry.com</section></div><div><section><button type="button" class="button_arrow" id="server_detail_button_mumble" onclick="showhide('server_detail_button_mumble', 'server_detail_mumble', 'server_detail_mumble_text')"><img src="./css/hud/jiantou-xia.svg" width="25" height="25"></button></section></div>
 									
 								<div class="grip_left button_detail" id="server_detail_mumble" style="display: none;">
 									<div id="server_detail_mumble_text" class="button_detail_text">
